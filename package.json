@@ -1,0 +1,13 @@
+{
+  "name": "@xeaone/style",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+  },
+  "author": "Alexander Elias",
+  "license": "MIT"
+}

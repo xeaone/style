@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/x-style.css">
+</head>
+
+<body>
+    <main>
+
+        <br />
+        <h1>Style</h1>
+        <hr />
+        <section>
+            <p>Coming Soon.</p>
+        </section>
+
+        <br />
+        <h2>Form</h2>
+        <hr />
+        <section>
+            <form>
+                <label>
+                    <span>Date</span>
+                    <input type="date" />
+                </label>
+                <label>
+                    <span>Time</span>
+                    <input type="time" />
+                </label>
+                <label>
+                    <span>Search</span>
+                    <input type="search" />
+                </label>
+                <label>
+                    <span>Name</span>
+                    <input type="text" />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" />
+                </label>
+                <label>
+                    <span>Range</span>
+                    <input type="range" min="0" max="100" value="50" />
+                </label>
+                <label>
+                    <span>Color</span>
+                    <input type="color" value="#0eaaaa" />
+                </label>
+                <label>
+                    <span>Fruit</span>
+                    <select required>
+                        <option value="" selected disabled>None</option>
+                        <option>Banana</option>
+                        <option>Watermelon</option>
+                        <option>Apple</option>
+                        <option>Orange</option>
+                        <option>Mango</option>
+                    </select>
+                </label>
+                <fieldset>
+                    <legend>Checks</legend>
+                    <label>
+                        <span>One</span>
+                        <input type="checkbox" checked />
+                    </label>
+                    <label>
+                        <span>Two</span>
+                        <input type="checkbox" disabled checked />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Radios</legend>
+                    <label>
+                        <span>Small</span>
+                        <input type="radio" name="size" value="small" checked />
+                    </label>
+                    <label>
+                        <span>Medium</span>
+                        <input type="radio" name="size" value="medium" />
+                    </label>
+                    <label>
+                        <span>Large</span>
+                        <input type="radio" name="size" value="large" disabled />
+                    </label>
+                </fieldset>
+                <label>
+                    <span>File</span>
+                    <input type="file" />
+                </label>
+
+                <!--
+                <label>
+                    <span>Textarea</span>
+                    <textarea>Hello World</textarea>
+                </label>
+                <input type="text" placeholder="Valid" aria-label="Valid" aria-invalid="false">
+                <input type="text" placeholder="Invalid" aria-label="Invalid" aria-invalid="true">
+                <input type="text" placeholder="Disabled" aria-label="Disabled" disabled>
+                <input type="text" value="Readonly" aria-label="Readonly" readonly="readonly">
+                -->
+            </form>
+        </section>
+
+        <br />
+        <h2>Progress</h2>
+        <hr />
+        <section>
+            <progress value="25" max="100"></progress>
+        </section>
+
+        <br />
+        <h2>Dialog</h2>
+        <section>
+            <button onclick="document.querySelector('dialog').showModal()">Open Dialog</button>
+            <dialog>
+                <article>
+                    <h3>Dialog Title</h3>
+                    <p>Dialog Message</p>
+                    <footer>
+                        <button onclick="document.querySelector('dialog').close()">Cancel</button>
+                        <button onclick="document.querySelector('dialog').close()">Confirm</button>
+                    </footer>
+                </article>
+            </dialog>
+        </section>
+
+        <br />
+        <h2>Details</h2>
+        <hr />
+        <section>
+            <details open>
+                <summary>Foo Bar</summary>
+                <p>Baz bat boo.</p>
+            </details>
+            <details>
+                <summary>Foo Bar</summary>
+                <p>Baz bat boo.</p>
+            </details>
+        </section>
+
+        <br />
+        <h2>Grid</h2>
+        <hr />
+        <section>
+            <style>
+                .e-grid {
+                    .row {
+                        margin: 0.5rem;
+                        padding: 0.5rem;
+                        min-width: 5rem;
+                        min-height: 5rem;
+                        background: darkblue;
+                    }
+
+                    .col {
+                        margin: 0.5rem;
+                        padding: 0.5rem;
+                        min-width: 5rem;
+                        min-height: 5rem;
+                        background: darkred;
+                    }
+                }
+            </style>
+            <div class="e-grid">
+                <div class="row wrap">
+                    <div class="col grow left">left</div>
+                    <div class="col grow right">right</div>
+                    <div class="col grow bottom">bottom</div>
+                    <div class="col grow top">top</div>
+                    <div class="col grow center">center</div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
