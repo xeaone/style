@@ -43,7 +43,7 @@
         l-... = 65em
 */
 
-const units = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+const units = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 export default async () => {
     let result = '';

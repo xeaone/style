@@ -4,6 +4,7 @@
     "include": [
         "."
     ],
+    "exports": "./build/mod.ts",
     "lint": {
         "rules": {
             "exclude": [
