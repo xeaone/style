@@ -3,14 +3,18 @@ import postcss from 'https://deno.land/x/postcss@8.4.16/mod.js';
 import generateLayout from './layout.ts';
 
 const build = async () => {
-    await generateLayout();
+    console.log('build started')
 
     const mainFile = await Deno.readTextFile('source/main.css');
     const layoutFile = await Deno.readTextFile('source/layout.css');
     const bundle = await postcss().process(`${mainFile}\n${layoutFile}`, { from: 'source', to: 'docs' });
 
     await Deno.writeTextFile('docs/x-style.css', bundle.content);
+    console.log('build done')
 };
+
+await generateLayout();
+await build();
 
 Deno.serve((req) => serveDir(req, { fsRoot: 'docs' }));
 

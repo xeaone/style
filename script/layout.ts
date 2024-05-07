@@ -66,77 +66,81 @@ export default async () => {
                 ['col-reverse', 'column-reverse'],
             ]
         ) {
-            size.result += `${size.prefix}${name}{`;
+            size.result += `${size.prefix}${name},`;
+            size.result += `${size.prefix}${name}-children>*`;
+            size.result += `{`;
             size.result += `display: flex;`;
-            // size.result += `flex: 1 1 auto;`;
-            // size.result += `flex-wrap: wrap;`;
-            // size.result += `overflow: hidden;`;
             size.result += `flex-direction: ${value};`;
             size.result += `box-sizing: border-box;`;
-            // size.result += `margin: 0; border: none; box-sizing: border-box;`;
             size.result += `}\n`;
         }
 
-        size.result += `${size.prefix}first{ order: 1; }\n`;
-        size.result += `${size.prefix}last{ order: -1; }\n`;
+        size.result += `${size.prefix}first,`;
+        size.result += `${size.prefix}first-children>*`;
+        size.result += `{ order: 1; }\n`;
 
-        size.result += `${size.prefix}grow{ flex-grow: 1; }\n`;
-        size.result += `${size.prefix}nogrow{ flex-grow: 0; }\n`;
+        size.result += `${size.prefix}last,`;
+        size.result += `${size.prefix}last-children>*`;
+        size.result += `{ order: -1; }\n`;
 
-        size.result += `${size.prefix}shrink{ flex-shrink: 1; }\n`;
-        size.result += `${size.prefix}noshrink{ flex-shrink: 0; }\n`;
+        size.result += `${size.prefix}grow,`;
+        size.result += `${size.prefix}grow-children>*`;
+        size.result += `{ flex-grow: 1; }\n`;
 
-        // size.result += `${size.prefix}basis{ flex-basis: auto; }\n`;
-        // size.result += `${size.prefix}nobasis{ flex-basis: 0; }\n`;
+        size.result += `${size.prefix}nogrow,`;
+        size.result += `${size.prefix}nogrow-children>*`;
+        size.result += `{ flex-grow: 0; }\n`;
 
-        size.result += `${size.prefix}wrap{ flex-wrap: wrap; }\n`;
-        size.result += `${size.prefix}nowrap{ flex-wrap: nowrap; }\n`;
+        size.result += `${size.prefix}shrink,`;
+        size.result += `${size.prefix}shrink-children>*`;
+        size.result += `{ flex-shrink: 1; }\n`;
 
-        size.result += `${size.prefix}flex{ display: flex; }\n`;
-        size.result += `${size.prefix}contain{ overflow: hidden; text-overflow: ellipsis; }\n`;
+        size.result += `${size.prefix}noshrink,`;
+        size.result += `${size.prefix}noshrink-children>*`;
+        size.result += `{ flex-shrink: 0; }\n`;
 
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}top`).join(',')}{ align-items: start; align-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}bottom`).join(',')}{ align-items: end; align-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}middle`).join(',')}{ align-items: center; align-content: center; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}left`).join(',')}{ justify-items: start; justify-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}right`).join(',')}{ justify-items: end; justify-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}center`).join(',')}{ justify-items: center; justify-content: center; }\n`;
+        size.result += `${size.prefix}wrap,${size.prefix}wrap-children>*{ flex-wrap: wrap; }\n`;
+        size.result += `${size.prefix}nowrap,${size.prefix}nowrap-children>*{ flex-wrap: nowrap; }\n`;
 
-        // size.result += `${sizes.map(s => `${s.prefix}row-reverse${size.prefix}top`).join(',')}{ align-items: start; align-content: end; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}row-reverse${size.prefix}bottom`).join(',')}{ align-items: end; align-content: center; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}row-reverse${size.prefix}middle`).join(',')}{ align-items: center; align-content: start; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}row-reverse${size.prefix}left`).join(',')}{ justify-items: end; justify-content: end; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}row-reverse${size.prefix}right`).join(',')}{ justify-items: start; justify-content: start; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}row-reverse${size.prefix}center`).join(',')}{ justify-items: center; justify-content: center; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}top`).join(',')}{ align-items: start; align-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}bottom`).join(',')}{ align-items: end; align-content: center; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}middle`).join(',')}{ align-items: center; align-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}left`).join(',')}{ justify-items: end; justify-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}right`).join(',')}{ justify-items: start; justify-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}center`).join(',')}{ justify-items: center; justify-content: center; }\n`;
+        size.result += `${size.prefix}flex,${size.prefix}flex-children>*{ display: flex; }\n`;
+        size.result += `${size.prefix}contain,${size.prefix}contain-children>*{ overflow: hidden; text-overflow: ellipsis; }\n`;
 
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}top`).join(',')}{ justify-items: start; justify-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}bottom`).join(',')}{ justify-items: end; justify-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}middle`).join(',')}{ justify-items: center; justify-content: center; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}left`).join(',')}{ align-items: start; align-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}right`).join(',')}{ align-items: end; align-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}center`).join(',')}{ align-items: center; align-content: center; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}top,${s.prefix}row-children>${size.prefix}top`).join(',')}{ align-items: start; align-content: start; }\n`;
 
-        // size.result += `${sizes.map(s => `${s.prefix}col-reverse${size.prefix}top`).join(',')}{ justify-items: end; justify-content: end; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}col-reverse${size.prefix}bottom`).join(',')}{ justify-items: start; justify-content: start; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}col-reverse${size.prefix}middle`).join(',')}{ justify-items: center; justify-content: center; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}col-reverse${size.prefix}left`).join(',')}{ align-items: start; align-content: start; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}col-reverse${size.prefix}right`).join(',')}{ align-items: end; align-content: end; }\n`;
-        // size.result += `${sizes.map(s => `${s.prefix}col-reverse${size.prefix}center`).join(',')}{ align-items: center; align-content: center; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}top`).join(',')}{ justify-items: end; justify-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}bottom`).join(',')}{ justify-items: start; justify-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}middle`).join(',')}{ justify-items: center; justify-content: center; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}left`).join(',')}{ align-items: start; align-content: start; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}right`).join(',')}{ align-items: end; align-content: end; }\n`;
-        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}center`).join(',')}{ align-items: center; align-content: center; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}bottom,${s.prefix}row-children>${size.prefix}bottom`).join(',')}{ align-items: end; align-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}middle,${s.prefix}row-children>${size.prefix}middle`).join(',')}{ align-items: center; align-content: center; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}left${s.prefix}row-children>${size.prefix}left`).join(',')}{ justify-items: start; justify-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}right,${s.prefix}row-children>${size.prefix}right`).join(',')}{ justify-items: end; justify-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}center,${s.prefix}row-children>${size.prefix}center`).join(',')}{ justify-items: center; justify-content: center; }\n`;
 
-        size.result += `${size.prefix}row${size.prefix}reverse{ flex-direction: row-reverse; }\n`;
-        size.result += `${size.prefix}col${size.prefix}reverse{ flex-direction: column-reverse; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}top,${s.prefix}row-children>${size.prefix}reverse${size.prefix}top`).join(',')}{ align-items: start; align-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}bottom,${s.prefix}row-children>${size.prefix}reverse${size.prefix}bottom`).join(',')}{ align-items: end; align-content: center; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}middle,${s.prefix}row-children>${size.prefix}reverse${size.prefix}middle`).join(',')}{ align-items: center; align-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}left,${s.prefix}row-children>${size.prefix}reverse${size.prefix}left`).join(',')}{ justify-items: end; justify-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}right,${s.prefix}row-children>${size.prefix}reverse${size.prefix}right`).join(',')}{ justify-items: start; justify-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}row${size.prefix}reverse${size.prefix}center,${s.prefix}row-children>${size.prefix}reverse${size.prefix}center`).join(',')}{ justify-items: center; justify-content: center; }\n`;
+
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}top,${s.prefix}col-children>${size.prefix}top`).join(',')}{ justify-items: start; justify-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}bottom,${s.prefix}col-children>${size.prefix}bottom`).join(',')}{ justify-items: end; justify-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}middle,${s.prefix}col-children>${size.prefix}middle`).join(',')}{ justify-items: center; justify-content: center; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}left,${s.prefix}col-children>${size.prefix}left`).join(',')}{ align-items: start; align-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}right,${s.prefix}col-children>${size.prefix}right`).join(',')}{ align-items: end; align-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}center,${s.prefix}col-children>${size.prefix}center`).join(',')}{ align-items: center; align-content: center; }\n`;
+
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}top,${s.prefix}col-children>${size.prefix}reverse${size.prefix}top`).join(',')}{ justify-items: end; justify-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}bottom,${s.prefix}col-children>${size.prefix}reverse${size.prefix}bottom`).join(',')}{ justify-items: start; justify-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}middle,${s.prefix}col-children>${size.prefix}reverse${size.prefix}middle`).join(',')}{ justify-items: center; justify-content: center; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}left,${s.prefix}col-children>${size.prefix}reverse${size.prefix}left`).join(',')}{ align-items: start; align-content: start; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}right,${s.prefix}col-children>${size.prefix}reverse${size.prefix}right`).join(',')}{ align-items: end; align-content: end; }\n`;
+        size.result += `${sizes.map((s) => `${s.prefix}col${size.prefix}reverse${size.prefix}center,${s.prefix}col-children>${size.prefix}reverse${size.prefix}center`).join(',')}{ align-items: center; align-content: center; }\n`;
+
+        size.result += `${size.prefix}row${size.prefix}reverse,`;
+        size.result += `${size.prefix}row-children>${size.prefix}reverse`;
+        size.result += `{ flex-direction: row-reverse; }\n`;
+
+        size.result += `${size.prefix}col${size.prefix}reverse,`;
+        size.result += `${size.prefix}col-children>${size.prefix}reverse`;
+        size.result += `{ flex-direction: column-reverse; }\n`;
 
         for (const aj of ['align', 'justify']) {
             for (const sci of ['self', 'content', 'items']) {
@@ -151,49 +155,133 @@ export default async () => {
                         ['between', 'space-between'],
                     ]
                 ) {
-                    size.result += `${size.prefix}${aj}-${sci}-${name}`;
+                    size.result += `${size.prefix}${aj}-${sci}-${name},`;
+                    size.result += `${size.prefix}${aj}-${sci}-${name}-children>*`;
                     size.result += `{ ${aj}-${sci}: ${value}; }\n`;
                 }
             }
         }
 
-        size.result += `${size.prefix}w0,${size.prefix}width0${size.prefix}width-0{ width: 0; }\n`;
-        size.result += `${size.prefix}wa,${size.prefix}widthauto,${size.prefix}width-auto{ width: auto; }\n`;
-        size.result += `${size.prefix}wf,${size.prefix}widthfit,${size.prefix}width-fit{ width: fit-content; }\n`;
+        size.result += `${size.prefix}wn,`;
+        size.result += `${size.prefix}wnc>*,`;
+        size.result += `${size.prefix}width-none-children>*`;
+        size.result += `{ width: 0; }\n`;
 
-        size.result += `${size.prefix}h0,${size.prefix}height0${size.prefix}height-0{ height: 0; }\n`;
-        size.result += `${size.prefix}ha,${size.prefix}heightauto,${size.prefix}height-auto{ height: auto; }\n`;
-        size.result += `${size.prefix}hf,${size.prefix}heightfit,${size.prefix}height-fit{ height: fit-content; }\n`;
+        size.result += `${size.prefix}wa,`;
+        size.result += `${size.prefix}width-auto,`;
+        size.result += `${size.prefix}wac>*,`;
+        size.result += `${size.prefix}width-auto-children>*`;
+        size.result += `{ width: auto; }\n`;
 
-        size.result += `${size.prefix}b0,${size.prefix}basis0${size.prefix}basis-0{ flex-basis: 0; }\n`;
-        size.result += `${size.prefix}ba,${size.prefix}basisauto,${size.prefix}basis-auto{ flex-basis: auto; }\n`;
-        size.result += `${size.prefix}bf,${size.prefix}basisfit,${size.prefix}basis-fit{ flex-basis: fit-content; }\n`;
+        size.result += `${size.prefix}wf,`;
+        size.result += `${size.prefix}width-fit,`;
+        size.result += `${size.prefix}wfc>*,`;
+        size.result += `${size.prefix}width-fit-children>*`;
+        size.result += `{ width: fit-content; }\n`;
 
-        size.result += `${size.prefix}m0,${size.prefix}margin0${size.prefix}margin-0{ margin: 0; }\n`;
-        size.result += `${size.prefix}ma,${size.prefix}marginauto,${size.prefix}margin-auto{ margin: auto; }\n`;
+        size.result += `${size.prefix}hn,`;
+        size.result += `${size.prefix}height-none,`;
+        size.result += `${size.prefix}hnc>*`;
+        size.result += `${size.prefix}height-none-children>*`;
+        size.result += `{ height: 0; }\n`;
 
-        size.result += `${size.prefix}p0,${size.prefix}padding0,${size.prefix}padding-0{ padding: 0; }\n`;
-        size.result += `${size.prefix}pa,${size.prefix}paddingauto,${size.prefix}padding-auto{ padding: auto; }\n`;
+        size.result += `${size.prefix}ha,`;
+        size.result += `${size.prefix}height-auto,`;
+        size.result += `${size.prefix}hac>*,`;
+        size.result += `${size.prefix}height-auto-children>*`;
+        size.result += `{ height: auto; }\n`;
+
+        size.result += `${size.prefix}hf,`;
+        size.result += `${size.prefix}height-fit,`;
+        size.result += `${size.prefix}hfc>*,`;
+        size.result += `${size.prefix}height-fit-children>*`;
+        size.result += `{ height: fit-content; }\n`;
+
+        size.result += `${size.prefix}bn,`;
+        size.result += `${size.prefix}basis-none,`;
+        size.result += `${size.prefix}bnc>*,`;
+        size.result += `${size.prefix}basis-none-children>*`;
+        size.result += `{ flex-basis: 0; }\n`;
+
+        size.result += `${size.prefix}ba,`;
+        size.result += `${size.prefix}basis-auto,`;
+        size.result += `${size.prefix}bac>*,`;
+        size.result += `${size.prefix}basis-auto-children>*`;
+        size.result += `{ flex-basis: auto; }\n`;
+
+        size.result += `${size.prefix}bf,`;
+        size.result += `${size.prefix}basis-fit,`;
+        size.result += `${size.prefix}bfc>*,`;
+        size.result += `${size.prefix}basis-fit-children>*`;
+        size.result += `{ flex-basis: fit-content; }\n`;
+
+        size.result += `${size.prefix}mn,`;
+        size.result += `${size.prefix}margin-none,`;
+        size.result += `${size.prefix}mnc>*,`;
+        size.result += `${size.prefix}margin-none-children>*`;
+        size.result += `{ margin: 0; }\n`;
+
+        size.result += `${size.prefix}ma,`;
+        size.result += `${size.prefix}margin-auto,`;
+        size.result += `${size.prefix}mac>*,`;
+        size.result += `${size.prefix}margin-auto-children>*`;
+        size.result += `{ margin: auto; }\n`;
+
+        size.result += `${size.prefix}pn,`;
+        size.result += `${size.prefix}padding-none,`;
+        size.result += `${size.prefix}pnc>*,`;
+        size.result += `${size.prefix}padding-none-children>*`;
+        size.result += `{ padding: 0; }\n`;
+
+        size.result += `${size.prefix}pa,`;
+        size.result += `${size.prefix}padding-auto,`;
+        size.result += `${size.prefix}pac>*,`;
+        size.result += `${size.prefix}padding-auto-children>*`;
+        size.result += `{ padding: auto; }\n`;
 
         for (let i = 0; i < units.length; i++) {
             const unit = units[i];
-
             const fontScale = units.length / (units.length / 2);
             const fontAdjusted = (unit / fontScale) < 0.9 ? 0.9 : (unit / fontScale);
 
-            size.result += `${size.prefix}f${unit},${size.prefix}font${unit},${size.prefix}font-${unit}{ font-size: ${fontAdjusted}rem; }\n`;
+            size.result += `${size.prefix}f${unit},`;
+            size.result += `${size.prefix}font-${unit},`;
+            size.result += `${size.prefix}f${unit}c>*,`;
+            size.result += `${size.prefix}font-${unit}-children>*`;
+            size.result += `{ font-size: ${fontAdjusted}rem; }\n`;
 
-            size.result += `${size.prefix}m${unit},${size.prefix}margin${unit},${size.prefix}margin-${unit}{ margin: ${unit / units.length}rem; }\n`;
-            size.result += `${size.prefix}p${unit},${size.prefix}padding${unit},${size.prefix}padding-${unit}{ padding: ${unit / units.length}rem; }\n`;
+            size.result += `${size.prefix}m${unit},`;
+            size.result += `${size.prefix}margin-${unit},`;
+            size.result += `${size.prefix}m${unit}c>*,`;
+            size.result += `${size.prefix}margin-${unit}-children>*`;
+            size.result += `{ margin: ${unit / units.length}rem; }\n`;
 
-            size.result += `${size.prefix}w${unit},${size.prefix}width${unit},${size.prefix}width-${unit}{ width: ${unit * (100 / units.length)}%; }\n`;
-            size.result += `${size.prefix}h${unit},${size.prefix}height${unit},${size.prefix}height-${unit}{ height: ${unit * (100 / units.length)}%; }\n`;
+            size.result += `${size.prefix}p${unit},`;
+            size.result += `${size.prefix}padding-${unit},`;
+            size.result += `${size.prefix}p${unit}c>*,`;
+            size.result += `${size.prefix}padding-${unit}-children>*`;
+            size.result += `{ padding: ${unit / units.length}rem; }\n`;
 
-            size.result += `${size.prefix}b${unit},${size.prefix}basis${unit},${size.prefix}basis-${unit}{ flex-basis: ${unit * (100 / units.length)}%; }\n`;
+            size.result += `${size.prefix}w${unit},`;
+            size.result += `${size.prefix}width-${unit},`;
+            size.result += `${size.prefix}w${unit}c>*,`;
+            size.result += `${size.prefix}width-${unit}-children>*`;
+            size.result += `{ width: ${unit * (100 / units.length)}%; }\n`;
+
+            size.result += `${size.prefix}h${unit},`;
+            size.result += `${size.prefix}height-${unit},`;
+            size.result += `${size.prefix}h${unit}c>*,`;
+            size.result += `${size.prefix}height-${unit}-children>*`;
+            size.result += `{ height: ${unit * (100 / units.length)}%; }\n`;
+
+            size.result += `${size.prefix}b${unit},`;
+            size.result += `${size.prefix}basis-${unit},`;
+            size.result += `${size.prefix}b${unit}c>*,`;
+            size.result += `${size.prefix}basis-${unit}-children>*`;
+            size.result += `{ flex-basis: ${unit * (100 / units.length)}%; }\n`;
         }
 
         size.result += size.close;
-
         result += size.result;
     }
 
