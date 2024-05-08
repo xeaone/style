@@ -183,6 +183,8 @@
     --icon-down: polygon(12% 25%, 50% 55%, 88% 25%, 100% 40%, 50% 80%, 0% 40%);
     --icon-up: polygon(0% 70%, 50% 25%, 100% 70%, 85% 85%, 50% 55%, 15% 85%);
 
+    --main-padding: 2vh 15vw;
+
     accent-color: var(--accent);
     font-size: var(--font-size);
     font-family: var(--font-family);
@@ -233,15 +235,23 @@ body>nav {
 }
 
 body>main {
-    flex: 1 1 100%;
     width: 100%;
+    flex: 1 1 100%;
     overflow: auto;
-    padding: 2vh 15vw;
     font-size: inherit;
     box-sizing: border-box;
+    padding: var(--main-padding);
 }
 
 body>footer {
+    flex: 1 1 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     flex: 1 1 auto;
 }
 
@@ -250,11 +260,19 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 h3 {
+    font-size: 2rem;
+}
+
+h4 {
     font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.5rem;
 }
 
 strong {
@@ -272,6 +290,7 @@ small {
 
 hr {
     width: 100%;
+    flex: 1 1 100%;
 
     margin: 0.5rem 0;
 
@@ -773,10 +792,15 @@ article {
 }
 
 /*
+    section
 */
 section {
     margin: 0.25rem;
     padding: 0.25rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 /*

@@ -244,39 +244,41 @@ export default async () => {
             const fontScale = units.length / (units.length / 2);
             const fontAdjusted = (unit / fontScale) < 0.9 ? 0.9 : (unit / fontScale);
 
-            size.result += `${size.prefix}f${unit},`;
+            size.result += `${size.prefix}f-${unit},`;
             size.result += `${size.prefix}font-${unit},`;
             size.result += `${size.prefix}f${unit}c>*,`;
             size.result += `${size.prefix}font-${unit}-children>*`;
             size.result += `{ font-size: ${fontAdjusted}rem; }\n`;
 
-            size.result += `${size.prefix}m${unit},`;
+            size.result += `${size.prefix}m-${unit},`;
             size.result += `${size.prefix}margin-${unit},`;
-            size.result += `${size.prefix}m${unit}c>*,`;
+            size.result += `${size.prefix}m-${unit}-c>*,`;
             size.result += `${size.prefix}margin-${unit}-children>*`;
             size.result += `{ margin: ${unit / units.length}rem; }\n`;
 
-            size.result += `${size.prefix}p${unit},`;
+            size.result += `${size.prefix}p-${unit},`;
             size.result += `${size.prefix}padding-${unit},`;
-            size.result += `${size.prefix}p${unit}c>*,`;
+            size.result += `${size.prefix}p-${unit}-c>*,`;
             size.result += `${size.prefix}padding-${unit}-children>*`;
             size.result += `{ padding: ${unit / units.length}rem; }\n`;
 
-            size.result += `${size.prefix}w${unit},`;
+            size.result += `${size.prefix}w-${unit},`;
             size.result += `${size.prefix}width-${unit},`;
-            size.result += `${size.prefix}w${unit}c>*,`;
+            size.result += `${size.prefix}w-${unit}-c>*,`;
             size.result += `${size.prefix}width-${unit}-children>*`;
             size.result += `{ width: ${unit * (100 / units.length)}%; }\n`;
 
-            size.result += `${size.prefix}h${unit},`;
+            size.result += `${size.prefix}h-${unit},`;
             size.result += `${size.prefix}height-${unit},`;
-            size.result += `${size.prefix}h${unit}c>*,`;
+            size.result += `${size.prefix}h-${unit}-c>*,`;
             size.result += `${size.prefix}height-${unit}-children>*`;
             size.result += `{ height: ${unit * (100 / units.length)}%; }\n`;
 
-            size.result += `${size.prefix}b${unit},`;
+            size.result += `${size.prefix.replace('-', '')}${unit},`;
+
+            size.result += `${size.prefix}b-${unit},`;
             size.result += `${size.prefix}basis-${unit},`;
-            size.result += `${size.prefix}b${unit}c>*,`;
+            size.result += `${size.prefix}b-${unit}-c>*,`;
             size.result += `${size.prefix}basis-${unit}-children>*`;
             size.result += `{ flex-basis: ${unit * (100 / units.length)}%; }\n`;
         }
