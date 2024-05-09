@@ -167,6 +167,9 @@
     --button-active-border-radius: 1rem;
     --button-disabled-filter: brightness(0.6);
 
+    --label-border-radius: 2px;
+    --label-background-hover: var();
+
     --dialog-border-radius: 0.25rem;
     --dialog-backdrop-filter: blur(10px);
     --dialog-backdrop-transition: var(--transition);
@@ -191,12 +194,14 @@
 
     margin: 0;
     padding: 0;
+
     width: 100%;
     height: 100%;
+
     min-height: 100%;
     max-height: 100%;
+
     overflow: hidden;
-    box-sizing: border-box;
 }
 
 template,
@@ -214,16 +219,19 @@ body {
     background: var(--back);
 
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
 
     margin: 0;
     padding: 0;
+
     width: 100%;
     height: 100%;
+
     min-height: 100%;
     max-height: 100%;
+
     overflow: hidden;
-    box-sizing: border-box;
 }
 
 body>header {
@@ -236,10 +244,14 @@ body>nav {
 
 body>main {
     width: 100%;
+
+    display: flex;
     flex: 1 1 100%;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+
     overflow: auto;
     font-size: inherit;
-    box-sizing: border-box;
     padding: var(--main-padding);
 }
 
@@ -247,12 +259,18 @@ body>footer {
     flex: 1 1 auto;
 }
 
+p {
+    flex: 1 1 100%;
+    padding: 0.25rem;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
+    padding: 0.25rem;
 }
 
 h1 {
@@ -289,17 +307,24 @@ small {
 }
 
 hr {
+    height: 4px;
     width: 100%;
+
     flex: 1 1 100%;
 
-    margin: 0.5rem 0;
+    padding: 0;
+    border: none;
+    margin: 0.25rem;
 
     border-radius: var(--border-radius);
-    border: 2px solid hsl(var(--base-hue), var(--base-sat), var(--m1), 0.2);
+    background: hsl(var(--base-hue), var(--base-sat), var(--m1), 0.2);
 }
 
 form {
+    padding: 0.25rem;
+
     display: flex;
+    flex: 1 1 100%;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -311,7 +336,7 @@ form {
 label {
     width: auto;
 
-    margin: 0;
+    margin: 0.25rem;
     padding: 0.25rem;
 
     display: flex;
@@ -320,10 +345,23 @@ label {
 
     max-width: 100%;
     min-width: auto;
+
+    border-radius: var(--label-border-radius);
 }
 
-label:has(input, select)>:first-child {
+label:has(input, select, textarea) {
+    color: hsl(var(--base-hue), var(--base-sat), var(--f1));
+    background: hsl(var(--base-hue), var(--base-sat), var(--b1));
+}
+
+label:has(input, select, textarea)>:first-child {
     color: var(--mean);
+    padding: 0.25rem;
+}
+
+label:has(input, select, textarea):hover {
+    color: hsl(var(--base-hue), var(--base-sat), var(--f2));
+    background: hsl(var(--base-hue), var(--base-sat), var(--b2));
 }
 
 label:has(input[type=radio]:not([disabled], [readonly]), input[type=checkbox]:not([disabled], [readonly])) {
@@ -359,11 +397,10 @@ fieldset {
     flex-wrap: wrap;
     flex-direction: row;
 
-    margin: 0;
-    padding: 0;
+    padding: 0.25rem;
 
-    position: relative;
-    margin: 1.25rem 0.25rem 0.25rem 0.25rem;
+    /* position: relative; */
+    /* margin: 1.25rem 0.25rem 0.25rem 0.25rem; */
 
     max-width: 100%;
     min-width: auto;
@@ -375,8 +412,8 @@ fieldset {
 fieldset>legend {
     padding: 0;
 
-    top: -1.25rem;
-    position: absolute;
+    /* top: -1.25rem; */
+    /* position: absolute; */
 
     font-size: 1rem;
     color: var(--mean);
@@ -411,13 +448,19 @@ input:not([type=image],
 
     font-size: 1rem;
 
-    color: var(--fore);
-    background: var(--back);
+    color: inherit;
+    background: inherit;
 
     transition: var(--transition);
 
-    border: solid 2px var(--accent-back);
     border-radius: var(--border-radius);
+    border: solid 2px var(--accent-back);
+
+    /* color: var(--fore); */
+    /* background: var(--back); */
+
+    /* color: hsl(var(--base-hue), var(--base-sat), var(--f1)); */
+    /* background: hsl(var(--base-hue), var(--base-sat), var(--b1)); */
 }
 
 select {
@@ -578,6 +621,8 @@ input:hover:not([type=image],
     [disabled],
     [readonly]) {
     border-color: var(--accent-fore);
+    /* color: hsl(var(--base-hue), var(--base-sat), var(--f2)); */
+    /* background: hsl(var(--base-hue), var(--base-sat), var(--b2)); */
 }
 
 select:focus-within,
@@ -655,7 +700,7 @@ button {
     display: inline-flex;
     align-items: center;
 
-    margin: 0.15rem;
+    margin: 0.25rem;
     padding: 0.5rem;
 
     cursor: pointer;
@@ -693,23 +738,16 @@ dialog {
     border: none;
     overflow: auto;
 
+    padding: 1rem;
+
     max-width: 100%;
     max-height: 100%;
+
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
     background: transparent;
-    /*
-    max-width: 90%;
-    max-height: 90%;
-    padding: 0.5rem;
-    font-size: 1rem;
-
-    --mean: hsl(var(--base-hue), var(--base-sat), var(--m1));
-    --fore: hsl(var(--base-hue), var(--base-sat), var(--f1));
-    --back: hsl(var(--base-hue), var(--base-sat), var(--b1));
-
-    color: var(--fore);
-    background: var(--back);
-    border-radius: var(--dialog-border-radius);
-    */
 }
 
 dialog::backdrop {
@@ -727,9 +765,10 @@ dialog::backdrop {
     details
 */
 details {
-    --mean: hsl(var(--base-hue), var(--base-sat), var(--m1));
-    --fore: hsl(var(--base-hue), var(--base-sat), var(--f1));
-    --back: hsl(var(--base-hue), var(--base-sat), var(--b1));
+    /* --mean: hsl(var(--base-hue), var(--base-sat), var(--m1)); */
+    /* --fore: hsl(var(--base-hue), var(--base-sat), var(--f1)); */
+    /* --back: hsl(var(--base-hue), var(--base-sat), var(--b1)); */
+    flex: 1 1 100%;
 
     margin: 0.25rem;
     padding: 0.25rem;
@@ -777,28 +816,31 @@ details>summary>:first-child {
 */
 
 article {
-    --mean: hsl(var(--base-hue), var(--base-sat), var(--m3));
-    --fore: hsl(var(--base-hue), var(--base-sat), var(--f3));
-    --back: hsl(var(--base-hue), var(--base-sat), var(--b3));
+    /* --mean: hsl(var(--base-hue), var(--base-sat), var(--m3)); */
+    /* --fore: hsl(var(--base-hue), var(--base-sat), var(--f3)); */
+    /* --back: hsl(var(--base-hue), var(--base-sat), var(--b3)); */
 
     color: var(--fore);
     background: var(--back);
 
     padding: 1rem;
-    margin: 0.5rem;
-    flex: 1 1 auto;
-    border-radius: var(--article-border-radius);
 
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    border-radius: var(--article-border-radius);
 }
 
 /*
     section
 */
 section {
-    margin: 0.25rem;
-    padding: 0.25rem;
+    padding: 1rem;
 
     display: flex;
+    flex: 1 1 auto;
     flex-wrap: wrap;
     flex-direction: row;
 }
