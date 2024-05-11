@@ -1,0 +1,42 @@
+details {
+    flex: 1 1 100%;
+
+    margin: 0.25rem;
+    padding: 0.25rem;
+
+    border-radius: var(--details-border-radius);
+    border-width: var(--details-border-width);
+    border-style: var(--details-border-style);
+
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+
+}
+
+details[open] {
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+}
+
+details>summary {
+    appearance: none;
+    user-select: none;
+
+    padding: 0.5rem;
+    border-radius: var(--details-border-radius);
+
+    cursor: pointer;
+    list-style: none;
+    font-weight: normal;
+    transition: var(--transition);
+}
+
+details>summary:hover {
+    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+}
+
+details>summary>:first-child {
+    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+}

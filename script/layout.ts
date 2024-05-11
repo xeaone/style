@@ -87,16 +87,16 @@ export default async () => {
         size.result += `${size.prefix}grow-children>*`;
         size.result += `{ flex-grow: 1; }\n`;
 
-        size.result += `${size.prefix}nogrow,`;
-        size.result += `${size.prefix}nogrow-children>*`;
+        size.result += `${size.prefix}grow-none,`;
+        size.result += `${size.prefix}grow-none-children>*`;
         size.result += `{ flex-grow: 0; }\n`;
 
         size.result += `${size.prefix}shrink,`;
         size.result += `${size.prefix}shrink-children>*`;
         size.result += `{ flex-shrink: 1; }\n`;
 
-        size.result += `${size.prefix}noshrink,`;
-        size.result += `${size.prefix}noshrink-children>*`;
+        size.result += `${size.prefix}shrink-none,`;
+        size.result += `${size.prefix}shrink-none-children>*`;
         size.result += `{ flex-shrink: 0; }\n`;
 
         size.result += `${size.prefix}wrap,${size.prefix}wrap-children>*{ flex-wrap: wrap; }\n`;
@@ -274,7 +274,7 @@ export default async () => {
             size.result += `${size.prefix}height-${unit}-children>*`;
             size.result += `{ height: ${unit * (100 / units.length)}%; }\n`;
 
-            size.result += `${size.prefix.replace('-', '')}${unit},`;
+            // size.result += `${size.prefix.replace('-', '')}${unit},`;
 
             size.result += `${size.prefix}b-${unit},`;
             size.result += `${size.prefix}basis-${unit},`;

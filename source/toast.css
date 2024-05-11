@@ -1,0 +1,31 @@
+.toast {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+    margin: auto;
+    display: block;
+    bottom: -1.3rem;
+    position: fixed;
+    overflow: hidden;
+    font-size: 0.8rem;
+    width: fit-content;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    text-transform: capitalize;
+    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+
+    color: var(--back);
+    background: var(--fore);
+    border-radius: var(--toast-border-radius);
+}
+
+.toast.active {
+    opacity: 1;
+    transform: translateY(calc(-1.3rem - 1vh));
+}
+
+.toast.error {
+    color: var(--error-fore);
+    background: var(--error-back);
+}

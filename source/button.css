@@ -1,0 +1,60 @@
+button,
+input[type=button],
+input[type=submit] {
+    border: none;
+    outline: none;
+    appearance: none;
+    user-select: none;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    margin: var(--button-margin);
+    padding: var(--button-padding);
+
+    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
+    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+
+    transition: var(--transition);
+
+    border-color: transparent;
+    border-width: var(--button-border-width);
+    border-style: var(--button-border-style);
+    border-radius: var(--button-border-radius);
+}
+
+button[disabled],
+input[disabled][type=button],
+input[disabled][type=submit] {
+    border-style: var(--button-border-style-disabled);
+    border-width: var(--button-border-width-disabled);
+    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+}
+
+button:hover:not([disabled]),
+button:active:not([disabled]),
+button:focus-visible:not([disabled]),
+input[type=button]:hover:not([disabled]),
+input[type=button]:active:not([disabled]),
+input[type=button]:focus-visible:not([disabled]),
+input[type=submit]:hover:not([disabled]),
+input[type=submit]:active:not([disabled]),
+input[type=submit]:focus-visible:not([disabled]) {
+    cursor: pointer;
+
+    border-radius: var(--button-border-radius-active);
+
+    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+}
+
+button>:first-child,
+input[type=submit]>:first-child,
+input[type=button]>:first-child {
+    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+}

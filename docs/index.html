@@ -112,10 +112,66 @@
         </section>
 
         <section>
+            <h2>Theme</h2>
+            <hr />
+            <form oninput="
+                    document.body.classList.remove(...[...event.target.options].map(o => o.value));
+                    document.body.classList.add(event.target.selectedOptions[0].value);
+            ">
+                <label>
+                    <span>Light/Dark</span>
+                    <select>
+                        <option selected>default</option>
+                        <option>dark</option>
+                        <option>light</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Accent</span>
+                    <select oninput="
+                        document.body.classList.remove(...[...this.options].map(o => o.value));
+                        document.body.classList.add(this.selectedOptions[0].value);
+                    ">
+                        <option selected>default</option>
+                        <option>accent-red</option>
+                        <option>accent-green</option>
+                        <option>accent-blue</option>
+                        <option>accent-yellow</option>
+                    </select>
+                </label>
+            </form>
+        </section>
+
+        <section>
+            <h2>Buttons</h2>
+            <hr />
+            <button>Default</button>
+            <button disabled>Disabled</button>
+        </section>
+
+        <section>
             <h2>Progress</h2>
             <hr />
             <progress value="25" max="100"></progress>
+            <hr />
+            <progress></progress>
         </section>
+
+        <section id="article">
+            <h2>Article</h2>
+            <hr>
+            <article>
+                <h3>Card One</h3>
+                <p>Hello world one!</p>
+                <small>Small</small>
+            </article>
+            <article>
+                <h3>Card Two</h3>
+                <p>Hello world two!</p>
+                <small>Small</small>
+            </article>
+        </section>
+
 
         <section>
             <h2>Dialog</h2>
@@ -151,6 +207,10 @@
             <h2>Grid</h2>
             <hr />
             <style>
+                .e-grid {
+                    width: 100%;
+                }
+
                 .e-grid>.row>* {
                     min-width: 4rem;
                     min-height: 4rem;
@@ -179,6 +239,42 @@
                     <div class="middle center">middle center</div>
                 </div>
             </div>
+        </section>
+
+        <section id="list">
+            <h2>List</h2>
+            <hr>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <hr>
+            <p><i>Italic</i></p>
+            <p><del>Delete</del></p>
+            <p><strong>Bold</strong></p>
+            <p><small>Small</small></p>
+            <p><s>Strikethrough</s></p>
+            <blockquote>
+                <p>"Foo bar baz."</p>
+                <cite>- moo too cow</cite>
+            </blockquote>
+        </section>
+
+        <section id="figure">
+            <h2>Figure</h2>
+            <hr>
+            <figure>
+                <img src="./mountain.jpg" alt="Minimal landscape">
+                <figcaption>
+                    <span>Caption</span>
+                    <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+                </figcaption>
+            </figure>
         </section>
 
     </main>

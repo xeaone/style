@@ -1,0 +1,382 @@
+label {
+    margin: 0.25rem;
+    padding: 0.25rem;
+
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+
+    max-width: 100%;
+    min-width: auto;
+
+    border-radius: var(--label-border-radius);
+}
+
+label:has(input, select, textarea) {
+    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
+    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+}
+
+label:has(input, select, textarea):hover,
+label:has(input, select, textarea):focus,
+label:has(input, select, textarea):focus-within {
+    color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2));
+    background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2));
+}
+
+label:has(input, select, textarea)>:first-child {
+    padding: 0.25rem;
+    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+}
+
+
+label:has(input[type=radio]:not([disabled], [readonly]), input[type=checkbox]:not([disabled], [readonly])) {
+    cursor: pointer;
+}
+
+label:has(input[type=radio], input[type=checkbox]) {
+    align-items: center;
+    justify-content: start;
+    flex-direction: row-reverse;
+}
+
+fieldset {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding: 0.25rem;
+
+    max-width: 100%;
+    min-width: auto;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: var(--border-radius);
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+}
+
+fieldset>legend {
+    padding: 0;
+
+    /* top: -1.25rem; */
+    /* position: absolute; */
+
+    font-size: 1rem;
+    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+}
+
+select,
+textarea,
+input:not([type=image],
+    [type=radio],
+    [type=reset],
+    [type=submit],
+    [type=hidden],
+    [type=button],
+    [type=checkbox]) {
+    outline: none;
+    display: block;
+    appearance: none;
+    box-sizing: border-box;
+
+    /* width: auto; */
+    max-width: 100%;
+
+    min-width: 100%;
+    min-height: 2.5rem;
+
+    inline-size: 10rem;
+
+    block-size: 2.5rem;
+    min-block-size: 2.5rem;
+
+    padding: 0.25rem;
+
+    font-size: 1rem;
+
+    color: inherit;
+    background: inherit;
+
+    transition: var(--transition);
+
+    border-radius: var(--border-radius);
+
+    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
+    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+    accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+
+}
+
+select {
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    border: 0;
+    font-size: 1rem;
+}
+
+textarea {
+    font-size: 1rem;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 30rem;
+}
+
+input[type=color] {
+    cursor: pointer;
+}
+
+input[type=range] {
+    border: none;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    border-radius: var(--border-radius);
+    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    border-radius: var(--border-radius);
+    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -0.25rem;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -0.25rem;
+}
+
+input[type=range]::-ms-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -0.25rem;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+    transform: scale(1.25);
+}
+
+input[type=range]:active::-moz-range-thumb {
+    transform: scale(1.25);
+}
+
+input[type=range]:active::-ms-thumb {
+    transform: scale(1.25);
+}
+
+input[type=color] {
+    cursor: pointer;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type=color]::-moz-focus-inner {
+    padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+input[type=color]::-moz-color-swatch {
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+/*
+    radio
+    checkbox
+*/
+input[type=radio] {
+    border-radius: 50%;
+    width: var(--radio-size);
+    height: var(--radio-size);
+    block-size: var(--radio-size);
+}
+
+input[type=checkbox] {
+    border-radius: 4px;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    block-size: var(--checkbox-size);
+}
+
+input[type=radio],
+input[type=checkbox] {
+    outline: none;
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: transparent;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    margin: 0.25rem;
+    padding: 0;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+}
+
+/*
+    input hover
+*/
+select:hover,
+textarea:hover,
+input:hover:not([type=image],
+    [type=reset],
+    [type=radio],
+    [type=hidden],
+    [type=submit],
+    [type=button],
+    [type=checkbox],
+    [hidden],
+    [disabled],
+    [readonly]) {
+    color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2));
+    background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2));
+}
+
+select:hover,
+textarea:hover,
+input:hover:not([type=image],
+    [type=reset],
+    [type=hidden],
+    [type=submit],
+    [type=button],
+    [hidden],
+    [disabled],
+    [readonly]) {
+    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+}
+
+/*
+    input focus
+*/
+select:focus,
+select:focus-within,
+textarea:focus,
+textarea:focus-within,
+input:focus:not([type=image],
+    [type=reset],
+    [type=radio],
+    [type=hidden],
+    [type=submit],
+    [type=button],
+    [type=checkbox],
+    [hidden],
+    [disabled],
+    [readonly]),
+input:focus-within:not([type=image],
+    [type=reset],
+    [type=radio],
+    [type=hidden],
+    [type=submit],
+    [type=button],
+    [type=checkbox],
+    [hidden],
+    [disabled],
+    [readonly]) {
+    color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2));
+    background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2));
+}
+
+select:focus-within,
+textarea:focus-within,
+input:focus-within:not([type=image],
+    [type=reset],
+    [type=hidden],
+    [type=submit],
+    [type=button],
+    [hidden],
+    [disabled],
+    [readonly]) {
+    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+}
+
+select[readonly],
+textarea[readonly],
+input[readonly]:not([type=image],
+    [type=reset],
+    [type=hidden],
+    [type=submit],
+    [type=button]) {
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+}
+
+select[disabled],
+textarea[disabled],
+input[disabled]:not([type=image],
+    [type=reset],
+    [type=hidden],
+    [type=submit],
+    [type=button]) {
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+    border-style: dotted;
+}
+
+select[placeholder]:invalid:not(:placeholder-shown, :focus),
+textarea[placeholder]:invalid:not(:placeholder-shown, :focus),
+input[placeholder]:invalid:not(:placeholder-shown, :focus,
+    [type=image],
+    [type=radio],
+    [type=reset],
+    [type=hidden],
+    [type=submit],
+    [type=button]) {
+    border-color: var(--error);
+}
+
+/*
+    file
+*/
+input[type=file] {
+    cursor: pointer;
+}
+
+input[type=file]::file-selector-button {
+    display: none;
+    cursor: pointer;
+}
