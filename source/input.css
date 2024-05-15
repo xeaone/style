@@ -1,3 +1,28 @@
+fieldset {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin: 0.25rem;
+    padding: 0.25rem;
+
+    max-width: 100%;
+    min-width: auto;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: var(--border-radius);
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+}
+
+fieldset>legend {
+    padding: 0;
+
+    font-size: 1rem;
+    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+}
+
 label {
     margin: 0.25rem;
     padding: 0.25rem;
@@ -40,32 +65,7 @@ label:has(input[type=radio], input[type=checkbox]) {
     flex-direction: row-reverse;
 }
 
-fieldset {
-    display: flex;
-    flex: 1 1 auto;
-    flex-wrap: wrap;
-    flex-direction: row;
 
-    padding: 0.25rem;
-
-    max-width: 100%;
-    min-width: auto;
-
-    border-width: 2px;
-    border-style: solid;
-    border-radius: var(--border-radius);
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
-}
-
-fieldset>legend {
-    padding: 0;
-
-    /* top: -1.25rem; */
-    /* position: absolute; */
-
-    font-size: 1rem;
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
-}
 
 select,
 textarea,

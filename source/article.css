@@ -35,8 +35,6 @@ article {
     --mean-lit-2: var(--article-mean-lit-3);
     --mean-lit-3: var(--article-mean-lit-4);
 
-    padding: 1rem;
-    margin: 0.25rem;
     border-radius: var(--article-border-radius);
 
     color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));

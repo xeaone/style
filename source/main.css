@@ -1,15 +1,112 @@
-@import './root.css';
+@import './variables.css';
+@import './body.css';
+@import './list.css';
 @import './input.css';
 @import './button.css';
 @import './dialog.css';
 @import './details.css';
-@import './section.css';
 @import './article.css';
 @import './progress.css';
+@import './typography.css';
+
+form,
+section,
+article,
+blockquote,
+form>header,
+form>footer,
+section>header,
+section>footer,
+article>header,
+article>footer {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+
+
+/*
+form>*,
+section>*,
+article>* {
+    flex: 1 1 auto;
+}
+*/
+
+section {
+    padding: 1rem;
+}
+
+hr {
+    height: 4px;
+    width: 100%;
+
+    flex: 1 1 100%;
+
+    padding: 0;
+    border: none;
+    margin: 0.25rem;
+
+    border-radius: var(--border-radius);
+    background: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+}
+
+
+img {
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    border-style: none;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+figure {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+figcaption {
+    margin: var(--margin);
+    padding: var(--padding);
+    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+}
+
+blockquote {
+    border-right: none;
+    border-left: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-inline-start: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-inline-end: none;
+}
+
+blockquote cite {
+    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+}
+
+del {
+    color: hsl(var(--red-hue), var(--red-sat), var(--red-lit));
+}
 
 /*
     utilities
 */
+
+.padding {
+    padding: var(--padding);
+}
+
+.margin {
+    margin: var(--margin);
+}
 
 .bold {
     font-weight: bold;
@@ -53,48 +150,63 @@
     --accent-hue: var(--red-hue);
     --accent-sat: var(--red-sat);
     --accent-lit: var(--red-lit);
+    --accent-alp: var(--red-alp);
 }
 
 .accent-green {
     --accent-hue: var(--green-hue);
     --accent-sat: var(--green-sat);
     --accent-lit: var(--green-lit);
+    --accent-alp: var(--green-alp);
 }
 
 .accent-blue {
     --accent-hue: var(--blue-hue);
     --accent-sat: var(--blue-sat);
     --accent-lit: var(--blue-lit);
+    --accent-alp: var(--blue-alp);
 }
 
 .accent-yellow {
     --accent-hue: var(--yellow-hue);
     --accent-sat: var(--yellow-sat);
     --accent-lit: var(--yellow-lit);
+    --accent-alp: var(--yellow-alp);
+}
+
+.accent-purple {
+    --accent-hue: var(--purple-hue);
+    --accent-sat: var(--purple-sat);
+    --accent-lit: var(--purple-lit);
+    --accent-alp: var(--purple-alp);
 }
 
 .accent-warn {
     --accent-hue: var(--warn-hue);
     --accent-sat: var(--warn-sat);
     --accent-lit: var(--warn-lit);
+    --accent-alp: var(--warn-alp);
 }
 
 .accent-error {
     --accent-hue: var(--error-hue);
     --accent-sat: var(--error-sat);
     --accent-lit: var(--error-lit);
+    --accent-alp: var(--error-alp);
 }
 
 .accent-success {
     --accent-hue: var(--success-hue);
     --accent-sat: var(--success-sat);
     --accent-lit: var(--success-lit);
+    --accent-alp: var(--success-alp);
 }
 
 .accent-red,
 .accent-green,
 .accent-blue,
 .accent-yellow,
+.accent-purple,
 .accent-error,
 .accent-success,
 .accent-safe,
@@ -131,6 +243,11 @@
     background: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit), var(--yellow-alp));
 }
 
+.purple,
+.purple-children>* {
+    color: hsl(var(--purple-hue), var(--purple-sat), var(--purple-lit));
+    background: hsl(var(--purple-hue), var(--purple-sat), var(--purple-lit), var(--purple-alp));
+}
 
 .error,
 .error-children>* {

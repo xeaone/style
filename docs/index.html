@@ -20,12 +20,15 @@
     <main>
 
         <section>
-            <h1>X-Style</h1>
+            <h1>
+                <span class="purple padding margin">X</span>
+                <span>Style</span>
+            </h1>
             <hr />
             <p>Coming Soon.</p>
         </section>
 
-        <section>
+        <section id="form">
             <h2>Form</h2>
             <hr />
             <form>
@@ -111,7 +114,7 @@
             </form>
         </section>
 
-        <section>
+        <section id="theme">
             <h2>Theme</h2>
             <hr />
             <form oninput="
@@ -137,24 +140,30 @@
                         <option>accent-green</option>
                         <option>accent-blue</option>
                         <option>accent-yellow</option>
+                        <option>accent-purple</option>
                     </select>
                 </label>
             </form>
         </section>
 
-        <section>
+        <section id="button">
             <h2>Buttons</h2>
             <hr />
             <button>Default</button>
             <button disabled>Disabled</button>
         </section>
 
-        <section>
+        <section id="progress">
             <h2>Progress</h2>
             <hr />
-            <progress value="25" max="100"></progress>
-            <hr />
-            <progress></progress>
+            <section>
+                <strong>Progress with value</strong>
+                <progress value="25" max="100"></progress>
+            </section>
+            <section>
+                <strong>Progress without value</strong>
+                <progress></progress>
+            </section>
         </section>
 
         <section id="article">
@@ -163,12 +172,10 @@
             <article>
                 <h3>Card One</h3>
                 <p>Hello world one!</p>
-                <small>Small</small>
             </article>
             <article>
                 <h3>Card Two</h3>
                 <p>Hello world two!</p>
-                <small>Small</small>
             </article>
         </section>
 
@@ -244,11 +251,18 @@
         <section id="list">
             <h2>List</h2>
             <hr>
+            <h3>Unordered List</h3>
             <ul>
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Coconut</li>
             </ul>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Coconut</li>
+            </ol>
         </section>
 
         <section id="typography">

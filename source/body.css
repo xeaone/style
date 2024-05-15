@@ -1,0 +1,87 @@
+body {
+    --back-hue-1: var(--body-back-hue-1);
+    --back-hue-2: var(--body-back-hue-2);
+    --back-hue-3: var(--body-back-hue-3);
+
+    --back-sat-1: var(--body-back-sat-1);
+    --back-sat-2: var(--body-back-sat-2);
+    --back-sat-3: var(--body-back-sat-3);
+
+    --back-lit-1: var(--body-back-lit-1);
+    --back-lit-2: var(--body-back-lit-2);
+    --back-lit-3: var(--body-back-lit-3);
+
+    --fore-hue-1: var(--body-fore-hue-1);
+    --fore-hue-2: var(--body-fore-hue-2);
+    --fore-hue-3: var(--body-fore-hue-3);
+
+    --fore-sat-1: var(--body-fore-sat-1);
+    --fore-sat-2: var(--body-fore-sat-2);
+    --fore-sat-3: var(--body-fore-sat-3);
+
+    --fore-lit-1: var(--body-fore-lit-1);
+    --fore-lit-2: var(--body-fore-lit-2);
+    --fore-lit-3: var(--body-fore-lit-3);
+
+    --mean-hue-1: var(--body-mean-hue-1);
+    --mean-hue-2: var(--body-mean-hue-2);
+    --mean-hue-3: var(--body-mean-hue-3);
+
+    --mean-sat-1: var(--body-mean-sat-1);
+    --mean-sat-2: var(--body-mean-sat-2);
+    --mean-sat-3: var(--body-mean-sat-3);
+
+    --mean-lit-1: var(--body-mean-lit-1);
+    --mean-lit-2: var(--body-mean-lit-2);
+    --mean-lit-3: var(--body-mean-lit-3);
+
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 100%;
+    max-height: 100%;
+
+    overflow: hidden;
+
+    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
+    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+}
+
+body>header {
+    flex: 1 1 auto;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+body>nav {
+    flex: 1 1 auto;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+body>main {
+    width: 100%;
+
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+
+    overflow: auto;
+    font-size: inherit;
+
+    margin: var(--main-margin);
+    padding: var(--main-padding);
+}
+
+body>footer {
+    flex: 1 1 auto;
+    margin: var(--margin);
+    padding: var(--padding);
+}

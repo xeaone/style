@@ -9,8 +9,9 @@ input[type=submit] {
 
     cursor: pointer;
 
+    display: flex;
+    flex: 1 1 auto;
     align-items: center;
-    display: inline-flex;
     justify-content: center;
 
     margin: var(--button-margin);

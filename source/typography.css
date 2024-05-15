@@ -1,0 +1,67 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+em,
+cite {
+    display: flex;
+    align-items: center;
+
+    font-size: inherit;
+    font-style: italic;
+}
+
+b,
+strong {
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: inherit;
+}
+
+small {
+    display: flex;
+    align-items: center;
+
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+s {
+    display: flex;
+    align-items: center;
+
+    font-size: inherit;
+}
