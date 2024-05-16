@@ -77,8 +77,18 @@
 
         --red-hue: 0deg;
         --red-sat: 100%;
-        --red-lit: 30%;
+        --red-lit: 15%;
         --red-alp: 0.2;
+
+        --orange-hue: 30deg;
+        --orange-sat: 100%;
+        --orange-lit: 15%;
+        --orange-alp: 0.2;
+
+        --yellow-hue: 50deg;
+        --yellow-sat: 100%;
+        --yellow-lit: 15%;
+        --yellow-alp: 0.2;
 
         --green-hue: 150deg;
         --green-sat: 100%;
@@ -87,18 +97,18 @@
 
         --blue-hue: 200deg;
         --blue-sat: 100%;
-        --blue-lit: 20%;
+        --blue-lit: 15%;
         --blue-alp: 0.2;
-
-        --yellow-hue: 50deg;
-        --yellow-sat: 100%;
-        --yellow-lit: 15%;
-        --yellow-alp: 0.2;
 
         --purple-hue: 250deg;
         --purple-sat: 100%;
-        --purple-lit: 60%;
+        --purple-lit: 15%;
         --purple-alp: 0.2;
+
+        --pink-hue: 300deg;
+        --pink-sat: 100%;
+        --pink-lit: 15%;
+        --pink-alp: 0.2;
 
         color-scheme: light;
     }
@@ -176,25 +186,35 @@
         --red-lit: 80%;
         --red-alp: 0.2;
 
+        --orange-hue: 30deg;
+        --orange-sat: 100%;
+        --orange-lit: 80%;
+        --orange-alp: 0.2;
+
+        --yellow-hue: 50deg;
+        --yellow-sat: 100%;
+        --yellow-lit: 80%;
+        --yellow-alp: 0.2;
+
         --green-hue: 150deg;
         --green-sat: 100%;
-        --green-lit: 40%;
+        --green-lit: 80%;
         --green-alp: 0.2;
 
         --blue-hue: 200deg;
         --blue-sat: 100%;
-        --blue-lit: 70%;
+        --blue-lit: 80%;
         --blue-alp: 0.2;
-
-        --yellow-hue: 50deg;
-        --yellow-sat: 100%;
-        --yellow-lit: 40%;
-        --yellow-alp: 0.2;
 
         --purple-hue: 250deg;
         --purple-sat: 100%;
-        --purple-lit: 70%;
+        --purple-lit: 80%;
         --purple-alp: 0.2;
+
+        --pink-hue: 300deg;
+        --pink-sat: 100%;
+        --pink-lit: 80%;
+        --pink-alp: 0.2;
 
         color-scheme: dark;
     }

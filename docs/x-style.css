@@ -77,8 +77,18 @@
 
         --red-hue: 0deg;
         --red-sat: 100%;
-        --red-lit: 30%;
+        --red-lit: 15%;
         --red-alp: 0.2;
+
+        --orange-hue: 30deg;
+        --orange-sat: 100%;
+        --orange-lit: 15%;
+        --orange-alp: 0.2;
+
+        --yellow-hue: 50deg;
+        --yellow-sat: 100%;
+        --yellow-lit: 15%;
+        --yellow-alp: 0.2;
 
         --green-hue: 150deg;
         --green-sat: 100%;
@@ -87,18 +97,18 @@
 
         --blue-hue: 200deg;
         --blue-sat: 100%;
-        --blue-lit: 20%;
+        --blue-lit: 15%;
         --blue-alp: 0.2;
-
-        --yellow-hue: 50deg;
-        --yellow-sat: 100%;
-        --yellow-lit: 15%;
-        --yellow-alp: 0.2;
 
         --purple-hue: 250deg;
         --purple-sat: 100%;
-        --purple-lit: 60%;
+        --purple-lit: 15%;
         --purple-alp: 0.2;
+
+        --pink-hue: 300deg;
+        --pink-sat: 100%;
+        --pink-lit: 15%;
+        --pink-alp: 0.2;
 
         color-scheme: light;
     }
@@ -176,25 +186,35 @@
         --red-lit: 80%;
         --red-alp: 0.2;
 
+        --orange-hue: 30deg;
+        --orange-sat: 100%;
+        --orange-lit: 80%;
+        --orange-alp: 0.2;
+
+        --yellow-hue: 50deg;
+        --yellow-sat: 100%;
+        --yellow-lit: 80%;
+        --yellow-alp: 0.2;
+
         --green-hue: 150deg;
         --green-sat: 100%;
-        --green-lit: 40%;
+        --green-lit: 80%;
         --green-alp: 0.2;
 
         --blue-hue: 200deg;
         --blue-sat: 100%;
-        --blue-lit: 70%;
+        --blue-lit: 80%;
         --blue-alp: 0.2;
-
-        --yellow-hue: 50deg;
-        --yellow-sat: 100%;
-        --yellow-lit: 40%;
-        --yellow-alp: 0.2;
 
         --purple-hue: 250deg;
         --purple-sat: 100%;
-        --purple-lit: 70%;
+        --purple-lit: 80%;
         --purple-alp: 0.2;
+
+        --pink-hue: 300deg;
+        --pink-sat: 100%;
+        --pink-lit: 80%;
+        --pink-alp: 0.2;
 
         color-scheme: dark;
     }
@@ -1337,31 +1357,38 @@ del {
     utilities
 */
 
-.padding {
+.padding,
+.padding-children>* {
     padding: var(--padding);
 }
 
-.margin {
+.margin,
+.margin-children>* {
     margin: var(--margin);
 }
 
-.bold {
+.bold,
+.bold-children>* {
     font-weight: bold;
 }
 
-.lowercase {
+.lowercase,
+.lowercase-children>* {
     text-transform: lowercase;
 }
 
-.uppercase {
+.uppercase,
+.uppercase-children>* {
     text-transform: uppercase;
 }
 
-.capitalize {
+.capitalize,
+.capitalize-children>* {
     text-transform: capitalize;
 }
 
-.ellipsis {
+.ellipsis,
+.ellipsis-children>* {
     max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -1372,6 +1399,7 @@ del {
 .border-children>* {
     border-width: var(--border-width);
     border-style: var(--border-style);
+    border-radius: var(--border-radius);
     border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
 }
 
@@ -1390,6 +1418,20 @@ del {
     --accent-alp: var(--red-alp);
 }
 
+.accent-orange {
+    --accent-hue: var(--orange-hue);
+    --accent-sat: var(--orange-sat);
+    --accent-lit: var(--orange-lit);
+    --accent-alp: var(--orange-alp);
+}
+
+.accent-yellow {
+    --accent-hue: var(--yellow-hue);
+    --accent-sat: var(--yellow-sat);
+    --accent-lit: var(--yellow-lit);
+    --accent-alp: var(--yellow-alp);
+}
+
 .accent-green {
     --accent-hue: var(--green-hue);
     --accent-sat: var(--green-sat);
@@ -1404,18 +1446,18 @@ del {
     --accent-alp: var(--blue-alp);
 }
 
-.accent-yellow {
-    --accent-hue: var(--yellow-hue);
-    --accent-sat: var(--yellow-sat);
-    --accent-lit: var(--yellow-lit);
-    --accent-alp: var(--yellow-alp);
-}
-
 .accent-purple {
     --accent-hue: var(--purple-hue);
     --accent-sat: var(--purple-sat);
     --accent-lit: var(--purple-lit);
     --accent-alp: var(--purple-alp);
+}
+
+.accent-pink {
+    --accent-hue: var(--pink-hue);
+    --accent-sat: var(--pink-sat);
+    --accent-lit: var(--pink-lit);
+    --accent-alp: var(--pink-alp);
 }
 
 .accent-warn {
@@ -1440,10 +1482,12 @@ del {
 }
 
 .accent-red,
+.accent-orange,
+.accent-yellow,
 .accent-green,
 .accent-blue,
-.accent-yellow,
 .accent-purple,
+.accent-pink,
 .accent-error,
 .accent-success,
 .accent-safe,
@@ -1462,6 +1506,18 @@ del {
     background: hsl(var(--red-hue), var(--red-sat), var(--red-lit), var(--red-alp));
 }
 
+.orange,
+.orange-children>* {
+    color: hsl(var(--orange-hue), var(--orange-sat), var(--orange-lit));
+    background: hsl(var(--orange-hue), var(--orange-sat), var(--orange-lit), var(--orange-alp));
+}
+
+.yellow,
+.yellow-children>* {
+    color: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit));
+    background: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit), var(--yellow-alp));
+}
+
 .green,
 .green-children>* {
     color: hsl(var(--green-hue), var(--green-sat), var(--green-lit));
@@ -1474,16 +1530,16 @@ del {
     background: hsl(var(--blue-hue), var(--blue-sat), var(--blue-lit), var(--blue-alp));
 }
 
-.yellow,
-.yellow-children>* {
-    color: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit));
-    background: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit), var(--yellow-alp));
-}
-
 .purple,
 .purple-children>* {
     color: hsl(var(--purple-hue), var(--purple-sat), var(--purple-lit));
     background: hsl(var(--purple-hue), var(--purple-sat), var(--purple-lit), var(--purple-alp));
+}
+
+.pink,
+.pink-children>* {
+    color: hsl(var(--pink-hue), var(--pink-sat), var(--pink-lit));
+    background: hsl(var(--pink-hue), var(--pink-sat), var(--pink-lit), var(--pink-alp));
 }
 
 .error,
