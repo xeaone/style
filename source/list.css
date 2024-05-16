@@ -37,9 +37,9 @@ ol>li::before {
     border-radius: 50%;
 
     font-size: 0.8rem;
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
 
-    background: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 ul>li::before {

@@ -111,68 +111,68 @@
     :root,
     ::backdrop {
 
-        /* back */
-        --root-back-hue-1: 200deg;
-        --root-back-hue-2: 200deg;
-        --root-back-hue-3: 200deg;
-        --root-back-hue-4: 200deg;
+        /* --root-hue: 200deg;
+        --root-sat: 0%;
+        --root-lit: 0%;
+        --root-alp: 0.5; */
 
-        --root-back-sat-1: 0%;
-        --root-back-sat-2: 0%;
-        --root-back-sat-3: 0%;
-        --root-back-sat-4: 0%;
+        --root-back-hue: 200deg;
+        --root-back-sat: 0%;
+        --root-back-lit: 0%;
+        --root-back-alp: 0.5;
 
-        --root-back-lit-1: 0%;
-        --root-back-lit-2: 10%;
-        --root-back-lit-3: 15%;
-        --root-back-lit-4: 20%;
+        --root-mean-hue: 200deg;
+        --root-mean-sat: 0%;
+        --root-mean-lit: 65%;
+        --root-mean-alp: 0.5;
 
-        --root-back-alp-1: 1;
-        --root-back-alp-2: 1;
-        --root-back-alp-3: 1;
-        --root-back-alp-4: 1;
+        --root-fore-hue: 200deg;
+        --root-fore-sat: 0%;
+        --root-fore-lit: 90%;
+        --root-fore-alp: 0.5;
 
-        /* mean */
-        --root-mean-hue-1: 200deg;
-        --root-mean-hue-2: 200deg;
-        --root-mean-hue-3: 200deg;
-        --root-mean-hue-4: 200deg;
+        --root-accent-hue: 200deg;
+        --root-accent-sat: 0%;
+        --root-accent-lit: 100%;
+        --root-accent-alp: 0.5;
 
-        --root-mean-sat-1: 0%;
-        --root-mean-sat-2: 0%;
-        --root-mean-sat-3: 0%;
-        --root-mean-sat-4: 0%;
+        --red-fore-hue: 0deg;
+        --red-back-hue: 0deg;
 
-        --root-mean-lit-1: 60%;
-        --root-mean-lit-2: 65%;
-        --root-mean-lit-3: 75%;
-        --root-mean-lit-4: 85%;
+        --orange-fore-hue: 30deg;
+        --orange-back-hue: 30deg;
 
-        --root-mean-alp-1: 1;
-        --root-mean-alp-2: 1;
-        --root-mean-alp-3: 1;
-        --root-mean-alp-4: 1;
+        --yellow-fore-hue: 50deg;
+        --yellow-back-hue: 50deg;
 
-        /* fore */
-        --root-fore-hue-1: 200deg;
-        --root-fore-hue-2: 200deg;
-        --root-fore-hue-3: 200deg;
-        --root-fore-hue-4: 200deg;
+        --green-fore-hue: 150deg;
+        --green-back-hue: 150deg;
 
-        --root-fore-sat-1: 0%;
-        --root-fore-sat-2: 0%;
-        --root-fore-sat-3: 0%;
-        --root-fore-sat-4: 0%;
+        --blue-fore-hue: 215deg;
+        --blue-back-hue: 215deg;
 
-        --root-fore-lit-1: 85%;
-        --root-fore-lit-2: 85%;
-        --root-fore-lit-3: 85%;
-        --root-fore-lit-4: 85%;
+        --purple-fore-hue: 270deg;
+        --purple-back-hue: 270deg;
 
-        --root-fore-alp-1: 1;
-        --root-fore-alp-2: 1;
-        --root-fore-alp-3: 1;
-        --root-fore-alp-4: 1;
+        --pink-fore-hue: 300deg;
+        --pink-back-hue: 300deg;
+
+        --color-fore-sat: 100%;
+        --color-fore-lit: 85%;
+        --color-fore-alp: 1;
+
+        --color-back-sat: 100%;
+        --color-back-lit: 15%;
+        --color-back-alp: 0.5;
+
+        /*
+        --root-fore-sat: 100%;
+        --root-fore-lit: 85%;
+        --root-fore-alp: 1;
+
+        --root-back-sat: 100%;
+        --root-back-lit: 15%;
+        --root-back-alp: 0.5; */
 
         /* accent */
         --accent-hue: 0deg;
@@ -200,20 +200,20 @@
         --green-lit: 80%;
         --green-alp: 0.2;
 
-        --blue-hue: 200deg;
+        --blue-hue: 215deg;
         --blue-sat: 100%;
         --blue-lit: 80%;
-        --blue-alp: 0.2;
+        --blue-alp: 0.5;
 
-        --purple-hue: 250deg;
+        --purple-hue: 270deg;
         --purple-sat: 100%;
         --purple-lit: 80%;
-        --purple-alp: 0.2;
+        --purple-alp: 0.5;
 
         --pink-hue: 300deg;
         --pink-sat: 100%;
         --pink-lit: 80%;
-        --pink-alp: 0.2;
+        --pink-alp: 0.5;
 
         color-scheme: dark;
     }
@@ -315,83 +315,53 @@
     --icon-up: polygon(0% 70%, 50% 25%, 100% 70%, 85% 85%, 50% 55%, 15% 85%);
 
     /* colors body */
-    --body-back-hue-1: var(--root-back-hue-1);
-    --body-back-hue-2: var(--root-back-hue-2);
-    --body-back-hue-3: var(--root-back-hue-3);
+    --body-back-hue: var(--root-back-hue);
+    --body-back-sat: var(--root-back-sat);
+    --body-back-lit: var(--root-back-lit);
+    --body-back-alp: var(--root-back-alp);
 
-    --body-back-sat-1: var(--root-back-sat-1);
-    --body-back-sat-2: var(--root-back-sat-2);
-    --body-back-sat-3: var(--root-back-sat-3);
+    --body-mean-hue: var(--root-mean-hue);
+    --body-mean-sat: var(--root-mean-sat);
+    --body-mean-lit: var(--root-mean-lit);
+    --body-mean-alp: var(--root-mean-alp);
 
-    --body-back-lit-1: var(--root-back-lit-1);
-    --body-back-lit-2: var(--root-back-lit-2);
-    --body-back-lit-3: var(--root-back-lit-3);
+    --body-fore-hue: var(--root-fore-hue);
+    --body-fore-sat: var(--root-fore-sat);
+    --body-fore-lit: var(--root-fore-lit);
+    --body-fore-alp: var(--root-fore-alp);
 
-    --body-mean-hue-1: var(--root-mean-hue-1);
-    --body-mean-hue-2: var(--root-mean-hue-3);
-    --body-mean-hue-3: var(--root-mean-hue-3);
-
-    --body-mean-sat-1: var(--root-mean-sat-1);
-    --body-mean-sat-2: var(--root-mean-sat-2);
-    --body-mean-sat-3: var(--root-mean-sat-3);
-
-    --body-mean-lit-1: var(--root-mean-lit-1);
-    --body-mean-lit-2: var(--root-mean-lit-2);
-    --body-mean-lit-3: var(--root-mean-lit-3);
-
-    --body-fore-hue-1: var(--root-fore-hue-1);
-    --body-fore-hue-2: var(--root-fore-hue-2);
-    --body-fore-hue-3: var(--root-fore-hue-3);
-
-    --body-fore-sat-1: var(--root-fore-sat-1);
-    --body-fore-sat-2: var(--root-fore-sat-2);
-    --body-fore-sat-3: var(--root-fore-sat-3);
-
-    --body-fore-lit-1: var(--root-fore-lit-1);
-    --body-fore-lit-2: var(--root-fore-lit-2);
-    --body-fore-lit-3: var(--root-fore-lit-3);
+    --body-accent-hue: var(--root-accent-hue);
+    --body-accent-sat: var(--root-accent-sat);
+    --body-accent-lit: var(--root-accent-lit);
+    --body-accent-alp: var(--root-accent-alp);
     /* colors body */
 
     /* colors article */
-    --article-back-hue-1: var(--root-back-hue-2);
-    --article-back-hue-2: var(--root-back-hue-3);
-    --article-back-hue-3: var(--root-back-hue-4);
+    --article-back-hue: var(--root-back-hue);
+    --article-back-sat: var(--root-back-sat);
+    --article-back-lit: var(--root-mean-lit);
+    --article-back-alp: var(--root-back-alp);
 
-    --article-back-sat-1: var(--root-back-sat-2);
-    --article-back-sat-2: var(--root-back-sat-3);
-    --article-back-sat-3: var(--root-back-sat-4);
+    --article-mean-hue: var(--root-mean-hue);
+    --article-mean-sat: var(--root-mean-sat);
+    --article-mean-lit: var(--root-back-lit);
+    --article-mean-alp: var(--root-mean-alp);
 
-    --article-back-lit-1: var(--root-back-lit-2);
-    --article-back-lit-2: var(--root-back-lit-3);
-    --article-back-lit-3: var(--root-back-lit-4);
+    --article-fore-hue: var(--root-fore-hue);
+    --article-fore-sat: var(--root-fore-sat);
+    --article-fore-lit: var(--root-fore-lit);
+    --article-fore-alp: var(--root-fore-alp);
 
-    --article-mean-hue-1: var(--root-mean-hue-2);
-    --article-mean-hue-2: var(--root-mean-hue-3);
-    --article-mean-hue-3: var(--root-mean-hue-4);
-
-    --article-mean-sat-1: var(--root-mean-sat-2);
-    --article-mean-sat-2: var(--root-mean-sat-3);
-    --article-mean-sat-3: var(--root-mean-sat-4);
-
-    --article-mean-lit-1: var(--root-mean-lit-2);
-    --article-mean-lit-2: var(--root-mean-lit-3);
-    --article-mean-lit-3: var(--root-mean-lit-4);
-
-    --article-fore-hue-1: var(--root-fore-hue-2);
-    --article-fore-hue-2: var(--root-fore-hue-3);
-    --article-fore-hue-3: var(--root-fore-hue-4);
-
-    --article-fore-sat-1: var(--root-fore-sat-2);
-    --article-fore-sat-2: var(--root-fore-sat-3);
-    --article-fore-sat-3: var(--root-fore-sat-4);
-
-    --article-fore-lit-1: var(--root-fore-lit-2);
-    --article-fore-lit-2: var(--root-fore-lit-3);
-    --article-fore-lit-3: var(--root-fore-lit-4);
+    --article-accent-hue: var(--root-accent-hue);
+    --article-accent-sat: var(--root-accent-sat);
+    --article-accent-lit: var(--root-accent-lit);
+    --article-accent-alp: var(--root-accent-alp);
     /* colors article */
 
     font-size: var(--font-size);
     font-family: var(--font-family);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
     accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
 
     margin: 0;
@@ -417,35 +387,25 @@ template,
 }
 
 body {
-    --back-hue-1: var(--body-back-hue-1);
-    --back-hue-2: var(--body-back-hue-2);
-    --back-hue-3: var(--body-back-hue-3);
-    --back-sat-1: var(--body-back-sat-1);
-    --back-sat-2: var(--body-back-sat-2);
-    --back-sat-3: var(--body-back-sat-3);
-    --back-lit-1: var(--body-back-lit-1);
-    --back-lit-2: var(--body-back-lit-2);
-    --back-lit-3: var(--body-back-lit-3);
+    --back-hue: var(--body-back-hue);
+    --back-sat: var(--body-back-sat);
+    --back-lit: var(--body-back-lit);
+    --back-alp: var(--body-back-alp);
 
-    --mean-hue-1: var(--body-mean-hue-1);
-    --mean-hue-2: var(--body-mean-hue-2);
-    --mean-hue-3: var(--body-mean-hue-3);
-    --mean-sat-1: var(--body-mean-sat-1);
-    --mean-sat-2: var(--body-mean-sat-2);
-    --mean-sat-3: var(--body-mean-sat-3);
-    --mean-lit-1: var(--body-mean-lit-1);
-    --mean-lit-2: var(--body-mean-lit-2);
-    --mean-lit-3: var(--body-mean-lit-3);
+    --mean-hue: var(--body-mean-hue);
+    --mean-sat: var(--body-mean-sat);
+    --mean-lit: var(--body-mean-lit);
+    --mean-alp: var(--body-mean-alp);
 
-    --fore-hue-1: var(--body-fore-hue-1);
-    --fore-hue-2: var(--body-fore-hue-2);
-    --fore-hue-3: var(--body-fore-hue-3);
-    --fore-sat-1: var(--body-fore-sat-1);
-    --fore-sat-2: var(--body-fore-sat-2);
-    --fore-sat-3: var(--body-fore-sat-3);
-    --fore-lit-1: var(--body-fore-lit-1);
-    --fore-lit-2: var(--body-fore-lit-2);
-    --fore-lit-3: var(--body-fore-lit-3);
+    --fore-hue: var(--body-fore-hue);
+    --fore-sat: var(--body-fore-sat);
+    --fore-lit: var(--body-fore-lit);
+    --fore-alp: var(--body-fore-alp);
+
+    --accent-hue: var(--body-accent-hue);
+    --accent-sat: var(--body-accent-sat);
+    --accent-lit: var(--body-accent-lit);
+    --accent-alp: var(--body-accent-alp);
 
     display: flex;
     flex: 1 1 auto;
@@ -462,8 +422,8 @@ body {
 
     overflow: hidden;
 
-    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
-    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 }
 
 body>header {
@@ -537,9 +497,9 @@ ol>li::before {
     border-radius: 50%;
 
     font-size: 0.8rem;
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
 
-    background: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 ul>li::before {
@@ -565,14 +525,16 @@ fieldset {
     border-width: 2px;
     border-style: solid;
     border-radius: var(--border-radius);
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    /* border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1)); */
 }
 
 fieldset>legend {
     padding: 0;
 
     font-size: 1rem;
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    /* color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1)); */
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
 }
 
 label {
@@ -590,20 +552,25 @@ label {
 }
 
 label:has(input, select, textarea) {
-    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
-    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+    /* color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1)); */
+    /* background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1)); */
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 }
 
 label:has(input, select, textarea):hover,
 label:has(input, select, textarea):focus,
 label:has(input, select, textarea):focus-within {
-    color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2));
-    background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2));
+    /* color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2)); */
+    /* background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2)); */
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 }
 
 label:has(input, select, textarea)>:first-child {
     padding: 0.25rem;
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
+    /* color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1)); */
 }
 
 label:has(input[type=radio]:not([disabled], [readonly]), input[type=checkbox]:not([disabled], [readonly])) {
@@ -651,13 +618,16 @@ input:not([type=image],
     transition: var(--transition);
 
     border-radius: var(--border-radius);
-
-    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
-    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
-    accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-
     border-style: solid;
     border-width: 2px;
+
+    /* color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1)); */
+    /* background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1)); */
+    /* accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp)); */
+
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
     border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
 
 }
@@ -803,7 +773,8 @@ input[type=radio]:checked,
 input[type=checkbox]:checked {
     color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
     background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
+    /* border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1)); */
 }
 
 /*
@@ -822,8 +793,10 @@ input:hover:not([type=image],
     [hidden],
     [disabled],
     [readonly]) {
-    color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2));
-    background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2));
+    /* color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2)); */
+    /* background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2)); */
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 }
 
 select:hover,
@@ -867,8 +840,10 @@ input:focus-within:not([type=image],
     [hidden],
     [disabled],
     [readonly]) {
-    color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2));
-    background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2));
+    /* color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2)); */
+    /* background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2)); */
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 }
 
 select:focus-within,
@@ -950,13 +925,13 @@ input[type=submit] {
     align-items: center;
     justify-content: center;
 
+    transition: var(--transition);
+
     margin: var(--button-margin);
     padding: var(--button-padding);
 
-    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
-    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
-
-    transition: var(--transition);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 
     border-color: transparent;
     border-width: var(--button-border-width);
@@ -969,8 +944,8 @@ input[disabled][type=button],
 input[disabled][type=submit] {
     border-style: var(--button-border-style-disabled);
     border-width: var(--button-border-width-disabled);
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-lit-1));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-lit));
 }
 
 button:hover:not([disabled]),
@@ -1037,12 +1012,12 @@ details {
     border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
-    border-bottom-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
+    border-bottom-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 
 }
 
 details[open] {
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 details>summary {
@@ -1068,40 +1043,31 @@ details>summary>:first-child {
 }
 
 article {
-    --back-hue-1: var(--article-back-hue-2);
-    --back-hue-2: var(--article-back-hue-3);
-    --back-hue-3: var(--article-back-hue-4);
-    --back-sat-1: var(--article-back-sat-2);
-    --back-sat-2: var(--article-back-sat-3);
-    --back-sat-3: var(--article-back-sat-4);
-    --back-lit-1: var(--article-back-lit-2);
-    --back-lit-2: var(--article-back-lit-3);
-    --back-lit-3: var(--article-back-lit-4);
 
-    --mean-hue-1: var(--article-mean-hue-2);
-    --mean-hue-2: var(--article-mean-hue-3);
-    --mean-hue-3: var(--article-mean-hue-4);
-    --mean-sat-1: var(--article-mean-sat-2);
-    --mean-sat-2: var(--article-mean-sat-3);
-    --mean-sat-3: var(--article-mean-sat-4);
-    --mean-lit-1: var(--article-mean-lit-2);
-    --mean-lit-2: var(--article-mean-lit-3);
-    --mean-lit-3: var(--article-mean-lit-4);
+    --back-hue: var(--article-back-hue);
+    --back-sat: var(--article-back-sat);
+    --back-lit: var(--article-back-lit);
+    --back-alp: var(--article-back-alp);
 
-    --fore-hue-1: var(--article-fore-hue-2);
-    --fore-hue-2: var(--article-fore-hue-3);
-    --fore-hue-3: var(--article-fore-hue-4);
-    --fore-sat-1: var(--article-fore-sat-2);
-    --fore-sat-2: var(--article-fore-sat-3);
-    --fore-sat-3: var(--article-fore-sat-4);
-    --fore-lit-1: var(--article-fore-lit-2);
-    --fore-lit-2: var(--article-fore-lit-3);
-    --fore-lit-3: var(--article-fore-lit-4);
+    --mean-hue: var(--article-mean-hue);
+    --mean-sat: var(--article-mean-sat);
+    --mean-lit: var(--article-mean-lit);
+    --mean-alp: var(--article-mean-alp);
+
+    --fore-hue: var(--article-fore-hue);
+    --fore-sat: var(--article-fore-sat);
+    --fore-lit: var(--article-fore-lit);
+    --fore-alp: var(--article-fore-alp);
+
+    --accent-hue: var(--article-accent-hue);
+    --accent-sat: var(--article-accent-sat);
+    --accent-lit: var(--article-accent-lit);
+    --accent-alp: var(--article-accent-alp);
 
     border-radius: var(--article-border-radius);
 
-    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
-    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 
 }
 
@@ -1291,7 +1257,7 @@ hr {
     margin: 0.25rem;
 
     border-radius: var(--border-radius);
-    background: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 img {
@@ -1315,18 +1281,18 @@ figure {
 figcaption {
     margin: var(--margin);
     padding: var(--padding);
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
 }
 
 blockquote {
     border-right: none;
-    border-left: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
-    border-inline-start: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
+    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
     border-inline-end: none;
 }
 
 blockquote cite {
-    color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
 }
 
 del {
@@ -1380,11 +1346,11 @@ del {
     border-width: var(--border-width);
     border-style: var(--border-style);
     border-radius: var(--border-radius);
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 .border-bottom {
-    border-bottom: 2px solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-bottom: 2px solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 /*
@@ -1482,44 +1448,44 @@ del {
 
 .red,
 .red-children>* {
-    color: hsl(var(--red-hue), var(--red-sat), var(--red-lit));
-    background: hsl(var(--red-hue), var(--red-sat), var(--red-lit), var(--red-alp));
+    --fore-hue: var(--red-fore-hue);
+    --back-hue: var(--red-back-hue);
 }
 
 .orange,
 .orange-children>* {
-    color: hsl(var(--orange-hue), var(--orange-sat), var(--orange-lit));
-    background: hsl(var(--orange-hue), var(--orange-sat), var(--orange-lit), var(--orange-alp));
+    --fore-hue: var(--orange-fore-hue);
+    --back-hue: var(--orange-back-hue);
 }
 
 .yellow,
 .yellow-children>* {
-    color: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit));
-    background: hsl(var(--yellow-hue), var(--yellow-sat), var(--yellow-lit), var(--yellow-alp));
+    --fore-hue: var(--yellow-fore-hue);
+    --back-hue: var(--yellow-back-hue);
 }
 
 .green,
 .green-children>* {
-    color: hsl(var(--green-hue), var(--green-sat), var(--green-lit));
-    background: hsl(var(--green-hue), var(--green-sat), var(--green-lit), var(--green-alp));
+    --fore-hue: var(--green-fore-hue);
+    --back-hue: var(--green-back-hue);
 }
 
 .blue,
 .blue-children>* {
-    color: hsl(var(--blue-hue), var(--blue-sat), var(--blue-lit));
-    background: hsl(var(--blue-hue), var(--blue-sat), var(--blue-lit), var(--blue-alp));
+    --fore-hue: var(--blue-fore-hue);
+    --back-hue: var(--blue-back-hue);
 }
 
 .purple,
 .purple-children>* {
-    color: hsl(var(--purple-hue), var(--purple-sat), var(--purple-lit));
-    background: hsl(var(--purple-hue), var(--purple-sat), var(--purple-lit), var(--purple-alp));
+    --fore-hue: var(--purple-fore-hue);
+    --back-hue: var(--purple-back-hue);
 }
 
 .pink,
 .pink-children>* {
-    color: hsl(var(--pink-hue), var(--pink-sat), var(--pink-lit));
-    background: hsl(var(--pink-hue), var(--pink-sat), var(--pink-lit), var(--pink-alp));
+    --fore-hue: var(--pink-fore-hue);
+    --back-hue: var(--pink-back-hue);
 }
 
 .error,
@@ -1546,19 +1512,40 @@ del {
     background: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit), var(--warn-alp));
 }
 
-/* .red,
-.red-children>*,
+.red,
+.orange,
+.yellow,
+.green,
+.blue,
+.purple,
+.pink,
 .error,
-.error-children>*,
 .success,
-.success-children>*,
 .safe,
-.safe-children>*,
 .warn,
+.red-children>*,
+.orange-children>*,
+.yellow-children>*,
+.green-children>*,
+.blue-children>*,
+.purple-children>*,
+.pink-children>*,
+.error-children>*,
+.success-children>*,
+.safe-children>*,
 .warn-children>* {
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+
+    --fore-sat: var(--color-fore-sat);
+    --fore-lit: var(--color-fore-lit);
+    --fore-alp: var(--color-fore-alp);
+
+    --back-sat: var(--color-back-sat);
+    --back-lit: var(--color-back-lit);
+    --back-alp: var(--color-back-alp);
+
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
     background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-} */
+}
 
 /*
     browser

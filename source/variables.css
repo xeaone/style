@@ -111,68 +111,68 @@
     :root,
     ::backdrop {
 
-        /* back */
-        --root-back-hue-1: 200deg;
-        --root-back-hue-2: 200deg;
-        --root-back-hue-3: 200deg;
-        --root-back-hue-4: 200deg;
+        /* --root-hue: 200deg;
+        --root-sat: 0%;
+        --root-lit: 0%;
+        --root-alp: 0.5; */
 
-        --root-back-sat-1: 0%;
-        --root-back-sat-2: 0%;
-        --root-back-sat-3: 0%;
-        --root-back-sat-4: 0%;
+        --root-back-hue: 200deg;
+        --root-back-sat: 0%;
+        --root-back-lit: 0%;
+        --root-back-alp: 0.5;
 
-        --root-back-lit-1: 0%;
-        --root-back-lit-2: 10%;
-        --root-back-lit-3: 15%;
-        --root-back-lit-4: 20%;
+        --root-mean-hue: 200deg;
+        --root-mean-sat: 0%;
+        --root-mean-lit: 65%;
+        --root-mean-alp: 0.5;
 
-        --root-back-alp-1: 1;
-        --root-back-alp-2: 1;
-        --root-back-alp-3: 1;
-        --root-back-alp-4: 1;
+        --root-fore-hue: 200deg;
+        --root-fore-sat: 0%;
+        --root-fore-lit: 90%;
+        --root-fore-alp: 0.5;
 
-        /* mean */
-        --root-mean-hue-1: 200deg;
-        --root-mean-hue-2: 200deg;
-        --root-mean-hue-3: 200deg;
-        --root-mean-hue-4: 200deg;
+        --root-accent-hue: 200deg;
+        --root-accent-sat: 0%;
+        --root-accent-lit: 100%;
+        --root-accent-alp: 0.5;
 
-        --root-mean-sat-1: 0%;
-        --root-mean-sat-2: 0%;
-        --root-mean-sat-3: 0%;
-        --root-mean-sat-4: 0%;
+        --red-fore-hue: 0deg;
+        --red-back-hue: 0deg;
 
-        --root-mean-lit-1: 60%;
-        --root-mean-lit-2: 65%;
-        --root-mean-lit-3: 75%;
-        --root-mean-lit-4: 85%;
+        --orange-fore-hue: 30deg;
+        --orange-back-hue: 30deg;
 
-        --root-mean-alp-1: 1;
-        --root-mean-alp-2: 1;
-        --root-mean-alp-3: 1;
-        --root-mean-alp-4: 1;
+        --yellow-fore-hue: 50deg;
+        --yellow-back-hue: 50deg;
 
-        /* fore */
-        --root-fore-hue-1: 200deg;
-        --root-fore-hue-2: 200deg;
-        --root-fore-hue-3: 200deg;
-        --root-fore-hue-4: 200deg;
+        --green-fore-hue: 150deg;
+        --green-back-hue: 150deg;
 
-        --root-fore-sat-1: 0%;
-        --root-fore-sat-2: 0%;
-        --root-fore-sat-3: 0%;
-        --root-fore-sat-4: 0%;
+        --blue-fore-hue: 215deg;
+        --blue-back-hue: 215deg;
 
-        --root-fore-lit-1: 85%;
-        --root-fore-lit-2: 85%;
-        --root-fore-lit-3: 85%;
-        --root-fore-lit-4: 85%;
+        --purple-fore-hue: 270deg;
+        --purple-back-hue: 270deg;
 
-        --root-fore-alp-1: 1;
-        --root-fore-alp-2: 1;
-        --root-fore-alp-3: 1;
-        --root-fore-alp-4: 1;
+        --pink-fore-hue: 300deg;
+        --pink-back-hue: 300deg;
+
+        --color-fore-sat: 100%;
+        --color-fore-lit: 85%;
+        --color-fore-alp: 1;
+
+        --color-back-sat: 100%;
+        --color-back-lit: 15%;
+        --color-back-alp: 0.5;
+
+        /*
+        --root-fore-sat: 100%;
+        --root-fore-lit: 85%;
+        --root-fore-alp: 1;
+
+        --root-back-sat: 100%;
+        --root-back-lit: 15%;
+        --root-back-alp: 0.5; */
 
         /* accent */
         --accent-hue: 0deg;
@@ -200,20 +200,20 @@
         --green-lit: 80%;
         --green-alp: 0.2;
 
-        --blue-hue: 200deg;
+        --blue-hue: 215deg;
         --blue-sat: 100%;
         --blue-lit: 80%;
-        --blue-alp: 0.2;
+        --blue-alp: 0.5;
 
-        --purple-hue: 250deg;
+        --purple-hue: 270deg;
         --purple-sat: 100%;
         --purple-lit: 80%;
-        --purple-alp: 0.2;
+        --purple-alp: 0.5;
 
         --pink-hue: 300deg;
         --pink-sat: 100%;
         --pink-lit: 80%;
-        --pink-alp: 0.2;
+        --pink-alp: 0.5;
 
         color-scheme: dark;
     }
@@ -315,83 +315,53 @@
     --icon-up: polygon(0% 70%, 50% 25%, 100% 70%, 85% 85%, 50% 55%, 15% 85%);
 
     /* colors body */
-    --body-back-hue-1: var(--root-back-hue-1);
-    --body-back-hue-2: var(--root-back-hue-2);
-    --body-back-hue-3: var(--root-back-hue-3);
+    --body-back-hue: var(--root-back-hue);
+    --body-back-sat: var(--root-back-sat);
+    --body-back-lit: var(--root-back-lit);
+    --body-back-alp: var(--root-back-alp);
 
-    --body-back-sat-1: var(--root-back-sat-1);
-    --body-back-sat-2: var(--root-back-sat-2);
-    --body-back-sat-3: var(--root-back-sat-3);
+    --body-mean-hue: var(--root-mean-hue);
+    --body-mean-sat: var(--root-mean-sat);
+    --body-mean-lit: var(--root-mean-lit);
+    --body-mean-alp: var(--root-mean-alp);
 
-    --body-back-lit-1: var(--root-back-lit-1);
-    --body-back-lit-2: var(--root-back-lit-2);
-    --body-back-lit-3: var(--root-back-lit-3);
+    --body-fore-hue: var(--root-fore-hue);
+    --body-fore-sat: var(--root-fore-sat);
+    --body-fore-lit: var(--root-fore-lit);
+    --body-fore-alp: var(--root-fore-alp);
 
-    --body-mean-hue-1: var(--root-mean-hue-1);
-    --body-mean-hue-2: var(--root-mean-hue-3);
-    --body-mean-hue-3: var(--root-mean-hue-3);
-
-    --body-mean-sat-1: var(--root-mean-sat-1);
-    --body-mean-sat-2: var(--root-mean-sat-2);
-    --body-mean-sat-3: var(--root-mean-sat-3);
-
-    --body-mean-lit-1: var(--root-mean-lit-1);
-    --body-mean-lit-2: var(--root-mean-lit-2);
-    --body-mean-lit-3: var(--root-mean-lit-3);
-
-    --body-fore-hue-1: var(--root-fore-hue-1);
-    --body-fore-hue-2: var(--root-fore-hue-2);
-    --body-fore-hue-3: var(--root-fore-hue-3);
-
-    --body-fore-sat-1: var(--root-fore-sat-1);
-    --body-fore-sat-2: var(--root-fore-sat-2);
-    --body-fore-sat-3: var(--root-fore-sat-3);
-
-    --body-fore-lit-1: var(--root-fore-lit-1);
-    --body-fore-lit-2: var(--root-fore-lit-2);
-    --body-fore-lit-3: var(--root-fore-lit-3);
+    --body-accent-hue: var(--root-accent-hue);
+    --body-accent-sat: var(--root-accent-sat);
+    --body-accent-lit: var(--root-accent-lit);
+    --body-accent-alp: var(--root-accent-alp);
     /* colors body */
 
     /* colors article */
-    --article-back-hue-1: var(--root-back-hue-2);
-    --article-back-hue-2: var(--root-back-hue-3);
-    --article-back-hue-3: var(--root-back-hue-4);
+    --article-back-hue: var(--root-back-hue);
+    --article-back-sat: var(--root-back-sat);
+    --article-back-lit: var(--root-mean-lit);
+    --article-back-alp: var(--root-back-alp);
 
-    --article-back-sat-1: var(--root-back-sat-2);
-    --article-back-sat-2: var(--root-back-sat-3);
-    --article-back-sat-3: var(--root-back-sat-4);
+    --article-mean-hue: var(--root-mean-hue);
+    --article-mean-sat: var(--root-mean-sat);
+    --article-mean-lit: var(--root-back-lit);
+    --article-mean-alp: var(--root-mean-alp);
 
-    --article-back-lit-1: var(--root-back-lit-2);
-    --article-back-lit-2: var(--root-back-lit-3);
-    --article-back-lit-3: var(--root-back-lit-4);
+    --article-fore-hue: var(--root-fore-hue);
+    --article-fore-sat: var(--root-fore-sat);
+    --article-fore-lit: var(--root-fore-lit);
+    --article-fore-alp: var(--root-fore-alp);
 
-    --article-mean-hue-1: var(--root-mean-hue-2);
-    --article-mean-hue-2: var(--root-mean-hue-3);
-    --article-mean-hue-3: var(--root-mean-hue-4);
-
-    --article-mean-sat-1: var(--root-mean-sat-2);
-    --article-mean-sat-2: var(--root-mean-sat-3);
-    --article-mean-sat-3: var(--root-mean-sat-4);
-
-    --article-mean-lit-1: var(--root-mean-lit-2);
-    --article-mean-lit-2: var(--root-mean-lit-3);
-    --article-mean-lit-3: var(--root-mean-lit-4);
-
-    --article-fore-hue-1: var(--root-fore-hue-2);
-    --article-fore-hue-2: var(--root-fore-hue-3);
-    --article-fore-hue-3: var(--root-fore-hue-4);
-
-    --article-fore-sat-1: var(--root-fore-sat-2);
-    --article-fore-sat-2: var(--root-fore-sat-3);
-    --article-fore-sat-3: var(--root-fore-sat-4);
-
-    --article-fore-lit-1: var(--root-fore-lit-2);
-    --article-fore-lit-2: var(--root-fore-lit-3);
-    --article-fore-lit-3: var(--root-fore-lit-4);
+    --article-accent-hue: var(--root-accent-hue);
+    --article-accent-sat: var(--root-accent-sat);
+    --article-accent-lit: var(--root-accent-lit);
+    --article-accent-alp: var(--root-accent-alp);
     /* colors article */
 
     font-size: var(--font-size);
     font-family: var(--font-family);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
     accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
 
     margin: 0;

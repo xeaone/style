@@ -1,33 +1,23 @@
 body {
-    --back-hue-1: var(--body-back-hue-1);
-    --back-hue-2: var(--body-back-hue-2);
-    --back-hue-3: var(--body-back-hue-3);
-    --back-sat-1: var(--body-back-sat-1);
-    --back-sat-2: var(--body-back-sat-2);
-    --back-sat-3: var(--body-back-sat-3);
-    --back-lit-1: var(--body-back-lit-1);
-    --back-lit-2: var(--body-back-lit-2);
-    --back-lit-3: var(--body-back-lit-3);
+    --back-hue: var(--body-back-hue);
+    --back-sat: var(--body-back-sat);
+    --back-lit: var(--body-back-lit);
+    --back-alp: var(--body-back-alp);
 
-    --mean-hue-1: var(--body-mean-hue-1);
-    --mean-hue-2: var(--body-mean-hue-2);
-    --mean-hue-3: var(--body-mean-hue-3);
-    --mean-sat-1: var(--body-mean-sat-1);
-    --mean-sat-2: var(--body-mean-sat-2);
-    --mean-sat-3: var(--body-mean-sat-3);
-    --mean-lit-1: var(--body-mean-lit-1);
-    --mean-lit-2: var(--body-mean-lit-2);
-    --mean-lit-3: var(--body-mean-lit-3);
+    --mean-hue: var(--body-mean-hue);
+    --mean-sat: var(--body-mean-sat);
+    --mean-lit: var(--body-mean-lit);
+    --mean-alp: var(--body-mean-alp);
 
-    --fore-hue-1: var(--body-fore-hue-1);
-    --fore-hue-2: var(--body-fore-hue-2);
-    --fore-hue-3: var(--body-fore-hue-3);
-    --fore-sat-1: var(--body-fore-sat-1);
-    --fore-sat-2: var(--body-fore-sat-2);
-    --fore-sat-3: var(--body-fore-sat-3);
-    --fore-lit-1: var(--body-fore-lit-1);
-    --fore-lit-2: var(--body-fore-lit-2);
-    --fore-lit-3: var(--body-fore-lit-3);
+    --fore-hue: var(--body-fore-hue);
+    --fore-sat: var(--body-fore-sat);
+    --fore-lit: var(--body-fore-lit);
+    --fore-alp: var(--body-fore-alp);
+
+    --accent-hue: var(--body-accent-hue);
+    --accent-sat: var(--body-accent-sat);
+    --accent-lit: var(--body-accent-lit);
+    --accent-alp: var(--body-accent-alp);
 
     display: flex;
     flex: 1 1 auto;
@@ -44,8 +34,8 @@ body {
 
     overflow: hidden;
 
-    color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1));
-    background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
 }
 
 body>header {
