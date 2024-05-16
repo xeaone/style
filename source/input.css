@@ -13,7 +13,7 @@ fieldset {
     border-width: 2px;
     border-style: solid;
     border-radius: var(--border-radius);
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
 }
 
 fieldset>legend {

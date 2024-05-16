@@ -34,7 +34,7 @@ input[disabled][type=submit] {
     border-style: var(--button-border-style-disabled);
     border-width: var(--button-border-width-disabled);
     color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1));
-    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-lit-1));
 }
 
 button:hover:not([disabled]),

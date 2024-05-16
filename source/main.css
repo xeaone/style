@@ -28,8 +28,6 @@ article>footer {
     padding: var(--padding);
 }
 
-
-
 /*
 form>*,
 section>*,
@@ -53,7 +51,7 @@ hr {
     margin: 0.25rem;
 
     border-radius: var(--border-radius);
-    background: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    background: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
 }
 
 
@@ -83,8 +81,8 @@ figcaption {
 
 blockquote {
     border-right: none;
-    border-left: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
-    border-inline-start: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp));
+    border-left: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
+    border-inline-start: 0.25rem solid hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1));
     border-inline-end: none;
 }
 
@@ -291,12 +289,6 @@ del {
     background: hsl(var(--error-hue), var(--error-sat), var(--error-lit), var(--error-alp));
 }
 
-.warn,
-.warn-children>* {
-    color: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit));
-    background: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit), var(--warn-alp));
-}
-
 .success,
 .success-children>* {
     color: hsl(var(--success-hue), var(--success-sat), var(--success-lit));
@@ -309,12 +301,25 @@ del {
     background: hsl(var(--safe-hue), var(--safe-sat), var(--safe-lit), var(--safe-alp));
 }
 
-
 .warn,
 .warn-children>* {
     color: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit));
     background: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit), var(--warn-alp));
 }
+
+/* .red,
+.red-children>*,
+.error,
+.error-children>*,
+.success,
+.success-children>*,
+.safe,
+.safe-children>*,
+.warn,
+.warn-children>* {
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+} */
 
 /*
     browser
