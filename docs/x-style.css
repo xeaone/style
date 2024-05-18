@@ -111,109 +111,161 @@
     :root,
     ::backdrop {
 
-        /* --root-hue: 200deg;
-        --root-sat: 0%;
-        --root-lit: 0%;
-        --root-alp: 0.5; */
+        --hue: 0deg;
+        --sat: 0%;
+        --alp: 1;
 
-        --root-back-hue: 200deg;
-        --root-back-sat: 0%;
-        --root-back-lit: 0%;
-        --root-back-alp: 0.5;
+        --lit-000: 5%;
+        --lit-001: 65%;
+        --lit-002: 85%;
+        --lit-010: 90%;
+        --lit-011: 10%;
 
-        --root-mean-hue: 200deg;
-        --root-mean-sat: 0%;
-        --root-mean-lit: 65%;
-        --root-mean-alp: 0.5;
+        --lit-100: 10%;
+        --lit-101: 75%;
+        --lit-102: 95%;
+        --lit-110: 80%;
+        --lit-111: 20%;
 
-        --root-fore-hue: 200deg;
-        --root-fore-sat: 0%;
-        --root-fore-lit: 90%;
-        --root-fore-alp: 0.5;
+        /* layer 0 */
+        /* --back-hue-0: var(--hue);
+        --back-sat-0: var(--sat);
+        --back-lit-0: 5%;
+        --back-alp-0: var(--alp);
 
-        --root-accent-hue: 200deg;
-        --root-accent-sat: 0%;
-        --root-accent-lit: 100%;
-        --root-accent-alp: 0.5;
+        --mean-hue-0: var(--hue);
+        --mean-sat-0: var(--sat);
+        --mean-lit-0: 65%;
+        --mean-alp-0: var(--alp);
 
-        --red-fore-hue: 0deg;
+        --fore-hue-0: var(--hue);
+        --fore-sat-0: var(--sat);
+        --fore-lit-0: 95%;
+        --fore-alp-0: var(--alp);
+
+        --accent-back-hue-0: var(--hue);
+        --accent-back-sat-0: var(--sat);
+        --accent-back-lit-0: 90%;
+        --accent-back-alp-0: 0.8;
+
+        --accent-fore-hue-0: var(--hue);
+        --accent-fore-sat-0: var(--sat);
+        --accent-fore-lit-0: 10%;
+        --accent-fore-alp-0: var(--alp); */
+        /* layer 0 */
+
+        /* layer 1 */
+        /* --back-hue-1: var(--hue);
+        --back-sat-1: var(--sat);
+        --back-lit-1: 10%;
+        --back-alp-1: var(--alp);
+
+        --mean-hue-1: var(--hue);
+        --mean-sat-1: var(--sat);
+        --mean-lit-1: 75%;
+        --mean-alp-1: var(--alp);
+
+        --fore-hue-1: var(--hue);
+        --fore-sat-1: var(--sat);
+        --fore-lit-1: 85%;
+        --fore-alp-1: var(--alp);
+
+        --accent-back-hue-1: var(--hue);
+        --accent-back-sat-1: var(--sat);
+        --accent-back-lit-1: 100%;
+        --accent-back-alp-1: 0.8;
+
+        --accent-fore-hue-1: var(--hue);
+        --accent-fore-sat-1: var(--sat);
+        --accent-fore-lit-1: 0%;
+        --accent-fore-alp-1: var(--alp); */
+        /* layer 1 */
+
+        --color-back-sat: var(--sat);
+        --color-back-lit: 20%;
+        --color-back-alp: 0.8;
+
+        --color-fore-sat: var(--sat);
+        --color-fore-lit: 80%;
+        --color-fore-alp: var(--alp);
+
+        /* red */
         --red-back-hue: 0deg;
+        --red-back-sat: var(--color-back-sat);
+        --red-back-lit: var(--color-back-lit);
+        --red-back-alp: var(--color-back-alp);
+        --red-fore-hue: 0deg;
+        --red-fore-sat: var(--color-fore-sat);
+        --red-fore-lit: var(--color-fore-lit);
+        --red-fore-alp: var(--color-fore-alp);
+        /* red */
 
-        --orange-fore-hue: 30deg;
+        /* orange */
         --orange-back-hue: 30deg;
+        --orange-back-sat: var(--color-back-sat);
+        --orange-back-lit: var(--color-back-lit);
+        --orange-back-alp: var(--color-back-alp);
+        --orange-fore-hue: 30deg;
+        --orange-fore-sat: var(--color-fore-sat);
+        --orange-fore-lit: var(--color-fore-lit);
+        --orange-fore-alp: var(--color-fore-alp);
+        /* orange */
 
-        --yellow-fore-hue: 50deg;
+        /* yellow */
         --yellow-back-hue: 50deg;
+        --yellow-back-sat: var(--color-back-sat);
+        --yellow-back-lit: var(--color-back-lit);
+        --yellow-back-alp: var(--color-back-alp);
+        --yellow-fore-hue: 50deg;
+        --yellow-fore-sat: var(--color-fore-sat);
+        --yellow-fore-lit: var(--color-fore-lit);
+        --yellow-fore-alp: var(--color-fore-alp);
 
-        --green-fore-hue: 150deg;
+        /* yellow */
+
+        /* green */
         --green-back-hue: 150deg;
+        --green-back-sat: var(--color-back-sat);
+        --green-back-lit: var(--color-back-lit);
+        --green-back-alp: var(--color-back-alp);
+        --green-fore-hue: 150deg;
+        --green-fore-sat: var(--color-fore-sat);
+        --green-fore-lit: var(--color-fore-lit);
+        --green-fore-alp: var(--color-fore-alp);
+        /* green */
 
-        --blue-fore-hue: 215deg;
+        /* blue */
         --blue-back-hue: 215deg;
+        --blue-back-sat: var(--color-back-sat);
+        --blue-back-lit: var(--color-back-lit);
+        --blue-back-alp: var(--color-back-alp);
+        --blue-fore-hue: 215deg;
+        --blue-fore-sat: var(--color-fore-sat);
+        --blue-fore-lit: var(--color-fore-lit);
+        --blue-fore-alp: var(--color-fore-alp);
+        /* blue */
 
-        --purple-fore-hue: 270deg;
+        /* purple */
         --purple-back-hue: 270deg;
+        --purple-back-sat: var(--color-back-sat);
+        --purple-back-lit: var(--color-back-lit);
+        --purple-back-alp: var(--color-back-alp);
+        --purple-fore-hue: 270deg;
+        --purple-fore-sat: var(--color-fore-sat);
+        --purple-fore-lit: var(--color-fore-lit);
+        --purple-fore-alp: var(--color-fore-alp);
+        /* purple */
 
-        --pink-fore-hue: 300deg;
+        /* pink */
         --pink-back-hue: 300deg;
-
-        --color-fore-sat: 100%;
-        --color-fore-lit: 85%;
-        --color-fore-alp: 1;
-
-        --color-back-sat: 100%;
-        --color-back-lit: 15%;
-        --color-back-alp: 0.5;
-
-        /*
-        --root-fore-sat: 100%;
-        --root-fore-lit: 85%;
-        --root-fore-alp: 1;
-
-        --root-back-sat: 100%;
-        --root-back-lit: 15%;
-        --root-back-alp: 0.5; */
-
-        /* accent */
-        --accent-hue: 0deg;
-        --accent-sat: 0%;
-        --accent-lit: 90%;
-        --accent-alp: 0.2;
-
-        --red-hue: 0deg;
-        --red-sat: 100%;
-        --red-lit: 80%;
-        --red-alp: 0.2;
-
-        --orange-hue: 30deg;
-        --orange-sat: 100%;
-        --orange-lit: 80%;
-        --orange-alp: 0.2;
-
-        --yellow-hue: 50deg;
-        --yellow-sat: 100%;
-        --yellow-lit: 80%;
-        --yellow-alp: 0.2;
-
-        --green-hue: 150deg;
-        --green-sat: 100%;
-        --green-lit: 80%;
-        --green-alp: 0.2;
-
-        --blue-hue: 215deg;
-        --blue-sat: 100%;
-        --blue-lit: 80%;
-        --blue-alp: 0.5;
-
-        --purple-hue: 270deg;
-        --purple-sat: 100%;
-        --purple-lit: 80%;
-        --purple-alp: 0.5;
-
-        --pink-hue: 300deg;
-        --pink-sat: 100%;
-        --pink-lit: 80%;
-        --pink-alp: 0.5;
+        --pink-back-sat: var(--color-back-sat);
+        --pink-back-lit: var(--color-back-lit);
+        --pink-back-alp: var(--color-back-alp);
+        --pink-fore-hue: 300deg;
+        --pink-fore-sat: var(--color-fore-sat);
+        --pink-fore-lit: var(--color-fore-lit);
+        --pink-fore-alp: var(--color-fore-alp);
+        /* pink */
 
         color-scheme: dark;
     }
@@ -222,25 +274,41 @@
 :root,
 ::backdrop {
 
-    --error-hue: var(--red-hue);
-    --error-sat: var(--red-sat);
-    --error-lit: var(--red-lit);
-    --error-alp: var(--red-alp);
+    --error-back-hue: var(--red-back-hue);
+    --error-back-sat: var(--red-back-sat);
+    --error-back-lit: var(--red-back-lit);
+    --error-back-alp: var(--red-back-alp);
+    --error-fore-hue: var(--red-fore-hue);
+    --error-fore-sat: var(--red-fore-sat);
+    --error-fore-lit: var(--red-fore-lit);
+    --error-fore-alp: var(--red-fore-alp);
 
-    --success-hue: var(--green-hue);
-    --success-sat: var(--green-sat);
-    --success-lit: var(--green-lit);
-    --success-alp: var(--green-alp);
+    --warn-back-hue: var(--yellow-back-hue);
+    --warn-back-sat: var(--yellow-back-sat);
+    --warn-back-lit: var(--yellow-back-lit);
+    --warn-back-alp: var(--yellow-back-alp);
+    --warn-fore-hue: var(--yellow-fore-hue);
+    --warn-fore-sat: var(--yellow-fore-sat);
+    --warn-fore-lit: var(--yellow-fore-lit);
+    --warn-fore-alp: var(--yellow-fore-alp);
 
-    --safe-hue: var(--blue-hue);
-    --safe-sat: var(--blue-sat);
-    --safe-lit: var(--blue-lit);
-    --safe-alp: var(--blue-alp);
+    --success-back-hue: var(--green-back-hue);
+    --success-back-sat: var(--green-back-sat);
+    --success-back-lit: var(--green-back-lit);
+    --success-back-alp: var(--green-back-alp);
+    --success-fore-hue: var(--green-fore-hue);
+    --success-fore-sat: var(--green-fore-sat);
+    --success-fore-lit: var(--green-fore-lit);
+    --success-fore-alp: var(--green-fore-alp);
 
-    --warn-hue: var(--yellow-hue);
-    --warn-sat: var(--yellow-sat);
-    --warn-lit: var(--yellow-lit);
-    --warn-alp: var(--yellow-alp);
+    --safe-back-hue: var(--blue-back-hue);
+    --safe-back-sat: var(--blue-back-sat);
+    --safe-back-lit: var(--blue-back-lit);
+    --safe-back-alp: var(--blue-back-alp);
+    --safe-fore-hue: var(--blue-fore-hue);
+    --safe-fore-sat: var(--blue-fore-sat);
+    --safe-fore-lit: var(--blue-fore-lit);
+    --safe-fore-alp: var(--blue-fore-alp);
 
     --transition:
         linear color 150ms,
@@ -263,10 +331,9 @@
     --padding: 0.25rem;
 
     /* border */
-    --border-width: 2px;
+    --border-width: 3px;
+    --border-radius: 3px;
     --border-style: solid;
-    --border-radius: 0.25rem;
-
     --border-width-disabled: 2px;
     --border-style-disabled: dotted;
     /* border */
@@ -274,15 +341,18 @@
     --main-margin: 0;
     --main-padding: 2vh 15vw;
 
+    /* input */
+    --input-border-width: var(--border-width);
+    --input-border-radius: var(--border-radius);
+    /* input */
+
     /* button */
     --button-margin: 0.15rem;
     --button-padding: 0.5rem;
     --button-border-radius: 1rem;
     --button-border-width: var(--border-width);
     --button-border-style: var(--border-style);
-
     --button-border-radius-active: 1rem;
-
     --button-border-style-disabled: var(--border-style-disabled);
     --button-border-width-disabled: var(--border-width-disabled);
     /* button */
@@ -301,9 +371,10 @@
     /* details*/
 
     /* progress */
-    --progress-accent: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    --progress-background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    --progress-margin: var(--margin);
     --progress-border-radius: var(--border-radius);
+    --progress-fore: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+    --progress-back: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
     /* progress */
 
     --label-border-radius: var(--border-radius);
@@ -313,50 +384,6 @@
 
     --icon-down: polygon(12% 25%, 50% 55%, 88% 25%, 100% 40%, 50% 80%, 0% 40%);
     --icon-up: polygon(0% 70%, 50% 25%, 100% 70%, 85% 85%, 50% 55%, 15% 85%);
-
-    /* colors body */
-    --body-back-hue: var(--root-back-hue);
-    --body-back-sat: var(--root-back-sat);
-    --body-back-lit: var(--root-back-lit);
-    --body-back-alp: var(--root-back-alp);
-
-    --body-mean-hue: var(--root-mean-hue);
-    --body-mean-sat: var(--root-mean-sat);
-    --body-mean-lit: var(--root-mean-lit);
-    --body-mean-alp: var(--root-mean-alp);
-
-    --body-fore-hue: var(--root-fore-hue);
-    --body-fore-sat: var(--root-fore-sat);
-    --body-fore-lit: var(--root-fore-lit);
-    --body-fore-alp: var(--root-fore-alp);
-
-    --body-accent-hue: var(--root-accent-hue);
-    --body-accent-sat: var(--root-accent-sat);
-    --body-accent-lit: var(--root-accent-lit);
-    --body-accent-alp: var(--root-accent-alp);
-    /* colors body */
-
-    /* colors article */
-    --article-back-hue: var(--root-back-hue);
-    --article-back-sat: var(--root-back-sat);
-    --article-back-lit: var(--root-mean-lit);
-    --article-back-alp: var(--root-back-alp);
-
-    --article-mean-hue: var(--root-mean-hue);
-    --article-mean-sat: var(--root-mean-sat);
-    --article-mean-lit: var(--root-back-lit);
-    --article-mean-alp: var(--root-mean-alp);
-
-    --article-fore-hue: var(--root-fore-hue);
-    --article-fore-sat: var(--root-fore-sat);
-    --article-fore-lit: var(--root-fore-lit);
-    --article-fore-alp: var(--root-fore-alp);
-
-    --article-accent-hue: var(--root-accent-hue);
-    --article-accent-sat: var(--root-accent-sat);
-    --article-accent-lit: var(--root-accent-lit);
-    --article-accent-alp: var(--root-accent-alp);
-    /* colors article */
 
     font-size: var(--font-size);
     font-family: var(--font-family);
@@ -386,26 +413,305 @@ template,
     vertical-align: middle;
 }
 
+/*
+    accent
+*/
+
+.accent-red,
+.accent-red-children>* {
+    --accent-back-hue: var(--red-back-hue);
+    --accent-back-sat: var(--red-back-sat);
+    --accent-back-lit: var(--red-back-lit);
+    --accent-back-alp: var(--red-back-alp);
+    --accent-fore-hue: var(--red-fore-hue);
+    --accent-fore-sat: var(--red-fore-sat);
+    --accent-fore-lit: var(--red-fore-lit);
+    --accent-fore-alp: var(--red-fore-alp);
+}
+
+.accent-orange {
+    --accent-back-hue: var(--orange-back-hue);
+    --accent-back-sat: var(--orange-back-sat);
+    --accent-back-lit: var(--orange-back-lit);
+    --accent-back-alp: var(--orange-back-alp);
+    --accent-fore-hue: var(--orange-fore-hue);
+    --accent-fore-sat: var(--orange-fore-sat);
+    --accent-fore-lit: var(--orange-fore-lit);
+    --accent-fore-alp: var(--orange-fore-alp);
+}
+
+.accent-yellow {
+    --accent-back-hue: var(--yellow-back-hue);
+    --accent-back-sat: var(--yellow-back-sat);
+    --accent-back-lit: var(--yellow-back-lit);
+    --accent-back-alp: var(--yellow-back-alp);
+    --accent-fore-hue: var(--yellow-fore-hue);
+    --accent-fore-sat: var(--yellow-fore-sat);
+    --accent-fore-lit: var(--yellow-fore-lit);
+    --accent-fore-alp: var(--yellow-fore-alp);
+}
+
+.accent-green {
+    --accent-back-hue: var(--green-back-hue);
+    --accent-back-sat: var(--green-back-sat);
+    --accent-back-lit: var(--green-back-lit);
+    --accent-back-alp: var(--green-back-alp);
+    --accent-fore-hue: var(--green-fore-hue);
+    --accent-fore-sat: var(--green-fore-sat);
+    --accent-fore-lit: var(--green-fore-lit);
+    --accent-fore-alp: var(--green-fore-alp);
+}
+
+.accent-blue {
+    --accent-back-hue: var(--blue-back-hue);
+    --accent-back-sat: var(--blue-back-sat);
+    --accent-back-lit: var(--blue-back-lit);
+    --accent-back-alp: var(--blue-back-alp);
+    --accent-fore-hue: var(--blue-fore-hue);
+    --accent-fore-sat: var(--blue-fore-sat);
+    --accent-fore-lit: var(--blue-fore-lit);
+    --accent-fore-alp: var(--blue-fore-alp);
+}
+
+.accent-purple {
+    --accent-back-hue: var(--purple-back-hue);
+    --accent-back-sat: var(--purple-back-sat);
+    --accent-back-lit: var(--purple-back-lit);
+    --accent-back-alp: var(--purple-back-alp);
+    --accent-fore-hue: var(--purple-fore-hue);
+    --accent-fore-sat: var(--purple-fore-sat);
+    --accent-fore-lit: var(--purple-fore-lit);
+    --accent-fore-alp: var(--purple-fore-alp);
+}
+
+.accent-pink {
+    --accent-back-hue: var(--pink-back-hue);
+    --accent-back-sat: var(--pink-back-sat);
+    --accent-back-lit: var(--pink-back-lit);
+    --accent-back-alp: var(--pink-back-alp);
+    --accent-fore-hue: var(--pink-fore-hue);
+    --accent-fore-sat: var(--pink-fore-sat);
+    --accent-fore-lit: var(--pink-fore-lit);
+    --accent-fore-alp: var(--pink-fore-alp);
+}
+
+.accent-warn {
+    --accent-back-hue: var(--warn-back-hue);
+    --accent-back-sat: var(--warn-back-sat);
+    --accent-back-lit: var(--warn-back-lit);
+    --accent-back-alp: var(--warn-back-alp);
+    --accent-fore-hue: var(--warn-fore-hue);
+    --accent-fore-sat: var(--warn-fore-sat);
+    --accent-fore-lit: var(--warn-fore-lit);
+    --accent-fore-alp: var(--warn-fore-alp);
+}
+
+.accent-error {
+    --accent-back-hue: var(--error-back-hue);
+    --accent-back-sat: var(--error-back-sat);
+    --accent-back-lit: var(--error-back-lit);
+    --accent-back-alp: var(--error-back-alp);
+    --accent-fore-hue: var(--error-fore-hue);
+    --accent-fore-sat: var(--error-fore-sat);
+    --accent-fore-lit: var(--error-fore-lit);
+    --accent-fore-alp: var(--error-fore-alp);
+}
+
+.accent-success {
+    --accent-back-hue: var(--success-back-hue);
+    --accent-back-sat: var(--success-back-sat);
+    --accent-back-lit: var(--success-back-lit);
+    --accent-back-alp: var(--success-back-alp);
+    --accent-fore-hue: var(--success-fore-hue);
+    --accent-fore-sat: var(--success-fore-sat);
+    --accent-fore-lit: var(--success-fore-lit);
+    --accent-fore-alp: var(--success-fore-alp);
+}
+
+/*
+    fill
+*/
+
+.red,
+.red-children>* {
+    --fore-hue: var(--red-fore-hue);
+    --fore-sat: var(--red-fore-sat);
+    --fore-lit: var(--red-fore-lit);
+    --fore-alp: var(--red-fore-alp);
+    --back-hue: var(--red-back-hue);
+    --back-sat: var(--red-back-sat);
+    --back-lit: var(--red-back-lit);
+    --back-alp: var(--red-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.orange,
+.orange-children>* {
+    --fore-hue: var(--orange-fore-hue);
+    --fore-sat: var(--orange-fore-sat);
+    --fore-lit: var(--orange-fore-lit);
+    --fore-alp: var(--orange-fore-alp);
+    --back-hue: var(--orange-back-hue);
+    --back-sat: var(--orange-back-sat);
+    --back-lit: var(--orange-back-lit);
+    --back-alp: var(--orange-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.yellow,
+.yellow-children>* {
+    --fore-hue: var(--yellow-fore-hue);
+    --fore-sat: var(--yellow-fore-sat);
+    --fore-lit: var(--yellow-fore-lit);
+    --fore-alp: var(--yellow-fore-alp);
+    --back-hue: var(--yellow-back-hue);
+    --back-sat: var(--yellow-back-sat);
+    --back-lit: var(--yellow-back-lit);
+    --back-alp: var(--yellow-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.green,
+.green-children>* {
+    --fore-hue: var(--green-fore-hue);
+    --fore-sat: var(--green-fore-sat);
+    --fore-lit: var(--green-fore-lit);
+    --fore-alp: var(--green-fore-alp);
+    --back-hue: var(--green-back-hue);
+    --back-sat: var(--green-back-sat);
+    --back-lit: var(--green-back-lit);
+    --back-alp: var(--green-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.blue,
+.blue-children>* {
+    --fore-hue: var(--blue-fore-hue);
+    --fore-sat: var(--blue-fore-sat);
+    --fore-lit: var(--blue-fore-lit);
+    --fore-alp: var(--blue-fore-alp);
+    --back-hue: var(--blue-back-hue);
+    --back-sat: var(--blue-back-sat);
+    --back-lit: var(--blue-back-lit);
+    --back-alp: var(--blue-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.purple,
+.purple-children>* {
+    --fore-hue: var(--purple-fore-hue);
+    --fore-sat: var(--purple-fore-sat);
+    --fore-lit: var(--purple-fore-lit);
+    --fore-alp: var(--purple-fore-alp);
+    --back-hue: var(--purple-back-hue);
+    --back-sat: var(--purple-back-sat);
+    --back-lit: var(--purple-back-lit);
+    --back-alp: var(--purple-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.pink,
+.pink-children>* {
+    --fore-hue: var(--pink-fore-hue);
+    --fore-sat: var(--pink-fore-sat);
+    --fore-lit: var(--pink-fore-lit);
+    --fore-alp: var(--pink-fore-alp);
+    --back-hue: var(--pink-back-hue);
+    --back-sat: var(--pink-back-sat);
+    --back-lit: var(--pink-back-lit);
+    --back-alp: var(--pink-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.error,
+.error-children>* {
+    --fore-hue: var(--error-fore-hue);
+    --fore-sat: var(--error-fore-sat);
+    --fore-lit: var(--error-fore-lit);
+    --fore-alp: var(--error-fore-alp);
+    --back-hue: var(--error-back-hue);
+    --back-sat: var(--error-back-sat);
+    --back-lit: var(--error-back-lit);
+    --back-alp: var(--error-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.warn,
+.warn-children>* {
+    --fore-hue: var(--warn-fore-hue);
+    --fore-sat: var(--warn-fore-sat);
+    --fore-lit: var(--warn-fore-lit);
+    --fore-alp: var(--warn-fore-alp);
+    --back-hue: var(--warn-back-hue);
+    --back-sat: var(--warn-back-sat);
+    --back-lit: var(--warn-back-lit);
+    --back-alp: var(--warn-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.success,
+.success-children>* {
+    --fore-hue: var(--success-fore-hue);
+    --fore-sat: var(--success-fore-sat);
+    --fore-lit: var(--success-fore-lit);
+    --fore-alp: var(--success-fore-alp);
+    --back-hue: var(--success-back-hue);
+    --back-sat: var(--success-back-sat);
+    --back-lit: var(--success-back-lit);
+    --back-alp: var(--success-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.safe,
+.safe-children>* {
+    --fore-hue: var(--safe-fore-hue);
+    --fore-sat: var(--safe-fore-sat);
+    --fore-lit: var(--safe-fore-lit);
+    --fore-alp: var(--safe-fore-alp);
+    --back-hue: var(--safe-back-hue);
+    --back-sat: var(--safe-back-sat);
+    --back-lit: var(--safe-back-lit);
+    --back-alp: var(--safe-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
 body {
-    --back-hue: var(--body-back-hue);
-    --back-sat: var(--body-back-sat);
-    --back-lit: var(--body-back-lit);
-    --back-alp: var(--body-back-alp);
 
-    --mean-hue: var(--body-mean-hue);
-    --mean-sat: var(--body-mean-sat);
-    --mean-lit: var(--body-mean-lit);
-    --mean-alp: var(--body-mean-alp);
+    --back-hue: var(--hue);
+    --back-lit: var(--lit-000);
+    --back-sat: var(--sat);
+    --back-alp: var(--alp);
 
-    --fore-hue: var(--body-fore-hue);
-    --fore-sat: var(--body-fore-sat);
-    --fore-lit: var(--body-fore-lit);
-    --fore-alp: var(--body-fore-alp);
+    --mean-hue: var(--hue);
+    --mean-sat: var(--sat);
+    --mean-lit: var(--lit-001);
+    --mean-alp: var(--alp);
 
-    --accent-hue: var(--body-accent-hue);
-    --accent-sat: var(--body-accent-sat);
-    --accent-lit: var(--body-accent-lit);
-    --accent-alp: var(--body-accent-alp);
+    --fore-hue: var(--hue);
+    --fore-lit: var(--lit-002);
+    --fore-sat: var(--sat);
+    --fore-alp: var(--alp);
+
+    --accent-back-hue: var(--hue);
+    --accent-back-sat: var(--sat);
+    --accent-back-lit: var(--lit-010);
+    --accent-back-alp: var(--alp);
+
+    --accent-fore-hue: var(--hue);
+    --accent-fore-sat: var(--sat);
+    --accent-fore-lit: var(--lit-011);
+    --accent-fore-alp: var(--alp);
 
     display: flex;
     flex: 1 1 auto;
@@ -522,19 +828,17 @@ fieldset {
     max-width: 100%;
     min-width: auto;
 
-    border-width: 2px;
     border-style: solid;
     border-radius: var(--border-radius);
+    border-width: var(--input-border-width);
     border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-    /* border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1), var(--mean-alp-1)); */
 }
 
 fieldset>legend {
     padding: 0;
 
     font-size: 1rem;
-    /* color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1)); */
-    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 label {
@@ -552,25 +856,20 @@ label {
 }
 
 label:has(input, select, textarea) {
-    /* color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1)); */
-    /* background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1)); */
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 label:has(input, select, textarea):hover,
 label:has(input, select, textarea):focus,
 label:has(input, select, textarea):focus-within {
-    /* color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2)); */
-    /* background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2)); */
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 label:has(input, select, textarea)>:first-child {
     padding: 0.25rem;
-    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
-    /* color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1)); */
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 label:has(input[type=radio]:not([disabled], [readonly]), input[type=checkbox]:not([disabled], [readonly])) {
@@ -617,18 +916,14 @@ input:not([type=image],
 
     transition: var(--transition);
 
-    border-radius: var(--border-radius);
     border-style: solid;
-    border-width: 2px;
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
 
-    /* color: hsl(var(--fore-hue-1), var(--fore-sat-1), var(--fore-lit-1)); */
-    /* background: hsl(var(--back-hue-1), var(--back-sat-1), var(--back-lit-1)); */
-    /* accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp)); */
-
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
-    accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
-    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+    accent-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
+    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 
 }
 
@@ -661,14 +956,14 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 0.5rem;
     border-radius: var(--border-radius);
-    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 input[type=range]::-moz-range-track {
     width: 100%;
     height: 0.5rem;
     border-radius: var(--border-radius);
-    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -764,17 +1059,16 @@ input[type=checkbox] {
     margin: 0.25rem;
     padding: 0;
 
-    border-width: 2px;
     border-style: solid;
-    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    border-width: var(--input-border-width);
+    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 input[type=radio]:checked,
 input[type=checkbox]:checked {
-    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
-    /* border-color: hsl(var(--mean-hue-1), var(--mean-sat-1), var(--mean-lit-1)); */
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 /*
@@ -793,10 +1087,8 @@ input:hover:not([type=image],
     [hidden],
     [disabled],
     [readonly]) {
-    /* color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2)); */
-    /* background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2)); */
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 select:hover,
@@ -809,7 +1101,7 @@ input:hover:not([type=image],
     [hidden],
     [disabled],
     [readonly]) {
-    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 /*
@@ -840,10 +1132,8 @@ input:focus-within:not([type=image],
     [hidden],
     [disabled],
     [readonly]) {
-    /* color: hsl(var(--fore-hue-2), var(--fore-sat-2), var(--fore-lit-2)); */
-    /* background: hsl(var(--back-hue-2), var(--back-sat-2), var(--back-lit-2)); */
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 select:focus-within,
@@ -856,7 +1146,7 @@ input:focus-within:not([type=image],
     [hidden],
     [disabled],
     [readonly]) {
-    border-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 select[readonly],
@@ -930,8 +1220,8 @@ input[type=submit] {
     margin: var(--button-margin);
     padding: var(--button-padding);
 
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 
     border-color: transparent;
     border-width: var(--button-border-width);
@@ -944,8 +1234,8 @@ input[disabled][type=button],
 input[disabled][type=submit] {
     border-style: var(--button-border-style-disabled);
     border-width: var(--button-border-width-disabled);
-    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
-    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-lit));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 button:hover:not([disabled]),
@@ -961,14 +1251,14 @@ input[type=submit]:focus-visible:not([disabled]) {
 
     border-radius: var(--button-border-radius-active);
 
-    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 button>:first-child,
 input[type=submit]>:first-child,
 input[type=button]>:first-child {
-    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 dialog {
@@ -1044,34 +1334,40 @@ details>summary>:first-child {
 
 article {
 
-    --back-hue: var(--article-back-hue);
-    --back-sat: var(--article-back-sat);
-    --back-lit: var(--article-back-lit);
-    --back-alp: var(--article-back-alp);
+    --back-hue: var(--hue);
+    --back-lit: var(--lit-100);
+    --back-sat: var(--sat);
+    --back-alp: var(--alp);
 
-    --mean-hue: var(--article-mean-hue);
-    --mean-sat: var(--article-mean-sat);
-    --mean-lit: var(--article-mean-lit);
-    --mean-alp: var(--article-mean-alp);
+    --mean-hue: var(--hue);
+    --mean-sat: var(--sat);
+    --mean-lit: var(--lit-101);
+    --mean-alp: var(--alp);
 
-    --fore-hue: var(--article-fore-hue);
-    --fore-sat: var(--article-fore-sat);
-    --fore-lit: var(--article-fore-lit);
-    --fore-alp: var(--article-fore-alp);
+    --fore-hue: var(--hue);
+    --fore-lit: var(--lit-102);
+    --fore-sat: var(--sat);
+    --fore-alp: var(--alp);
 
-    --accent-hue: var(--article-accent-hue);
-    --accent-sat: var(--article-accent-sat);
-    --accent-lit: var(--article-accent-lit);
-    --accent-alp: var(--article-accent-alp);
+    --accent-back-hue: var(--hue);
+    --accent-back-sat: var(--sat);
+    --accent-back-lit: var(--lit-110);
+    --accent-back-alp: var(--alp);
+
+    --accent-fore-hue: var(--hue);
+    --accent-fore-sat: var(--sat);
+    --accent-fore-lit: var(--lit-111);
+    --accent-fore-alp: var(--alp);
 
     border-radius: var(--article-border-radius);
 
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
     background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 
 }
 
 progress {
+
     background: none;
     appearance: none;
     overflow: hidden;
@@ -1090,27 +1386,28 @@ progress {
     height: 0.5rem;
     block-size: 0.5rem;
 
+    margin: var(--progress-margin);
     border-radius: var(--progress-border-radius);
 
-    color: var(--progress-background);
-    accent-color: var(--progress-accent);
-    background-color: var(--progress-background);
+    color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
+    accent-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+    background-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 progress::-moz-progress-bar {
-    background-color: var(--progress-background);
+    background-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 progress::-webkit-progress-bar {
-    background-color: var(--progress-background);
+    background-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 progress::-moz-progress-value {
-    background-color: var(--progress-accent);
+    background-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 progress::-webkit-progress-value {
-    background-color: var(--progress-accent);
+    background-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 progress:not([value]):after {
@@ -1130,7 +1427,7 @@ progress:not([value]):after {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
-    background-color: var(--progress-accent);
+    background-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 @keyframes progress {
@@ -1215,6 +1512,25 @@ s {
     font-size: inherit;
 }
 
+code,
+kbd {
+    display: inline-block;
+}
+
+code,
+kbd,
+pre {
+    margin: var(--margin);
+    padding: var(--padding);
+
+    line-height: initial;
+    font-family: monospace;
+    border-radius: var(--border-radius);
+
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+}
+
 form,
 section,
 article,
@@ -1234,14 +1550,6 @@ article>footer {
     padding: var(--padding);
 }
 
-/*
-form>*,
-section>*,
-article>* {
-    flex: 1 1 auto;
-}
-*/
-
 section {
     padding: 1rem;
 }
@@ -1257,7 +1565,7 @@ hr {
     margin: 0.25rem;
 
     border-radius: var(--border-radius);
-    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
 }
 
 img {
@@ -1286,8 +1594,8 @@ figcaption {
 
 blockquote {
     border-right: none;
-    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
+    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
     border-inline-end: none;
 }
 
@@ -1351,200 +1659,6 @@ del {
 
 .border-bottom {
     border-bottom: 2px solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-}
-
-/*
-    accent
-*/
-
-.accent-red {
-    --accent-hue: var(--red-hue);
-    --accent-sat: var(--red-sat);
-    --accent-lit: var(--red-lit);
-    --accent-alp: var(--red-alp);
-}
-
-.accent-orange {
-    --accent-hue: var(--orange-hue);
-    --accent-sat: var(--orange-sat);
-    --accent-lit: var(--orange-lit);
-    --accent-alp: var(--orange-alp);
-}
-
-.accent-yellow {
-    --accent-hue: var(--yellow-hue);
-    --accent-sat: var(--yellow-sat);
-    --accent-lit: var(--yellow-lit);
-    --accent-alp: var(--yellow-alp);
-}
-
-.accent-green {
-    --accent-hue: var(--green-hue);
-    --accent-sat: var(--green-sat);
-    --accent-lit: var(--green-lit);
-    --accent-alp: var(--green-alp);
-}
-
-.accent-blue {
-    --accent-hue: var(--blue-hue);
-    --accent-sat: var(--blue-sat);
-    --accent-lit: var(--blue-lit);
-    --accent-alp: var(--blue-alp);
-}
-
-.accent-purple {
-    --accent-hue: var(--purple-hue);
-    --accent-sat: var(--purple-sat);
-    --accent-lit: var(--purple-lit);
-    --accent-alp: var(--purple-alp);
-}
-
-.accent-pink {
-    --accent-hue: var(--pink-hue);
-    --accent-sat: var(--pink-sat);
-    --accent-lit: var(--pink-lit);
-    --accent-alp: var(--pink-alp);
-}
-
-.accent-warn {
-    --accent-hue: var(--warn-hue);
-    --accent-sat: var(--warn-sat);
-    --accent-lit: var(--warn-lit);
-    --accent-alp: var(--warn-alp);
-}
-
-.accent-error {
-    --accent-hue: var(--error-hue);
-    --accent-sat: var(--error-sat);
-    --accent-lit: var(--error-lit);
-    --accent-alp: var(--error-alp);
-}
-
-.accent-success {
-    --accent-hue: var(--success-hue);
-    --accent-sat: var(--success-sat);
-    --accent-lit: var(--success-lit);
-    --accent-alp: var(--success-alp);
-}
-
-.accent-red,
-.accent-orange,
-.accent-yellow,
-.accent-green,
-.accent-blue,
-.accent-purple,
-.accent-pink,
-.accent-error,
-.accent-success,
-.accent-safe,
-.accent-warn {
-    --progress-accent: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    --progress-background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
-}
-
-/*
-    fill
-*/
-
-.red,
-.red-children>* {
-    --fore-hue: var(--red-fore-hue);
-    --back-hue: var(--red-back-hue);
-}
-
-.orange,
-.orange-children>* {
-    --fore-hue: var(--orange-fore-hue);
-    --back-hue: var(--orange-back-hue);
-}
-
-.yellow,
-.yellow-children>* {
-    --fore-hue: var(--yellow-fore-hue);
-    --back-hue: var(--yellow-back-hue);
-}
-
-.green,
-.green-children>* {
-    --fore-hue: var(--green-fore-hue);
-    --back-hue: var(--green-back-hue);
-}
-
-.blue,
-.blue-children>* {
-    --fore-hue: var(--blue-fore-hue);
-    --back-hue: var(--blue-back-hue);
-}
-
-.purple,
-.purple-children>* {
-    --fore-hue: var(--purple-fore-hue);
-    --back-hue: var(--purple-back-hue);
-}
-
-.pink,
-.pink-children>* {
-    --fore-hue: var(--pink-fore-hue);
-    --back-hue: var(--pink-back-hue);
-}
-
-.error,
-.error-children>* {
-    color: hsl(var(--error-hue), var(--error-sat), var(--error-lit));
-    background: hsl(var(--error-hue), var(--error-sat), var(--error-lit), var(--error-alp));
-}
-
-.success,
-.success-children>* {
-    color: hsl(var(--success-hue), var(--success-sat), var(--success-lit));
-    background: hsl(var(--success-hue), var(--success-sat), var(--success-lit), var(--success-alp));
-}
-
-.safe,
-.safe-children>* {
-    color: hsl(var(--safe-hue), var(--safe-sat), var(--safe-lit));
-    background: hsl(var(--safe-hue), var(--safe-sat), var(--safe-lit), var(--safe-alp));
-}
-
-.warn,
-.warn-children>* {
-    color: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit));
-    background: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit), var(--warn-alp));
-}
-
-.red,
-.orange,
-.yellow,
-.green,
-.blue,
-.purple,
-.pink,
-.error,
-.success,
-.safe,
-.warn,
-.red-children>*,
-.orange-children>*,
-.yellow-children>*,
-.green-children>*,
-.blue-children>*,
-.purple-children>*,
-.pink-children>*,
-.error-children>*,
-.success-children>*,
-.safe-children>*,
-.warn-children>* {
-
-    --fore-sat: var(--color-fore-sat);
-    --fore-lit: var(--color-fore-lit);
-    --fore-alp: var(--color-fore-alp);
-
-    --back-sat: var(--color-back-sat);
-    --back-lit: var(--color-back-lit);
-    --back-alp: var(--color-back-alp);
-
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 /*

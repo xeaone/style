@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './color.css';
 @import './body.css';
 @import './list.css';
 @import './input.css';
@@ -8,6 +9,25 @@
 @import './article.css';
 @import './progress.css';
 @import './typography.css';
+
+code,
+kbd {
+    display: inline-block;
+}
+
+code,
+kbd,
+pre {
+    margin: var(--margin);
+    padding: var(--padding);
+
+    line-height: initial;
+    font-family: monospace;
+    border-radius: var(--border-radius);
+
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+}
 
 form,
 section,
@@ -28,14 +48,6 @@ article>footer {
     padding: var(--padding);
 }
 
-/*
-form>*,
-section>*,
-article>* {
-    flex: 1 1 auto;
-}
-*/
-
 section {
     padding: 1rem;
 }
@@ -51,9 +63,8 @@ hr {
     margin: 0.25rem;
 
     border-radius: var(--border-radius);
-    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
 }
-
 
 img {
     display: flex;
@@ -81,8 +92,8 @@ figcaption {
 
 blockquote {
     border-right: none;
-    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
+    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
     border-inline-end: none;
 }
 
@@ -146,200 +157,6 @@ del {
 
 .border-bottom {
     border-bottom: 2px solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-}
-
-/*
-    accent
-*/
-
-.accent-red {
-    --accent-hue: var(--red-hue);
-    --accent-sat: var(--red-sat);
-    --accent-lit: var(--red-lit);
-    --accent-alp: var(--red-alp);
-}
-
-.accent-orange {
-    --accent-hue: var(--orange-hue);
-    --accent-sat: var(--orange-sat);
-    --accent-lit: var(--orange-lit);
-    --accent-alp: var(--orange-alp);
-}
-
-.accent-yellow {
-    --accent-hue: var(--yellow-hue);
-    --accent-sat: var(--yellow-sat);
-    --accent-lit: var(--yellow-lit);
-    --accent-alp: var(--yellow-alp);
-}
-
-.accent-green {
-    --accent-hue: var(--green-hue);
-    --accent-sat: var(--green-sat);
-    --accent-lit: var(--green-lit);
-    --accent-alp: var(--green-alp);
-}
-
-.accent-blue {
-    --accent-hue: var(--blue-hue);
-    --accent-sat: var(--blue-sat);
-    --accent-lit: var(--blue-lit);
-    --accent-alp: var(--blue-alp);
-}
-
-.accent-purple {
-    --accent-hue: var(--purple-hue);
-    --accent-sat: var(--purple-sat);
-    --accent-lit: var(--purple-lit);
-    --accent-alp: var(--purple-alp);
-}
-
-.accent-pink {
-    --accent-hue: var(--pink-hue);
-    --accent-sat: var(--pink-sat);
-    --accent-lit: var(--pink-lit);
-    --accent-alp: var(--pink-alp);
-}
-
-.accent-warn {
-    --accent-hue: var(--warn-hue);
-    --accent-sat: var(--warn-sat);
-    --accent-lit: var(--warn-lit);
-    --accent-alp: var(--warn-alp);
-}
-
-.accent-error {
-    --accent-hue: var(--error-hue);
-    --accent-sat: var(--error-sat);
-    --accent-lit: var(--error-lit);
-    --accent-alp: var(--error-alp);
-}
-
-.accent-success {
-    --accent-hue: var(--success-hue);
-    --accent-sat: var(--success-sat);
-    --accent-lit: var(--success-lit);
-    --accent-alp: var(--success-alp);
-}
-
-.accent-red,
-.accent-orange,
-.accent-yellow,
-.accent-green,
-.accent-blue,
-.accent-purple,
-.accent-pink,
-.accent-error,
-.accent-success,
-.accent-safe,
-.accent-warn {
-    --progress-accent: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    --progress-background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
-}
-
-/*
-    fill
-*/
-
-.red,
-.red-children>* {
-    --fore-hue: var(--red-fore-hue);
-    --back-hue: var(--red-back-hue);
-}
-
-.orange,
-.orange-children>* {
-    --fore-hue: var(--orange-fore-hue);
-    --back-hue: var(--orange-back-hue);
-}
-
-.yellow,
-.yellow-children>* {
-    --fore-hue: var(--yellow-fore-hue);
-    --back-hue: var(--yellow-back-hue);
-}
-
-.green,
-.green-children>* {
-    --fore-hue: var(--green-fore-hue);
-    --back-hue: var(--green-back-hue);
-}
-
-.blue,
-.blue-children>* {
-    --fore-hue: var(--blue-fore-hue);
-    --back-hue: var(--blue-back-hue);
-}
-
-.purple,
-.purple-children>* {
-    --fore-hue: var(--purple-fore-hue);
-    --back-hue: var(--purple-back-hue);
-}
-
-.pink,
-.pink-children>* {
-    --fore-hue: var(--pink-fore-hue);
-    --back-hue: var(--pink-back-hue);
-}
-
-.error,
-.error-children>* {
-    color: hsl(var(--error-hue), var(--error-sat), var(--error-lit));
-    background: hsl(var(--error-hue), var(--error-sat), var(--error-lit), var(--error-alp));
-}
-
-.success,
-.success-children>* {
-    color: hsl(var(--success-hue), var(--success-sat), var(--success-lit));
-    background: hsl(var(--success-hue), var(--success-sat), var(--success-lit), var(--success-alp));
-}
-
-.safe,
-.safe-children>* {
-    color: hsl(var(--safe-hue), var(--safe-sat), var(--safe-lit));
-    background: hsl(var(--safe-hue), var(--safe-sat), var(--safe-lit), var(--safe-alp));
-}
-
-.warn,
-.warn-children>* {
-    color: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit));
-    background: hsl(var(--warn-hue), var(--warn-sat), var(--warn-lit), var(--warn-alp));
-}
-
-.red,
-.orange,
-.yellow,
-.green,
-.blue,
-.purple,
-.pink,
-.error,
-.success,
-.safe,
-.warn,
-.red-children>*,
-.orange-children>*,
-.yellow-children>*,
-.green-children>*,
-.blue-children>*,
-.purple-children>*,
-.pink-children>*,
-.error-children>*,
-.success-children>*,
-.safe-children>*,
-.warn-children>* {
-
-    --fore-sat: var(--color-fore-sat);
-    --fore-lit: var(--color-fore-lit);
-    --fore-alp: var(--color-fore-alp);
-
-    --back-sat: var(--color-back-sat);
-    --back-lit: var(--color-back-lit);
-    --back-alp: var(--color-back-alp);
-
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 /*

@@ -19,8 +19,8 @@ input[type=submit] {
     margin: var(--button-margin);
     padding: var(--button-padding);
 
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 
     border-color: transparent;
     border-width: var(--button-border-width);
@@ -33,8 +33,8 @@ input[disabled][type=button],
 input[disabled][type=submit] {
     border-style: var(--button-border-style-disabled);
     border-width: var(--button-border-width-disabled);
-    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
-    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-lit));
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 button:hover:not([disabled]),
@@ -50,12 +50,12 @@ input[type=submit]:focus-visible:not([disabled]) {
 
     border-radius: var(--button-border-radius-active);
 
-    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
-    background: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit), var(--accent-alp));
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 button>:first-child,
 input[type=submit]>:first-child,
 input[type=button]>:first-child {
-    color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lit));
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }

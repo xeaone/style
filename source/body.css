@@ -1,23 +1,29 @@
 body {
-    --back-hue: var(--body-back-hue);
-    --back-sat: var(--body-back-sat);
-    --back-lit: var(--body-back-lit);
-    --back-alp: var(--body-back-alp);
 
-    --mean-hue: var(--body-mean-hue);
-    --mean-sat: var(--body-mean-sat);
-    --mean-lit: var(--body-mean-lit);
-    --mean-alp: var(--body-mean-alp);
+    --back-hue: var(--hue);
+    --back-lit: var(--lit-000);
+    --back-sat: var(--sat);
+    --back-alp: var(--alp);
 
-    --fore-hue: var(--body-fore-hue);
-    --fore-sat: var(--body-fore-sat);
-    --fore-lit: var(--body-fore-lit);
-    --fore-alp: var(--body-fore-alp);
+    --mean-hue: var(--hue);
+    --mean-sat: var(--sat);
+    --mean-lit: var(--lit-001);
+    --mean-alp: var(--alp);
 
-    --accent-hue: var(--body-accent-hue);
-    --accent-sat: var(--body-accent-sat);
-    --accent-lit: var(--body-accent-lit);
-    --accent-alp: var(--body-accent-alp);
+    --fore-hue: var(--hue);
+    --fore-lit: var(--lit-002);
+    --fore-sat: var(--sat);
+    --fore-alp: var(--alp);
+
+    --accent-back-hue: var(--hue);
+    --accent-back-sat: var(--sat);
+    --accent-back-lit: var(--lit-010);
+    --accent-back-alp: var(--alp);
+
+    --accent-fore-hue: var(--hue);
+    --accent-fore-sat: var(--sat);
+    --accent-fore-lit: var(--lit-011);
+    --accent-fore-alp: var(--alp);
 
     display: flex;
     flex: 1 1 auto;

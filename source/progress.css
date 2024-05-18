@@ -1,4 +1,5 @@
 progress {
+
     background: none;
     appearance: none;
     overflow: hidden;
@@ -17,27 +18,28 @@ progress {
     height: 0.5rem;
     block-size: 0.5rem;
 
+    margin: var(--progress-margin);
     border-radius: var(--progress-border-radius);
 
-    color: var(--progress-background);
-    accent-color: var(--progress-accent);
-    background-color: var(--progress-background);
+    color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
+    accent-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+    background-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 progress::-moz-progress-bar {
-    background-color: var(--progress-background);
+    background-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 progress::-webkit-progress-bar {
-    background-color: var(--progress-background);
+    background-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
 
 progress::-moz-progress-value {
-    background-color: var(--progress-accent);
+    background-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 progress::-webkit-progress-value {
-    background-color: var(--progress-accent);
+    background-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 progress:not([value]):after {
@@ -57,7 +59,7 @@ progress:not([value]):after {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
-    background-color: var(--progress-accent);
+    background-color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
 }
 
 @keyframes progress {
