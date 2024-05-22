@@ -39,7 +39,7 @@ ol>li::before {
     font-size: 0.8rem;
     color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
 
-    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), 10%);
 }
 
 ul>li::before {

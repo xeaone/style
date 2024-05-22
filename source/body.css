@@ -1,29 +1,7 @@
 body {
-
-    --back-hue: var(--hue);
-    --back-lit: var(--lit-000);
-    --back-sat: var(--sat);
-    --back-alp: var(--alp);
-
-    --mean-hue: var(--hue);
-    --mean-sat: var(--sat);
-    --mean-lit: var(--lit-001);
-    --mean-alp: var(--alp);
-
-    --fore-hue: var(--hue);
-    --fore-lit: var(--lit-002);
-    --fore-sat: var(--sat);
-    --fore-alp: var(--alp);
-
-    --accent-back-hue: var(--hue);
-    --accent-back-sat: var(--sat);
-    --accent-back-lit: var(--lit-010);
-    --accent-back-alp: var(--alp);
-
-    --accent-fore-hue: var(--hue);
-    --accent-fore-sat: var(--sat);
-    --accent-fore-lit: var(--lit-011);
-    --accent-fore-alp: var(--alp);
+    --back-lit: var(--lit-0-1);
+    --mean-lit: var(--lit-0-2);
+    --fore-lit: var(--lit-0-3);
 
     display: flex;
     flex: 1 1 auto;
@@ -40,8 +18,8 @@ body {
 
     overflow: hidden;
 
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit));
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 body>header {

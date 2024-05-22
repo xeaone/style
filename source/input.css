@@ -13,7 +13,7 @@ fieldset {
     border-style: solid;
     border-radius: var(--border-radius);
     border-width: var(--input-border-width);
-    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), 10%);
 }
 
 fieldset>legend {
@@ -34,7 +34,7 @@ label {
     max-width: 100%;
     min-width: auto;
 
-    border-radius: var(--label-border-radius);
+    border-radius: var(--border-radius);
 }
 
 label:has(input, select, textarea) {
@@ -107,7 +107,6 @@ input:not([type=image],
     background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
     accent-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
     border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-
 }
 
 select {
@@ -248,14 +247,15 @@ input[type=checkbox] {
 
 input[type=radio]:checked,
 input[type=checkbox]:checked {
+    /* border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp)); */
     color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
     background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
 /*
     input hover
 */
+/*
 select:hover,
 textarea:hover,
 input:hover:not([type=image],
@@ -284,10 +284,12 @@ input:hover:not([type=image],
     [readonly]) {
     border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
+*/
 
 /*
     input focus
 */
+/*
 select:focus,
 select:focus-within,
 textarea:focus,
@@ -328,6 +330,7 @@ input:focus-within:not([type=image],
     [readonly]) {
     border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
+*/
 
 select[readonly],
 textarea[readonly],

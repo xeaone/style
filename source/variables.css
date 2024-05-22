@@ -8,99 +8,48 @@
     text-rendering: optimizeLegibility;
 }
 
+:root,
+::backdrop {
+
+    --black-hue: 0deg;
+    --black-sat: 0%;
+
+    --white-hue: 0deg;
+    --white-sat: 0%;
+
+    --red-hue: 0deg;
+    --orange-hue: 30deg;
+    --yellow-hue: 50deg;
+    --green-hue: 150deg;
+    --blue-hue: 215deg;
+    --purple-hue: 270deg;
+    --pink-hue: 300deg;
+}
+
 @media (prefers-color-scheme: light) {
 
     :root,
     ::backdrop {
+        --hue: 0deg;
+        --sat: 0%;
+        --alp: 1;
 
-        /* back */
-        --root-back-hue-1: 0deg;
-        --root-back-hue-2: 0deg;
-        --root-back-hue-3: 0deg;
-        --root-back-hue-4: 0deg;
+        /* (type)-(layer)-(level) */
+        --lit-0-1: 95%;
+        --lit-0-2: 30%;
+        --lit-0-3: 5%;
 
-        --root-back-sat-1: 0%;
-        --root-back-sat-2: 0%;
-        --root-back-sat-3: 0%;
-        --root-back-sat-4: 0%;
+        --lit-1-1: 90%;
+        --lit-1-2: 70%;
+        --lit-1-3: 10%;
 
-        --root-back-lit-1: 100%;
-        --root-back-lit-2: 90%;
-        --root-back-lit-3: 85%;
-        --root-back-lit-4: 80%;
+        --color-back-sat: 50%;
+        --color-back-lit: 70%;
+        --color-back-alp: 1;
 
-        /* fore */
-        --root-fore-hue-1: 0deg;
-        --root-fore-hue-2: 0deg;
-        --root-fore-hue-3: 0deg;
-        --root-fore-hue-4: 0deg;
-
-        --root-fore-sat-1: 0%;
-        --root-fore-sat-2: 0%;
-        --root-fore-sat-3: 0%;
-        --root-fore-sat-4: 0%;
-
-        --root-fore-lit-1: 15%;
-        --root-fore-lit-2: 15%;
-        --root-fore-lit-3: 15%;
-        --root-fore-lit-5: 15%;
-
-        /* mean */
-        --root-mean-hue-1: 0deg;
-        --root-mean-hue-2: 0deg;
-        --root-mean-hue-3: 0deg;
-        --root-mean-hue-4: 0deg;
-
-        --root-mean-sat-1: 0%;
-        --root-mean-sat-2: 0%;
-        --root-mean-sat-3: 0%;
-        --root-mean-sat-4: 0%;
-
-        --root-mean-lit-1: 40%;
-        --root-mean-lit-2: 35%;
-        --root-mean-lit-3: 30%;
-        --root-mean-lit-4: 25%;
-
-        /* accent */
-        --accent-hue: 0deg;
-        --accent-sat: 0%;
-        --accent-lit: 10%;
-        --accent-alp: 0.2;
-
-        --red-hue: 0deg;
-        --red-sat: 100%;
-        --red-lit: 15%;
-        --red-alp: 0.2;
-
-        --orange-hue: 30deg;
-        --orange-sat: 100%;
-        --orange-lit: 15%;
-        --orange-alp: 0.2;
-
-        --yellow-hue: 50deg;
-        --yellow-sat: 100%;
-        --yellow-lit: 15%;
-        --yellow-alp: 0.2;
-
-        --green-hue: 150deg;
-        --green-sat: 100%;
-        --green-lit: 15%;
-        --green-alp: 0.2;
-
-        --blue-hue: 200deg;
-        --blue-sat: 100%;
-        --blue-lit: 15%;
-        --blue-alp: 0.2;
-
-        --purple-hue: 250deg;
-        --purple-sat: 100%;
-        --purple-lit: 15%;
-        --purple-alp: 0.2;
-
-        --pink-hue: 300deg;
-        --pink-sat: 100%;
-        --pink-lit: 15%;
-        --pink-alp: 0.2;
+        --color-fore-sat: 50%;
+        --color-fore-lit: 10%;
+        --color-fore-alp: 1;
 
         color-scheme: light;
     }
@@ -115,157 +64,22 @@
         --sat: 0%;
         --alp: 1;
 
-        --lit-000: 5%;
-        --lit-001: 65%;
-        --lit-002: 85%;
-        --lit-010: 90%;
-        --lit-011: 10%;
+        /* (type)-(layer)-(level) */
+        --lit-0-1: 5%;
+        --lit-0-2: 65%;
+        --lit-0-3: 95%;
 
-        --lit-100: 10%;
-        --lit-101: 75%;
-        --lit-102: 95%;
-        --lit-110: 80%;
-        --lit-111: 20%;
+        --lit-1-1: 10%;
+        --lit-1-2: 70%;
+        --lit-1-3: 90%;
 
-        /* layer 0 */
-        /* --back-hue-0: var(--hue);
-        --back-sat-0: var(--sat);
-        --back-lit-0: 5%;
-        --back-alp-0: var(--alp);
-
-        --mean-hue-0: var(--hue);
-        --mean-sat-0: var(--sat);
-        --mean-lit-0: 65%;
-        --mean-alp-0: var(--alp);
-
-        --fore-hue-0: var(--hue);
-        --fore-sat-0: var(--sat);
-        --fore-lit-0: 95%;
-        --fore-alp-0: var(--alp);
-
-        --accent-back-hue-0: var(--hue);
-        --accent-back-sat-0: var(--sat);
-        --accent-back-lit-0: 90%;
-        --accent-back-alp-0: 0.8;
-
-        --accent-fore-hue-0: var(--hue);
-        --accent-fore-sat-0: var(--sat);
-        --accent-fore-lit-0: 10%;
-        --accent-fore-alp-0: var(--alp); */
-        /* layer 0 */
-
-        /* layer 1 */
-        /* --back-hue-1: var(--hue);
-        --back-sat-1: var(--sat);
-        --back-lit-1: 10%;
-        --back-alp-1: var(--alp);
-
-        --mean-hue-1: var(--hue);
-        --mean-sat-1: var(--sat);
-        --mean-lit-1: 75%;
-        --mean-alp-1: var(--alp);
-
-        --fore-hue-1: var(--hue);
-        --fore-sat-1: var(--sat);
-        --fore-lit-1: 85%;
-        --fore-alp-1: var(--alp);
-
-        --accent-back-hue-1: var(--hue);
-        --accent-back-sat-1: var(--sat);
-        --accent-back-lit-1: 100%;
-        --accent-back-alp-1: 0.8;
-
-        --accent-fore-hue-1: var(--hue);
-        --accent-fore-sat-1: var(--sat);
-        --accent-fore-lit-1: 0%;
-        --accent-fore-alp-1: var(--alp); */
-        /* layer 1 */
-
-        --color-back-sat: var(--sat);
+        --color-back-sat: 60%;
         --color-back-lit: 20%;
-        --color-back-alp: 0.8;
+        --color-back-alp: 1;
 
-        --color-fore-sat: var(--sat);
-        --color-fore-lit: 80%;
-        --color-fore-alp: var(--alp);
-
-        /* red */
-        --red-back-hue: 0deg;
-        --red-back-sat: var(--color-back-sat);
-        --red-back-lit: var(--color-back-lit);
-        --red-back-alp: var(--color-back-alp);
-        --red-fore-hue: 0deg;
-        --red-fore-sat: var(--color-fore-sat);
-        --red-fore-lit: var(--color-fore-lit);
-        --red-fore-alp: var(--color-fore-alp);
-        /* red */
-
-        /* orange */
-        --orange-back-hue: 30deg;
-        --orange-back-sat: var(--color-back-sat);
-        --orange-back-lit: var(--color-back-lit);
-        --orange-back-alp: var(--color-back-alp);
-        --orange-fore-hue: 30deg;
-        --orange-fore-sat: var(--color-fore-sat);
-        --orange-fore-lit: var(--color-fore-lit);
-        --orange-fore-alp: var(--color-fore-alp);
-        /* orange */
-
-        /* yellow */
-        --yellow-back-hue: 50deg;
-        --yellow-back-sat: var(--color-back-sat);
-        --yellow-back-lit: var(--color-back-lit);
-        --yellow-back-alp: var(--color-back-alp);
-        --yellow-fore-hue: 50deg;
-        --yellow-fore-sat: var(--color-fore-sat);
-        --yellow-fore-lit: var(--color-fore-lit);
-        --yellow-fore-alp: var(--color-fore-alp);
-
-        /* yellow */
-
-        /* green */
-        --green-back-hue: 150deg;
-        --green-back-sat: var(--color-back-sat);
-        --green-back-lit: var(--color-back-lit);
-        --green-back-alp: var(--color-back-alp);
-        --green-fore-hue: 150deg;
-        --green-fore-sat: var(--color-fore-sat);
-        --green-fore-lit: var(--color-fore-lit);
-        --green-fore-alp: var(--color-fore-alp);
-        /* green */
-
-        /* blue */
-        --blue-back-hue: 215deg;
-        --blue-back-sat: var(--color-back-sat);
-        --blue-back-lit: var(--color-back-lit);
-        --blue-back-alp: var(--color-back-alp);
-        --blue-fore-hue: 215deg;
-        --blue-fore-sat: var(--color-fore-sat);
-        --blue-fore-lit: var(--color-fore-lit);
-        --blue-fore-alp: var(--color-fore-alp);
-        /* blue */
-
-        /* purple */
-        --purple-back-hue: 270deg;
-        --purple-back-sat: var(--color-back-sat);
-        --purple-back-lit: var(--color-back-lit);
-        --purple-back-alp: var(--color-back-alp);
-        --purple-fore-hue: 270deg;
-        --purple-fore-sat: var(--color-fore-sat);
-        --purple-fore-lit: var(--color-fore-lit);
-        --purple-fore-alp: var(--color-fore-alp);
-        /* purple */
-
-        /* pink */
-        --pink-back-hue: 300deg;
-        --pink-back-sat: var(--color-back-sat);
-        --pink-back-lit: var(--color-back-lit);
-        --pink-back-alp: var(--color-back-alp);
-        --pink-fore-hue: 300deg;
-        --pink-fore-sat: var(--color-fore-sat);
-        --pink-fore-lit: var(--color-fore-lit);
-        --pink-fore-alp: var(--color-fore-alp);
-        /* pink */
+        --color-fore-sat: 60%;
+        --color-fore-lit: 85%;
+        --color-fore-alp: 1;
 
         color-scheme: dark;
     }
@@ -273,6 +87,94 @@
 
 :root,
 ::backdrop {
+
+    --back-hue: var(--hue);
+    --back-sat: var(--sat);
+    --back-lit: var(--lit-0-1);
+    --back-alp: var(--alp);
+
+    --mean-hue: var(--hue);
+    --mean-sat: var(--sat);
+    --mean-lit: var(--lit-0-2);
+    --mean-alp: var(--alp);
+
+    --fore-hue: var(--hue);
+    --fore-sat: var(--sat);
+    --fore-lit: var(--lit-0-3);
+    --fore-alp: var(--alp);
+
+    --accent-back-hue: var(--hue);
+    --accent-back-sat: var(--sat);
+    --accent-back-lit: var(--lit-0-3);
+    --accent-back-alp: var(--alp);
+
+    --accent-fore-hue: var(--hue);
+    --accent-fore-sat: var(--sat);
+    --accent-fore-lit: var(--lit-0-1);
+    --accent-fore-alp: var(--alp);
+
+    --red-back-hue: var(--red-hue);
+    --red-back-sat: var(--color-back-sat);
+    --red-back-lit: var(--color-back-lit);
+    --red-back-alp: var(--color-back-alp);
+    --red-fore-hue: var(--red-hue);
+    --red-fore-sat: var(--color-fore-sat);
+    --red-fore-lit: var(--color-fore-lit);
+    --red-fore-alp: var(--color-fore-alp);
+
+    --orange-back-hue: var(--orange-hue);
+    --orange-back-sat: var(--color-back-sat);
+    --orange-back-lit: var(--color-back-lit);
+    --orange-back-alp: var(--color-back-alp);
+    --orange-fore-hue: var(--orange-hue);
+    --orange-fore-sat: var(--color-fore-sat);
+    --orange-fore-lit: var(--color-fore-lit);
+    --orange-fore-alp: var(--color-fore-alp);
+
+    --yellow-back-hue: var(--yellow-hue);
+    --yellow-back-sat: var(--color-back-sat);
+    --yellow-back-lit: var(--color-back-lit);
+    --yellow-back-alp: var(--color-back-alp);
+    --yellow-fore-hue: var(--yellow-hue);
+    --yellow-fore-sat: var(--color-fore-sat);
+    --yellow-fore-lit: var(--color-fore-lit);
+    --yellow-fore-alp: var(--color-fore-alp);
+
+    --green-back-hue: var(--green-hue);
+    --green-back-sat: var(--color-back-sat);
+    --green-back-lit: var(--color-back-lit);
+    --green-back-alp: var(--color-back-alp);
+    --green-fore-hue: var(--green-hue);
+    --green-fore-sat: var(--color-fore-sat);
+    --green-fore-lit: var(--color-fore-lit);
+    --green-fore-alp: var(--color-fore-alp);
+
+    --blue-back-hue: var(--blue-hue);
+    --blue-back-sat: var(--color-back-sat);
+    --blue-back-lit: var(--color-back-lit);
+    --blue-back-alp: var(--color-back-alp);
+    --blue-fore-hue: var(--blue-hue);
+    --blue-fore-sat: var(--color-fore-sat);
+    --blue-fore-lit: var(--color-fore-lit);
+    --blue-fore-alp: var(--color-fore-alp);
+
+    --purple-back-hue: var(--purple-hue);
+    --purple-back-sat: var(--color-back-sat);
+    --purple-back-lit: var(--color-back-lit);
+    --purple-back-alp: var(--color-back-alp);
+    --purple-fore-hue: var(--purple-hue);
+    --purple-fore-sat: var(--color-fore-sat);
+    --purple-fore-lit: var(--color-fore-lit);
+    --purple-fore-alp: var(--color-fore-alp);
+
+    --pink-back-hue: var(--pink-hue);
+    --pink-back-sat: var(--color-back-sat);
+    --pink-back-lit: var(--color-back-lit);
+    --pink-back-alp: var(--color-back-alp);
+    --pink-fore-hue: var(--pink-hue);
+    --pink-fore-sat: var(--color-fore-sat);
+    --pink-fore-lit: var(--color-fore-lit);
+    --pink-fore-alp: var(--color-fore-alp);
 
     --error-back-hue: var(--red-back-hue);
     --error-back-sat: var(--red-back-sat);
@@ -331,7 +233,7 @@
     --padding: 0.25rem;
 
     /* border */
-    --border-width: 3px;
+    --border-width: 2px;
     --border-radius: 3px;
     --border-style: solid;
     --border-width-disabled: 2px;
@@ -377,10 +279,7 @@
     --progress-back: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
     /* progress */
 
-    --label-border-radius: var(--border-radius);
-    --toast-border-radius: var(--border-radius);
-    --article-border-radius: var(--border-radius);
-    --fieldset-border-radius: var(--border-radius);
+    --hr-height: 2px;
 
     --icon-down: polygon(12% 25%, 50% 55%, 88% 25%, 100% 40%, 50% 80%, 0% 40%);
     --icon-up: polygon(0% 70%, 50% 25%, 100% 70%, 85% 85%, 50% 55%, 15% 85%);

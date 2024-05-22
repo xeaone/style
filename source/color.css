@@ -1,4 +1,3 @@
-
 /*
     accent
 */
@@ -117,6 +116,20 @@
 /*
     fill
 */
+
+.accent,
+.accent-children>* {
+    --fore-hue: var(--accent-fore-hue);
+    --fore-sat: var(--accent-fore-sat);
+    --fore-lit: var(--accent-fore-lit);
+    --fore-alp: var(--accent-fore-alp);
+    --back-hue: var(--accent-back-hue);
+    --back-sat: var(--accent-back-sat);
+    --back-lit: var(--accent-back-lit);
+    --back-alp: var(--accent-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
 
 .red,
 .red-children>* {

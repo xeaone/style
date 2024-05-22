@@ -17,7 +17,7 @@
 
     color: var(--back);
     background: var(--fore);
-    border-radius: var(--toast-border-radius);
+    border-radius: var(--border-radius);
 }
 
 .toast.active {
