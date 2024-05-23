@@ -2,10 +2,13 @@ article {
     --back-lit: var(--lit-1-1);
     --mean-lit: var(--lit-1-2);
     --fore-lit: var(--lit-1-3);
+    --accent-back-lit: var(--lit-1-3);
+    --accent-fore-lit: var(--lit-1-1);
+    --fore: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    --back: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 
     border-radius: var(--border-radius);
 
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-
+    color: var(--fore);
+    background: var(--back);
 }

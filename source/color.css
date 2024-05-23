@@ -1,3 +1,15 @@
+
+/*
+    mode
+*/
+.light {
+    color-scheme: light;
+}
+
+.dark {
+    color-scheme: dark;
+}
+
 /*
     accent
 */
