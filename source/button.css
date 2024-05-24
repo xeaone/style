@@ -1,3 +1,16 @@
+/* a {
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: var(--transition);
+
+    margin: var(--button-margin);
+    padding: var(--button-padding);
+
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+} */
+
+a,
 button,
 input[type=button],
 input[type=submit] {
@@ -9,9 +22,10 @@ input[type=submit] {
 
     cursor: pointer;
 
-    display: flex;
     flex: 1 1 auto;
+    flex-wrap: wrap;
     align-items: center;
+    display: inline-flex;
     justify-content: center;
 
     transition: var(--transition);
@@ -28,7 +42,8 @@ input[type=submit] {
     border-radius: var(--button-border-radius);
 }
 
-button[disabled],
+a:disabled,
+button:disabled,
 input[disabled][type=button],
 input[disabled][type=submit] {
     border-style: var(--button-border-style-disabled);
@@ -37,6 +52,9 @@ input[disabled][type=submit] {
     border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
 }
 
+a:hover:not(:disabled),
+a:active:not(:disabled),
+a:focus-visible:not(:disabled),
 button:hover:not([disabled]),
 button:active:not([disabled]),
 button:focus-visible:not([disabled]),
@@ -58,4 +76,13 @@ button>:first-child,
 input[type=submit]>:first-child,
 input[type=button]>:first-child {
     color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+}
+
+a {
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+}
+
+p>a {
+    margin: 0.1rem;
+    padding: 0.1rem;
 }

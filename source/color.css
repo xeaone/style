@@ -1,4 +1,3 @@
-
 /*
     mode
 */
@@ -14,8 +13,7 @@
     accent
 */
 
-.accent-red,
-.accent-red-children>* {
+.accent-red {
     --accent-back-hue: var(--red-back-hue);
     --accent-back-sat: var(--red-back-sat);
     --accent-back-lit: var(--red-back-lit);
@@ -112,6 +110,17 @@
     --accent-fore-sat: var(--error-fore-sat);
     --accent-fore-lit: var(--error-fore-lit);
     --accent-fore-alp: var(--error-fore-alp);
+}
+
+.accent-safe {
+    --accent-back-hue: var(--safe-back-hue);
+    --accent-back-sat: var(--safe-back-sat);
+    --accent-back-lit: var(--safe-back-lit);
+    --accent-back-alp: var(--safe-back-alp);
+    --accent-fore-hue: var(--safe-fore-hue);
+    --accent-fore-sat: var(--safe-fore-sat);
+    --accent-fore-lit: var(--safe-fore-lit);
+    --accent-fore-alp: var(--safe-fore-alp);
 }
 
 .accent-success {
@@ -269,20 +278,6 @@
     background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
-.success,
-.success-children>* {
-    --fore-hue: var(--success-fore-hue);
-    --fore-sat: var(--success-fore-sat);
-    --fore-lit: var(--success-fore-lit);
-    --fore-alp: var(--success-fore-alp);
-    --back-hue: var(--success-back-hue);
-    --back-sat: var(--success-back-sat);
-    --back-lit: var(--success-back-lit);
-    --back-alp: var(--success-back-alp);
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-}
-
 .safe,
 .safe-children>* {
     --fore-hue: var(--safe-fore-hue);
@@ -293,6 +288,20 @@
     --back-sat: var(--safe-back-sat);
     --back-lit: var(--safe-back-lit);
     --back-alp: var(--safe-back-alp);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+.success,
+.success-children>* {
+    --fore-hue: var(--success-fore-hue);
+    --fore-sat: var(--success-fore-sat);
+    --fore-lit: var(--success-fore-lit);
+    --fore-alp: var(--success-fore-alp);
+    --back-hue: var(--success-back-hue);
+    --back-sat: var(--success-back-sat);
+    --back-lit: var(--success-back-lit);
+    --back-alp: var(--success-back-alp);
     color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
     background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }

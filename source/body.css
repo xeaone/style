@@ -1,12 +1,4 @@
 body {
-    --back-lit: var(--lit-0-1);
-    --mean-lit: var(--lit-0-2);
-    --fore-lit: var(--lit-0-3);
-    --accent-back-lit: var(--lit-0-3);
-    --accent-fore-lit: var(--lit-0-1);
-    --fore: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    --back: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -22,8 +14,8 @@ body {
 
     overflow: hidden;
 
-    color: var(--fore);
-    background: var(--back);
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 body>header {

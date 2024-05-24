@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./x-style.css">
 </head>
 
-<body>
+<body class="accent-purple">
     <main>
 
         <section>
@@ -24,16 +24,20 @@
                 <span class="accent padding margin">X</span>
                 <span>Style</span>
             </h1>
+            <h2>A minimalist css framework that prioritizes semantic classless styling with classed grid and utilities.</h2>
             <hr />
-            <p>Coming Soon.</p>
+            <p>Powerful theming for light and dark mode using css variables.</p>
+            <p>Based on a layer concept where each layer must stack either from <code>lighter to darker</code> (light mode) or <code>darker to lighter</code> (dark mode).</p>
+            <p>Each layer should define css variables <code>--back</code>, <code>--mean</code>, <code>--fore</code></p>
+            <p>Accent colors should be used on elements that can be interacted with.</p>
         </section>
 
         <section id="theme">
             <h2>Theme</h2>
             <hr />
             <form oninput="
-                    document.body.classList.remove(...[...event.target.options].map(o => o.value));
-                    document.body.classList.add(event.target.selectedOptions[0].value);
+                document.body.classList.remove(...[...event.target.options].map(o => o.value));
+                document.body.classList.add(event.target.selectedOptions[0].value);
             ">
                 <label>
                     <span>Mode</span>
@@ -57,6 +61,10 @@
                         <option>accent-blue</option>
                         <option>accent-purple</option>
                         <option>accent-pink</option>
+                        <option>accent-error</option>
+                        <option>accent-warn</option>
+                        <option>accent-safe</option>
+                        <option>accent-success</option>
                     </select>
                 </label>
             </form>
@@ -65,7 +73,7 @@
         <section id="colors">
             <h2>Colors</h2>
             <hr />
-            <div class="flex grow grow-children center-children middle-children padding-children margin-children border-children bold-children">
+            <div class="flex grow wrap grow-children center-children middle-children padding-children margin-children bold-children">
                 <div class="red">Red</div>
                 <div class="orange">Orange</div>
                 <div class="yellow">Yellow</div>
@@ -73,6 +81,10 @@
                 <div class="blue">Blue</div>
                 <div class="purple">Purple</div>
                 <div class="pink">Pink</div>
+                <div class="error">Error</div>
+                <div class="warn">Warn</div>
+                <div class="safe">Safe</div>
+                <div class="success">Success</div>
             </div>
         </section>
 
@@ -234,13 +246,17 @@
                 }
 
                 .e-grid>.row>* {
+                    padding: 1rem;
                     min-width: 4rem;
                     min-height: 4rem;
+                    border-radius: 4px;
                 }
 
                 .e-grid>.col>* {
+                    padding: 1rem;
                     min-width: 4rem;
                     min-height: 4rem;
+                    border-radius: 4px;
                 }
             </style>
             <div class="e-grid">
@@ -308,92 +324,303 @@
             </figure>
         </section>
 
-        <section id="concepts">
-            <h2>Concepts</h2>
+        <section id="customize">
+            <h2>Customize</h2>
             <hr>
-            <h3>Theme</h3>
-            <p>To define a root theme you can overwrite these css variables.</p>
-            <pre>
-                @media (prefers-color-scheme: light) {
-                    :root,
-                    ::backdrop {
-                        --hue: 0deg;
-                        --sat: 0%;
-                        --alp: 1;
-
-                        --lit-0-1: 95%;
-                        --lit-0-2: 30%;
-                        --lit-0-3: 5%;
-
-                        --lit-1-1: 85%;
-                        --lit-1-2: 70%;
-                        --lit-1-3: 10%;
-
-                        --color-back-sat: 50%;
-                        --color-back-lit: 70%;
-                        --color-back-alp: 1;
-
-                        --color-fore-sat: 50%;
-                        --color-fore-lit: 10%;
-                        --color-fore-alp: 1;
-
-                        color-scheme: light;
-                    }
-                }
-                @media (prefers-color-scheme: dark) {
-                    :root,
-                    ::backdrop {
-                        --hue: 0deg;
-                        --sat: 0%;
-                        --alp: 1;
-
-                        --lit-0-1: 5%;
-                        --lit-0-2: 65%;
-                        --lit-0-3: 95%;
-
-                        --lit-1-1: 10%;
-                        --lit-1-2: 75%;
-                        --lit-1-3: 85%;
-
-                        --color-back-sat: 60%;
-                        --color-back-lit: 10%;
-                        --color-back-alp: 1;
-
-                        --color-fore-sat: 60%;
-                        --color-fore-lit: 80%;
-                        --color-fore-alp: 1;
-
-                        color-scheme: dark;
-                    }
-                }
-            </pre>
-            <h3>Layers</h3>
+            <h3>Layer</h3>
             <p>
-                <span>Layer elements define css variables and provide (theming, AAA contrast). </span>
+                <span>Layer elements such as </span>
                 <code>body</code>
                 <span> and </span>
                 <code>article</code>
+                <span>can be stacked by defining the following css variables.</span>
             </p>
             <pre>
-                --back-hue: var(--article-back-hue);
-                --back-sat: var(--article-back-sat);
-                --back-lit: var(--article-back-lit);
-                --back-alp: var(--article-back-alp);
+            article {
+                --back-lit: var(--back-lit-1);
+                --mean-lit: var(--mean-lit-1);
+                --fore-lit: var(--fore-lit-1);
+            }
+            </pre>
+            <h3>Theme</h3>
+            <p>To customize the theme you can overwrite these css variables for light and dark mode.</p>
+            <pre>
+            @media (prefers-color-scheme: light) {
+                :root,
+                ::backdrop {
+                    --back-hue-0: 0deg;
+                    --back-sat-0: 0%;
+                    --back-lit-0: 95%;
+                    --back-alp-0: 100%;
 
-                --mean-hue: var(--article-mean-hue);
-                --mean-sat: var(--article-mean-sat);
-                --mean-lit: var(--article-mean-lit);
-                --mean-alp: var(--article-mean-alp);
+                    --mean-hue-0: 0deg;
+                    --mean-sat-0: 0%;
+                    --mean-lit-0: 30%;
+                    --mean-alp-0: 100%;
 
-                --fore-hue: var(--article-fore-hue);
-                --fore-sat: var(--article-fore-sat);
-                --fore-lit: var(--article-fore-lit);
-                --fore-alp: var(--article-fore-alp);
+                    --fore-hue-0: 0deg;
+                    --fore-sat-0: 0%;
+                    --fore-lit-0: 5%;
+                    --fore-alp-0: 100%;
 
-                --accent-hue: var(--article-accent-hue);
-                --accent-sat: var(--article-accent-sat);
-                --accent-lit: var(--article-accent-lit);
-                --accent-alp: var(--article-accent-alp);
+                    --back-hue-1: 0deg;
+                    --back-sat-1: 0%;
+                    --back-lit-1: 90%;
+                    --back-alp-1: 100%;
+
+                    --mean-hue-1: 0deg;
+                    --mean-sat-1: 0%;
+                    --mean-lit-1: 50%;
+                    --mean-alp-1: 100%;
+
+                    --fore-hue-1: 0deg;
+                    --fore-sat-1: 0%;
+                    --fore-lit-1: 10%;
+                    --fore-alp-1: 100%;
+
+                    --back-hue-2: 0deg;
+                    --back-sat-2: 0%;
+                    --back-lit-2: 90%;
+                    --back-alp-2: 100%;
+
+                    --mean-hue-2: 0deg;
+                    --mean-sat-2: 0%;
+                    --mean-lit-2: 50%;
+                    --mean-alp-2: 100%;
+
+                    --fore-hue-2: 0deg;
+                    --fore-sat-2: 0%;
+                    --fore-lit-2: 20%;
+                    --fore-alp-2: 100%;
+
+                    --back-hue-3: 0deg;
+                    --back-sat-3: 0%;
+                    --back-lit-3: 85%;
+                    --back-alp-3: 100%;
+
+                    --mean-hue-3: 0deg;
+                    --mean-sat-3: 0%;
+                    --mean-lit-3: 50%;
+                    --mean-alp-3: 100%;
+
+                    --fore-hue-3: 0deg;
+                    --fore-sat-3: 0%;
+                    --fore-lit-3: 15%;
+                    --fore-alp-3: 100%;
+
+                    --red-back-hue: 0deg;
+                    --red-back-sat: 50%;
+                    --red-back-lit: 85%;
+                    --red-back-alp: 100%;
+
+                    --red-fore-hue: 0deg;
+                    --red-fore-sat: 50%;
+                    --red-fore-lit: 15%;
+                    --red-fore-alp: 100%;
+
+                    --orange-back-hue: 30deg;
+                    --orange-back-sat: 50%;
+                    --orange-back-lit: 80%;
+                    --orange-back-alp: 100%;
+
+                    --orange-fore-hue: 30deg;
+                    --orange-fore-sat: 50%;
+                    --orange-fore-lit: 20%;
+                    --orange-fore-alp: 100%;
+
+                    --yellow-back-hue: 50deg;
+                    --yellow-back-sat: 50%;
+                    --yellow-back-lit: 80%;
+                    --yellow-back-alp: 100%;
+
+                    --yellow-fore-hue: 50deg;
+                    --yellow-fore-sat: 50%;
+                    --yellow-fore-lit: 20%;
+                    --yellow-fore-alp: 100%;
+
+                    --green-back-hue: 150deg;
+                    --green-back-sat: 50%;
+                    --green-back-lit: 80%;
+                    --green-back-alp: 100%;
+
+                    --green-fore-hue: 150deg;
+                    --green-fore-sat: 50%;
+                    --green-fore-lit: 20%;
+                    --green-fore-alp: 100%;
+
+                    --blue-back-hue: 215deg;
+                    --blue-back-sat: 50%;
+                    --blue-back-lit: 80%;
+                    --blue-back-alp: 100%;
+
+                    --blue-fore-hue: 215deg;
+                    --blue-fore-sat: 50%;
+                    --blue-fore-lit: 20%;
+                    --blue-fore-alp: 100%;
+
+                    --purple-back-hue: 270deg;
+                    --purple-back-sat: 50%;
+                    --purple-back-lit: 80%;
+                    --purple-back-alp: 100%;
+
+                    --purple-fore-hue: 270deg;
+                    --purple-fore-sat: 50%;
+                    --purple-fore-lit: 20%;
+                    --purple-fore-alp: 100%;
+
+                    --pink-back-hue: 300deg;
+                    --pink-back-sat: 50%;
+                    --pink-back-lit: 80%;
+                    --pink-back-alp: 100%;
+
+                    --pink-fore-hue: 300deg;
+                    --pink-fore-sat: 50%;
+                    --pink-fore-lit: 20%;
+                    --pink-fore-alp: 100%;
+
+                    --backdrop-background: hsl(0deg, 0%, 30%, 50%);
+
+                    color-scheme: light;
+                }
+            }
+            @media (prefers-color-scheme: dark) {
+                :root,
+                ::backdrop {
+                    --back-hue-0: 0deg;
+                    --back-sat-0: 0%;
+                    --back-lit-0: 5%;
+                    --back-alp-0: 100%;
+
+                    --mean-hue-0: 0deg;
+                    --mean-sat-0: 0%;
+                    --mean-lit-0: 65%;
+                    --mean-alp-0: 100%;
+
+                    --fore-hue-0: 0deg;
+                    --fore-sat-0: 0%;
+                    --fore-lit-0: 90%;
+                    --fore-alp-0: 100%;
+
+                    --back-hue-1: 0deg;
+                    --back-sat-1: 0%;
+                    --back-lit-1: 10%;
+                    --back-alp-1: 100%;
+
+                    --mean-hue-1: 0deg;
+                    --mean-sat-1: 0%;
+                    --mean-lit-1: 30%;
+                    --mean-alp-1: 100%;
+
+                    --fore-hue-1: 0deg;
+                    --fore-sat-1: 0%;
+                    --fore-lit-1: 90%;
+                    --fore-alp-1: 100%;
+
+                    --back-hue-2: 0deg;
+                    --back-sat-2: 0%;
+                    --back-lit-2: 20%;
+                    --back-alp-2: 100%;
+
+                    --mean-hue-2: 0deg;
+                    --mean-sat-2: 0%;
+                    --mean-lit-2: 30%;
+                    --mean-alp-2: 100%;
+
+                    --fore-hue-2: 0deg;
+                    --fore-sat-2: 0%;
+                    --fore-lit-2: 90%;
+                    --fore-alp-2: 100%;
+
+                    --back-hue-3: 0deg;
+                    --back-sat-3: 0%;
+                    --back-lit-3: 30%;
+                    --back-alp-3: 100%;
+
+                    --mean-hue-3: 0deg;
+                    --mean-sat-3: 0%;
+                    --mean-lit-3: 20%;
+                    --mean-alp-3: 100%;
+
+                    --fore-hue-3: 0deg;
+                    --fore-sat-3: 0%;
+                    --fore-lit-3: 95%;
+                    --fore-alp-3: 100%;
+
+                    --red-back-hue: 0deg;
+                    --red-back-sat: 60%;
+                    --red-back-lit: 15%;
+                    --red-back-alp: 100%;
+
+                    --red-fore-hue: 0deg;
+                    --red-fore-sat: 60%;
+                    --red-fore-lit: 85%;
+                    --red-fore-alp: 100%;
+
+                    --orange-back-hue: 30deg;
+                    --orange-back-sat: 60%;
+                    --orange-back-lit: 20%;
+                    --orange-back-alp: 100%;
+
+                    --orange-fore-hue: 30deg;
+                    --orange-fore-sat: 60%;
+                    --orange-fore-lit: 80%;
+                    --orange-fore-alp: 100%;
+
+                    --yellow-back-hue: 50deg;
+                    --yellow-back-sat: 60%;
+                    --yellow-back-lit: 20%;
+                    --yellow-back-alp: 100%;
+
+                    --yellow-fore-hue: 50deg;
+                    --yellow-fore-sat: 60%;
+                    --yellow-fore-lit: 80%;
+                    --yellow-fore-alp: 100%;
+
+                    --green-back-hue: 150deg;
+                    --green-back-sat: 60%;
+                    --green-back-lit: 20%;
+                    --green-back-alp: 100%;
+
+                    --green-fore-hue: 150deg;
+                    --green-fore-sat: 60%;
+                    --green-fore-lit: 80%;
+                    --green-fore-alp: 100%;
+
+                    --blue-back-hue: 215deg;
+                    --blue-back-sat: 60%;
+                    --blue-back-lit: 20%;
+                    --blue-back-alp: 100%;
+
+                    --blue-fore-hue: 215deg;
+                    --blue-fore-sat: 60%;
+                    --blue-fore-lit: 80%;
+                    --blue-fore-alp: 100%;
+
+                    --purple-back-hue: 270deg;
+                    --purple-back-sat: 60%;
+                    --purple-back-lit: 20%;
+                    --purple-back-alp: 100%;
+
+                    --purple-fore-hue: 270deg;
+                    --purple-fore-sat: 60%;
+                    --purple-fore-lit: 80%;
+                    --purple-fore-alp: 100%;
+
+                    --pink-back-hue: 300deg;
+                    --pink-back-sat: 60%;
+                    --pink-back-lit: 20%;
+                    --pink-back-alp: 100%;
+
+                    --pink-fore-hue: 300deg;
+                    --pink-fore-sat: 60%;
+                    --pink-fore-lit: 80%;
+                    --pink-fore-alp: 100%;
+
+                    --backdrop-background: hsl(0deg, 0%, 70%, 50%);
+
+                    color-scheme: dark;
+                }
+            }
             </pre>
         </section>
 

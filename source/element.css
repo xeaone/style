@@ -1,0 +1,105 @@
+code,
+kbd {
+    display: inline-block;
+}
+
+code,
+kbd,
+pre {
+    --back-lit: var(--back-lit-1);
+    --mean-lit: var(--mean-lit-1);
+    --fore-lit: var(--fore-lit-1);
+
+    font-size: 0.9rem;
+    line-height: initial;
+    font-family: monospace;
+
+    margin: var(--margin);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+
+    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+}
+
+pre {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+form,
+section,
+article,
+blockquote,
+form>header,
+form>footer,
+section>header,
+section>footer,
+article>header,
+article>footer {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+section {
+    padding: 1rem;
+}
+
+hr {
+    width: 100%;
+    height: var(--hr-height);
+
+    flex: 1 1 100%;
+
+    padding: 0;
+    border: none;
+    margin: 0.25rem;
+
+    border-radius: var(--border-radius);
+    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), 10%);
+}
+
+img {
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    border-style: none;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+figure {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+figcaption {
+    margin: var(--margin);
+    padding: var(--padding);
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit) var(--mean-alp));
+}
+
+blockquote {
+    border-right: none;
+    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 5));
+    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 5));
+    border-inline-end: none;
+}
+
+blockquote cite {
+    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+}
+
+del {
+    color: hsl(var(--red-hue), var(--red-sat), var(--red-lit), var(--red-alp));
+}

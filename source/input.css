@@ -38,15 +38,15 @@ label {
 }
 
 label:has(input, select, textarea) {
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+    /* color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp)); */
+    /* background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp)); */
 }
 
 label:has(input, select, textarea):hover,
 label:has(input, select, textarea):focus,
 label:has(input, select, textarea):focus-within {
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+    /* color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp)); */
+    /* background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp)); */
 }
 
 label:has(input, select, textarea)>:first-child {
@@ -105,8 +105,9 @@ input:not([type=image],
 
     color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
     background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
+
     accent-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
+    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-fore-alp));
 }
 
 select {
@@ -126,65 +127,7 @@ textarea {
 }
 
 input[type=color] {
-    cursor: pointer;
-}
-
-input[type=range] {
     border: none;
-    cursor: pointer;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 0.5rem;
-    border-radius: var(--border-radius);
-    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
-
-input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 0.5rem;
-    border-radius: var(--border-radius);
-    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
-
-input[type=range]::-webkit-slider-thumb {
-    width: 1.25rem;
-    height: 1.25rem;
-    cursor: pointer;
-    border-radius: 50%;
-    margin-top: -0.25rem;
-}
-
-input[type=range]::-moz-range-thumb {
-    width: 1.25rem;
-    height: 1.25rem;
-    cursor: pointer;
-    border-radius: 50%;
-    margin-top: -0.25rem;
-}
-
-input[type=range]::-ms-thumb {
-    width: 1.25rem;
-    height: 1.25rem;
-    cursor: pointer;
-    border-radius: 50%;
-    margin-top: -0.25rem;
-}
-
-input[type=range]:active::-webkit-slider-thumb {
-    transform: scale(1.25);
-}
-
-input[type=range]:active::-moz-range-thumb {
-    transform: scale(1.25);
-}
-
-input[type=range]:active::-ms-thumb {
-    transform: scale(1.25);
-}
-
-input[type=color] {
     cursor: pointer;
 }
 
@@ -207,50 +150,7 @@ input[type=color]::-moz-color-swatch {
     border-radius: var(--border-radius);
 }
 
-/*
-    radio
-    checkbox
-*/
-input[type=radio] {
-    border-radius: 50%;
-    width: var(--radio-size);
-    height: var(--radio-size);
-    block-size: var(--radio-size);
-}
 
-input[type=checkbox] {
-    border-radius: 4px;
-    width: var(--checkbox-size);
-    height: var(--checkbox-size);
-    block-size: var(--checkbox-size);
-}
-
-input[type=radio],
-input[type=checkbox] {
-    outline: none;
-    appearance: none;
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    background: transparent;
-
-    cursor: pointer;
-    font-size: 1rem;
-
-    margin: 0.25rem;
-    padding: 0;
-
-    border-style: solid;
-    border-width: var(--input-border-width);
-    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
-
-input[type=radio]:checked,
-input[type=checkbox]:checked {
-    /* border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp)); */
-    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
-    background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
 
 /*
     input hover

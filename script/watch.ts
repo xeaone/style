@@ -7,11 +7,10 @@ const build = async () => {
     console.log('build started')
 
     const mainFile = await Deno.readTextFile('source/main.css');
-    const layoutFile = await Deno.readTextFile('source/layout.css');
 
     const bundle = await postcss()
         .use(postcssImport({ path: ['./source'], }))
-        .process(`${mainFile}\n${layoutFile}`, { from: 'source', to: 'docs' });
+        .process(`${mainFile}`, { from: 'source', to: 'docs' });
 
     await Deno.writeTextFile('docs/x-style.css', bundle.content);
     console.log('build done')

@@ -1,0 +1,148 @@
+@media (prefers-color-scheme: light) {
+
+    :root,
+    ::backdrop {
+
+        /* layer 0 */
+        --back-hue-0: 0deg;
+        --back-sat-0: 0%;
+        --back-lit-0: 95%;
+        --back-alp-0: 100%;
+
+        --mean-hue-0: 0deg;
+        --mean-sat-0: 0%;
+        --mean-lit-0: 30%;
+        --mean-alp-0: 100%;
+
+        --fore-hue-0: 0deg;
+        --fore-sat-0: 0%;
+        --fore-lit-0: 5%;
+        --fore-alp-0: 100%;
+        /* layer 0 */
+
+        /* layer 1 */
+        --back-hue-1: 0deg;
+        --back-sat-1: 0%;
+        --back-lit-1: 90%;
+        --back-alp-1: 100%;
+
+        --mean-hue-1: 0deg;
+        --mean-sat-1: 0%;
+        --mean-lit-1: 50%;
+        --mean-alp-1: 100%;
+
+        --fore-hue-1: 0deg;
+        --fore-sat-1: 0%;
+        --fore-lit-1: 10%;
+        --fore-alp-1: 100%;
+        /* layer 1 */
+
+        /* layer 2 */
+        --back-hue-2: 0deg;
+        --back-sat-2: 0%;
+        --back-lit-2: 90%;
+        --back-alp-2: 100%;
+
+        --mean-hue-2: 0deg;
+        --mean-sat-2: 0%;
+        --mean-lit-2: 50%;
+        --mean-alp-2: 100%;
+
+        --fore-hue-2: 0deg;
+        --fore-sat-2: 0%;
+        --fore-lit-2: 20%;
+        --fore-alp-2: 100%;
+        /* layer 2 */
+
+        /* layer 3 */
+        --back-hue-3: 0deg;
+        --back-sat-3: 0%;
+        --back-lit-3: 85%;
+        --back-alp-3: 100%;
+
+        --mean-hue-3: 0deg;
+        --mean-sat-3: 0%;
+        --mean-lit-3: 50%;
+        --mean-alp-3: 100%;
+
+        --fore-hue-3: 0deg;
+        --fore-sat-3: 0%;
+        --fore-lit-3: 15%;
+        --fore-alp-3: 100%;
+        /* layer 3 */
+
+        --red-back-hue: 0deg;
+        --red-back-sat: 50%;
+        --red-back-lit: 85%;
+        --red-back-alp: 100%;
+
+        --red-fore-hue: 0deg;
+        --red-fore-sat: 50%;
+        --red-fore-lit: 15%;
+        --red-fore-alp: 100%;
+
+        --orange-back-hue: 30deg;
+        --orange-back-sat: 50%;
+        --orange-back-lit: 80%;
+        --orange-back-alp: 100%;
+
+        --orange-fore-hue: 30deg;
+        --orange-fore-sat: 50%;
+        --orange-fore-lit: 20%;
+        --orange-fore-alp: 100%;
+
+        --yellow-back-hue: 50deg;
+        --yellow-back-sat: 50%;
+        --yellow-back-lit: 80%;
+        --yellow-back-alp: 100%;
+
+        --yellow-fore-hue: 50deg;
+        --yellow-fore-sat: 50%;
+        --yellow-fore-lit: 20%;
+        --yellow-fore-alp: 100%;
+
+        --green-back-hue: 150deg;
+        --green-back-sat: 50%;
+        --green-back-lit: 80%;
+        --green-back-alp: 100%;
+
+        --green-fore-hue: 150deg;
+        --green-fore-sat: 50%;
+        --green-fore-lit: 20%;
+        --green-fore-alp: 100%;
+
+        --blue-back-hue: 215deg;
+        --blue-back-sat: 50%;
+        --blue-back-lit: 80%;
+        --blue-back-alp: 100%;
+
+        --blue-fore-hue: 215deg;
+        --blue-fore-sat: 50%;
+        --blue-fore-lit: 20%;
+        --blue-fore-alp: 100%;
+
+        --purple-back-hue: 270deg;
+        --purple-back-sat: 50%;
+        --purple-back-lit: 80%;
+        --purple-back-alp: 100%;
+
+        --purple-fore-hue: 270deg;
+        --purple-fore-sat: 50%;
+        --purple-fore-lit: 20%;
+        --purple-fore-alp: 100%;
+
+        --pink-back-hue: 300deg;
+        --pink-back-sat: 50%;
+        --pink-back-lit: 80%;
+        --pink-back-alp: 100%;
+
+        --pink-fore-hue: 300deg;
+        --pink-fore-sat: 50%;
+        --pink-fore-lit: 20%;
+        --pink-fore-alp: 100%;
+
+        --backdrop-background: hsl(0deg, 0%, 30%, 50%);
+
+        color-scheme: light;
+    }
+}

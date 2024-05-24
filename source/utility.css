@@ -1,0 +1,57 @@
+.padding,
+.padding-children>* {
+    padding: var(--padding);
+}
+
+.margin,
+.margin-children>* {
+    margin: var(--margin);
+}
+
+.bold,
+.bold-children>* {
+    font-weight: bold;
+}
+
+.lowercase,
+.lowercase-children>* {
+    text-transform: lowercase;
+}
+
+.uppercase,
+.uppercase-children>* {
+    text-transform: uppercase;
+}
+
+.capitalize,
+.capitalize-children>* {
+    text-transform: capitalize;
+}
+
+.ellipsis,
+.ellipsis-children>* {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.border,
+.border-children>* {
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+    border-radius: var(--border-radius);
+    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+}
+
+.border-bottom {
+    border-bottom: 2px solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
+}
+
+.center:not(.row, .col) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

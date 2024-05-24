@@ -1,201 +1,21 @@
-@import './variables.css';
+@import './light.css';
+@import './dark.css';
+@import './root.css';
 @import './color.css';
 @import './body.css';
 @import './list.css';
 @import './input.css';
+@import './range.css';
+@import './check.css';
 @import './button.css';
 @import './dialog.css';
 @import './details.css';
 @import './article.css';
 @import './progress.css';
 @import './typography.css';
-
-code,
-kbd {
-    display: inline-block;
-}
-
-code,
-kbd,
-pre {
-    --back-lit: var(--lit-1-1);
-    --mean-lit: var(--lit-1-2);
-    --fore-lit: var(--lit-1-3);
-
-    font-size: 0.9rem;
-    line-height: initial;
-    font-family: monospace;
-
-    margin: var(--margin);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-}
-
-pre {
-    display: flex;
-    flex: 1 1 auto;
-    overflow: auto;
-}
-
-form,
-section,
-article,
-blockquote,
-form>header,
-form>footer,
-section>header,
-section>footer,
-article>header,
-article>footer {
-    display: flex;
-    flex: 1 1 auto;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    margin: var(--margin);
-    padding: var(--padding);
-}
-
-section {
-    padding: 1rem;
-}
-
-hr {
-    width: 100%;
-    height: var(--hr-height);
-
-    flex: 1 1 100%;
-
-    padding: 0;
-    border: none;
-    margin: 0.25rem;
-
-    border-radius: var(--border-radius);
-    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), 10%);
-}
-
-img {
-    display: flex;
-    height: auto;
-    max-width: 100%;
-    border-style: none;
-    margin: var(--margin);
-    padding: var(--padding);
-}
-
-figure {
-    display: flex;
-    flex: 1 1 auto;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: var(--margin);
-    padding: var(--padding);
-}
-
-figcaption {
-    margin: var(--margin);
-    padding: var(--padding);
-    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
-}
-
-blockquote {
-    border-right: none;
-    border-left: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
-    border-inline-start: 0.25rem solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), calc(var(--mean-alp) / 2));
-    border-inline-end: none;
-}
-
-blockquote cite {
-    color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit));
-}
-
-del {
-    color: hsl(var(--red-hue), var(--red-sat), var(--red-lit));
-}
-
-/*
-    utilities
-*/
-
-.padding,
-.padding-children>* {
-    padding: var(--padding);
-}
-
-.margin,
-.margin-children>* {
-    margin: var(--margin);
-}
-
-.bold,
-.bold-children>* {
-    font-weight: bold;
-}
-
-.lowercase,
-.lowercase-children>* {
-    text-transform: lowercase;
-}
-
-.uppercase,
-.uppercase-children>* {
-    text-transform: uppercase;
-}
-
-.capitalize,
-.capitalize-children>* {
-    text-transform: capitalize;
-}
-
-.ellipsis,
-.ellipsis-children>* {
-    max-width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.border,
-.border-children>* {
-    border-width: var(--border-width);
-    border-style: var(--border-style);
-    border-radius: var(--border-radius);
-    border-color: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-}
-
-.border-bottom {
-    border-bottom: 2px solid hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-}
-
-/*
-    browser
-*/
-
-/*
-::-webkit-scrollbar {
-    width: 0.65rem;
-    transition: var(--transition);
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-}
-
-::-webkit-scrollbar-thumb {
-    transition: var(--transition);
-    background: hsl(var(--mean-hue), var(--mean-sat), var(--mean-lit), var(--mean-alp));
-}
-
-::-webkit-scrollbar:hover {
-    transition: var(--transition);
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-}
-
-::-webkit-scrollbar-thumb:hover {
-    transition: var(--transition);
-    background: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-}
-*/
+@import './element.css';
+@import './utility.css';
+@import './layout.css';
 
 @media screen and (max-width: 65em) {
     body>main {
