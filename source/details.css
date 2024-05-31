@@ -11,6 +11,7 @@ details {
 }
 
 details>summary {
+    outline: none;
     appearance: none;
     user-select: none;
 
@@ -23,7 +24,10 @@ details>summary {
     transition: var(--transition);
 }
 
-details>summary:hover {
+details>summary:hover,
+details>summary:focus,
+details>summary:focus-within,
+details>summary:focus-visible {
     color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
     background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
 }
@@ -41,6 +45,7 @@ details>summary::after {
     display: inline-flex;
 
     background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
+
 }
 
 details>summary::after {

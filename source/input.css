@@ -37,16 +37,31 @@ label {
     border-radius: var(--border-radius);
 }
 
-label:has(input, select, textarea) {
-    /* color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp)); */
-    /* background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp)); */
-}
+/* label:has(input, select, textarea) { */
+/* color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp)); */
+/* background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp)); */
+/* } */
 
 label:has(input, select, textarea):hover,
 label:has(input, select, textarea):focus,
-label:has(input, select, textarea):focus-within {
-    /* color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp)); */
-    /* background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp)); */
+label:has(input, select, textarea):focus-within,
+label:has(input, select, textarea):focus-visible {
+    --back-hue: var(--back-hue-1);
+    --back-sat: var(--back-sat-1);
+    --back-lit: var(--back-lit-1);
+    --back-alp: var(--back-alp-1);
+
+    --mean-hue: var(--mean-hue-1);
+    --mean-sat: var(--mean-sat-1);
+    --mean-lit: var(--mean-lit-1);
+    --mean-alp: var(--mean-alp-1);
+
+    --fore-hue: var(--fore-hue-1);
+    --fore-sat: var(--fore-sat-1);
+    --fore-lit: var(--fore-lit-1);
+    --fore-alp: var(--fore-alp-1);
+
+    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
 }
 
 label:has(input, select, textarea)>:first-child {
@@ -75,11 +90,11 @@ input:not([type=image],
     [type=button],
     [type=checkbox]) {
     outline: none;
-    display: block;
     appearance: none;
+
+    display: block;
     box-sizing: border-box;
 
-    /* width: auto; */
     max-width: 100%;
 
     min-width: 100%;
@@ -150,88 +165,6 @@ input[type=color]::-moz-color-swatch {
     border-radius: var(--border-radius);
 }
 
-
-
-/*
-    input hover
-*/
-/*
-select:hover,
-textarea:hover,
-input:hover:not([type=image],
-    [type=reset],
-    [type=radio],
-    [type=hidden],
-    [type=submit],
-    [type=button],
-    [type=checkbox],
-    [hidden],
-    [disabled],
-    [readonly]) {
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-}
-
-select:hover,
-textarea:hover,
-input:hover:not([type=image],
-    [type=reset],
-    [type=hidden],
-    [type=submit],
-    [type=button],
-    [hidden],
-    [disabled],
-    [readonly]) {
-    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
-*/
-
-/*
-    input focus
-*/
-/*
-select:focus,
-select:focus-within,
-textarea:focus,
-textarea:focus-within,
-input:focus:not([type=image],
-    [type=reset],
-    [type=radio],
-    [type=hidden],
-    [type=submit],
-    [type=button],
-    [type=checkbox],
-    [hidden],
-    [disabled],
-    [readonly]),
-input:focus-within:not([type=image],
-    [type=reset],
-    [type=radio],
-    [type=hidden],
-    [type=submit],
-    [type=button],
-    [type=checkbox],
-    [hidden],
-    [disabled],
-    [readonly]) {
-    color: hsl(var(--fore-hue), var(--fore-sat), var(--fore-lit), var(--fore-alp));
-    background: hsl(var(--back-hue), var(--back-sat), var(--back-lit), var(--back-alp));
-}
-
-select:focus-within,
-textarea:focus-within,
-input:focus-within:not([type=image],
-    [type=reset],
-    [type=hidden],
-    [type=submit],
-    [type=button],
-    [hidden],
-    [disabled],
-    [readonly]) {
-    border-color: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
-*/
-
 select[readonly],
 textarea[readonly],
 input[readonly]:not([type=image],
@@ -244,9 +177,9 @@ input[readonly]:not([type=image],
     pointer-events: none;
 }
 
-select[disabled],
-textarea[disabled],
-input[disabled]:not([type=image],
+select:disabled,
+textarea:disabled,
+input:disabled:not([type=image],
     [type=reset],
     [type=hidden],
     [type=submit],

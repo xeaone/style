@@ -22,6 +22,6 @@
     "tasks": {
         "b": "deno run --allow-all script/build.ts",
         "w": "deno run --allow-all script/watch.ts",
-        "example": "file_server docs"
+        "e": "file_server docs"
     }
 }
