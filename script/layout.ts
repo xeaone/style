@@ -164,6 +164,18 @@ export default async () => {
             }
         }
 
+        size.result += `${size.prefix}between,`;
+        size.result += `${size.prefix}between-children>*`;
+        size.result += `{ justify-content: space-between; }\n`;
+
+        size.result += `${size.prefix}around,`;
+        size.result += `${size.prefix}around-children>*`;
+        size.result += `{ justify-content: space-around; }\n`;
+
+        size.result += `${size.prefix}evenly,`;
+        size.result += `${size.prefix}evenly-children>*`;
+        size.result += `{ justify-content: space-evenly; }\n`;
+
         size.result += `${size.prefix}wn,`;
         size.result += `${size.prefix}wnc>*,`;
         size.result += `${size.prefix}width-none-children>*`;

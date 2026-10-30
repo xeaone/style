@@ -4,7 +4,7 @@ import { createServer } from 'node:http';
 import { extname, resolve, sep } from 'node:path';
 import postcssImport from 'postcss-import';
 import postcss from 'postcss';
-import generateLayout from './layout.ts';
+import layout from './layout.ts';
 
 const docsRoot = resolve('docs');
 const port = 8080;
@@ -17,6 +17,8 @@ const contentTypes = {
 const build = async () => {
     console.log('build started');
 
+    await layout();
+
     const mainFile = await readFile('source/main.css', 'utf8');
 
     const bundle = await postcss()
@@ -27,7 +29,6 @@ const build = async () => {
     console.log('build done');
 };
 
-await generateLayout();
 await build();
 
 createServer(async (request, response) => {
@@ -55,9 +56,15 @@ createServer(async (request, response) => {
 }).listen(port, () => console.log(`docs available at http://localhost:${port}`));
 
 let buildTimer;
-watch('source', { recursive: true }, (_eventType, filename) => {
-    if (!filename?.toString().endsWith('.css')) return;
 
+watch('script/layout.ts', () => {
+    clearTimeout(buildTimer);
+    buildTimer = setTimeout(() => {
+        build().catch((error) => console.error(error));
+    }, 100);
+});
+
+watch('source', { recursive: true }, () => {
     clearTimeout(buildTimer);
     buildTimer = setTimeout(() => {
         build().catch((error) => console.error(error));

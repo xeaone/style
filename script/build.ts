@@ -1,9 +1,9 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import postcssImport from 'postcss-import';
 import postcss from 'postcss';
-import generateLayout from './layout.ts';
+import layout from './layout.ts';
 
-await generateLayout();
+await layout();
 
 const mainFile = await readFile('source/main.css', 'utf8');
 
