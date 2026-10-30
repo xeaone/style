@@ -30,8 +30,8 @@
 
 .ellipsis,
 .ellipsis-children>* {
-    max-width: 100%;
     overflow: hidden;
+    max-width: stretch;
     white-space: nowrap;
     text-overflow: ellipsis;
 }

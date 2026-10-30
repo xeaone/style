@@ -1,167 +1,168 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <script>
-        const base = document.createElement('base');
-        if (location.host.startsWith('localhost')) base.href = '/';
-        else base.href = '/style/';
-        document.head.prepend(base);
-    </script>
+    <head>
+        <title>X-Style</title>
+        <script>
+            const base = document.createElement('base');
+            if (location.host.startsWith('localhost')) base.href = '/';
+            else base.href = '/style/';
+            document.head.prepend(base);
+        </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" href="./x-style.css">
-</head>
+        <link rel="stylesheet" href="./x-style.css">
+    </head>
 
-<body class="accent-purple">
-    <main>
+    <body class="accent-purple">
+        <main>
 
-        <section>
-            <h1>
-                <span class="accent padding margin">X</span>
-                <span>Style</span>
-            </h1>
-            <h2>A minimalist css framework that prioritizes semantic classless styling with classed grid and utilities.</h2>
-            <hr />
-            <p>Powerful theming for light and dark mode using css variables.</p>
-            <p>Based on a layer concept where each layer must stack either from <code>lighter to darker</code> (light mode) or <code>darker to lighter</code> (dark mode).</p>
-            <p>Each layer should define css variables <code>--back</code>, <code>--mean</code>, <code>--fore</code></p>
-            <p>Accent colors should be used on elements that can be interacted with.</p>
-        </section>
+            <section>
+                <h1>
+                    <span class="accent padding margin">X</span>
+                    <span>Style</span>
+                </h1>
+                <h2>A minimalist css framework that prioritizes semantic classless styling with classed grid and utilities.</h2>
+                <hr />
+                <p>Powerful theming for light and dark mode using css variables.</p>
+                <p>Based on a layer concept where each layer must stack either from <code>lighter to darker</code> (light mode) or <code>darker to lighter</code> (dark mode).</p>
+                <p>Each layer should define css variables <code>--back</code>, <code>--mean</code>, <code>--fore</code></p>
+                <p>Accent colors should be used on elements that can be interacted with.</p>
+            </section>
 
-        <section id="theme">
-            <h2>Theme</h2>
-            <hr />
-            <form oninput="
+            <section id="theme">
+                <h2>Theme</h2>
+                <hr />
+                <form oninput="
                 document.body.classList.remove(...[...event.target.options].map(o => o.value));
                 document.body.classList.add(event.target.selectedOptions[0].value);
             ">
-                <label>
-                    <span>Mode</span>
-                    <select>
-                        <option selected>default</option>
-                        <option>light</option>
-                        <option>dark</option>
-                    </select>
-                </label>
-                <label>
-                    <span>Accent</span>
-                    <select oninput="
+                    <label>
+                        <span>Mode</span>
+                        <select>
+                            <option selected>default</option>
+                            <option>light</option>
+                            <option>dark</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Accent</span>
+                        <select oninput="
                         document.body.classList.remove(...[...this.options].map(o => o.value));
                         document.body.classList.add(this.selectedOptions[0].value);
                     ">
-                        <option selected>default</option>
-                        <option>accent-red</option>
-                        <option>accent-orange</option>
-                        <option>accent-yellow</option>
-                        <option>accent-green</option>
-                        <option>accent-blue</option>
-                        <option>accent-purple</option>
-                        <option>accent-pink</option>
-                        <option>accent-error</option>
-                        <option>accent-warn</option>
-                        <option>accent-safe</option>
-                        <option>accent-success</option>
-                    </select>
-                </label>
-            </form>
-        </section>
+                            <option selected>default</option>
+                            <option>accent-red</option>
+                            <option>accent-orange</option>
+                            <option>accent-yellow</option>
+                            <option>accent-green</option>
+                            <option>accent-blue</option>
+                            <option>accent-purple</option>
+                            <option>accent-pink</option>
+                            <option>accent-error</option>
+                            <option>accent-warn</option>
+                            <option>accent-safe</option>
+                            <option>accent-success</option>
+                        </select>
+                    </label>
+                </form>
+            </section>
 
-        <section id="colors">
-            <h2>Colors</h2>
-            <hr />
-            <div class="flex grow wrap grow-children center-children middle-children padding-children margin-children bold-children">
-                <div class="red">Red</div>
-                <div class="orange">Orange</div>
-                <div class="yellow">Yellow</div>
-                <div class="green">Green</div>
-                <div class="blue">Blue</div>
-                <div class="purple">Purple</div>
-                <div class="pink">Pink</div>
-                <div class="error">Error</div>
-                <div class="warn">Warn</div>
-                <div class="safe">Safe</div>
-                <div class="success">Success</div>
-            </div>
-        </section>
+            <section id="colors">
+                <h2>Colors</h2>
+                <hr />
+                <div class="flex grow wrap grow-children center-children middle-children padding-children margin-children bold-children">
+                    <div class="red">Red</div>
+                    <div class="orange">Orange</div>
+                    <div class="yellow">Yellow</div>
+                    <div class="green">Green</div>
+                    <div class="blue">Blue</div>
+                    <div class="purple">Purple</div>
+                    <div class="pink">Pink</div>
+                    <div class="error">Error</div>
+                    <div class="warn">Warn</div>
+                    <div class="safe">Safe</div>
+                    <div class="success">Success</div>
+                </div>
+            </section>
 
-        <section id="form">
-            <h2>Form</h2>
-            <hr />
-            <form>
-                <label>
-                    <span>Date</span>
-                    <input type="date" />
-                </label>
-                <label>
-                    <span>Time</span>
-                    <input type="time" />
-                </label>
-                <label>
-                    <span>Search</span>
-                    <input type="search" />
-                </label>
-                <label>
-                    <span>Name</span>
-                    <input type="text" />
-                </label>
-                <label>
-                    <span>Email</span>
-                    <input type="email" />
-                </label>
-                <label>
-                    <span>Range</span>
-                    <input type="range" min="0" max="100" value="50" />
-                </label>
-                <label>
-                    <span>Color</span>
-                    <input type="color" value="#0eaaaa" />
-                </label>
-                <label>
-                    <span>Fruit</span>
-                    <select required>
-                        <option value="" selected disabled>None</option>
-                        <option>Banana</option>
-                        <option>Watermelon</option>
-                        <option>Apple</option>
-                        <option>Orange</option>
-                        <option>Mango</option>
-                    </select>
-                </label>
-                <label>
-                    <span>File</span>
-                    <input type="file" />
-                </label>
-                <fieldset>
-                    <legend>Checks</legend>
+            <section id="form">
+                <h2>Form</h2>
+                <hr />
+                <form>
                     <label>
-                        <span>One</span>
-                        <input type="checkbox" checked />
+                        <span>Date</span>
+                        <input type="date" />
                     </label>
                     <label>
-                        <span>Two</span>
-                        <input type="checkbox" />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>Radios</legend>
-                    <label>
-                        <span>Small</span>
-                        <input type="radio" name="size" value="small" checked />
+                        <span>Time</span>
+                        <input type="time" />
                     </label>
                     <label>
-                        <span>Medium</span>
-                        <input type="radio" name="size" value="medium" />
+                        <span>Search</span>
+                        <input type="search" />
                     </label>
                     <label>
-                        <span>Large</span>
-                        <input type="radio" name="size" value="large" disabled />
+                        <span>Name</span>
+                        <input type="text" />
                     </label>
-                </fieldset>
-                <!--
+                    <label>
+                        <span>Email</span>
+                        <input type="email" />
+                    </label>
+                    <label>
+                        <span>Range</span>
+                        <input type="range" min="0" max="100" value="50" />
+                    </label>
+                    <label>
+                        <span>Color</span>
+                        <input type="color" value="#0eaaaa" />
+                    </label>
+                    <label>
+                        <span>Fruit</span>
+                        <select required>
+                            <option value="" selected disabled>None</option>
+                            <option>Banana</option>
+                            <option>Watermelon</option>
+                            <option>Apple</option>
+                            <option>Orange</option>
+                            <option>Mango</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>File</span>
+                        <input type="file" />
+                    </label>
+                    <fieldset>
+                        <legend>Checks</legend>
+                        <label>
+                            <span>One</span>
+                            <input type="checkbox" checked />
+                        </label>
+                        <label>
+                            <span>Two</span>
+                            <input type="checkbox" />
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Radios</legend>
+                        <label>
+                            <span>Small</span>
+                            <input type="radio" name="size" value="small" checked />
+                        </label>
+                        <label>
+                            <span>Medium</span>
+                            <input type="radio" name="size" value="medium" />
+                        </label>
+                        <label>
+                            <span>Large</span>
+                            <input type="radio" name="size" value="large" disabled />
+                        </label>
+                    </fieldset>
+                    <!--
                 <label>
                     <span>Textarea</span>
                     <textarea>Hello World</textarea>
@@ -171,180 +172,180 @@
                 <input type="text" placeholder="Disabled" aria-label="Disabled" disabled>
                 <input type="text" value="Readonly" aria-label="Readonly" readonly="readonly">
                 -->
-            </form>
-        </section>
-
-        <section id="button">
-            <h2>Buttons</h2>
-            <hr />
-            <button>Default</button>
-            <button disabled>Disabled</button>
-        </section>
-
-        <section id="progress">
-            <h2>Progress</h2>
-            <hr />
-            <section>
-                <strong>Progress with value</strong>
-                <progress value="25" max="100"></progress>
+                </form>
             </section>
-            <section>
-                <strong>Progress without value</strong>
-                <progress></progress>
+
+            <section id="button">
+                <h2>Buttons</h2>
+                <hr />
+                <button>Default</button>
+                <button disabled>Disabled</button>
             </section>
-        </section>
 
-        <section id="article">
-            <h2>Article</h2>
-            <hr>
-            <article>
-                <h3>Card One</h3>
-                <p>Hello world one!</p>
-            </article>
-            <article>
-                <h3>Card Two</h3>
-                <p>Hello world two!</p>
-            </article>
-        </section>
+            <section id="progress">
+                <h2>Progress</h2>
+                <hr />
+                <section>
+                    <strong>Progress with value</strong>
+                    <progress value="25" max="100"></progress>
+                </section>
+                <section>
+                    <strong>Progress without value</strong>
+                    <progress></progress>
+                </section>
+            </section>
 
-
-        <section>
-            <h2>Dialog</h2>
-            <hr />
-            <button onclick="document.querySelector('dialog').showModal()">Open Dialog</button>
-            <dialog>
+            <section id="article">
+                <h2>Article</h2>
+                <hr>
                 <article>
-                    <h3>Dialog Title</h3>
-                    <p>Dialog Message</p>
-                    <footer>
-                        <button onclick="document.querySelector('dialog').close()">Cancel</button>
-                        <button onclick="document.querySelector('dialog').close()">Confirm</button>
-                    </footer>
+                    <h3>Card One</h3>
+                    <p>Hello world one!</p>
                 </article>
-            </dialog>
-        </section>
+                <article>
+                    <h3>Card Two</h3>
+                    <p>Hello world two!</p>
+                </article>
+            </section>
 
-        <section>
-            <h2>Details</h2>
-            <hr />
-            <details open>
-                <summary>Foo Bar</summary>
-                <p>Baz bat boo.</p>
-            </details>
-            <details>
-                <summary>Foo Bar</summary>
-                <p>Baz bat boo.</p>
-            </details>
-        </section>
 
-        <section>
-            <h2>Grid</h2>
-            <hr />
-            <style>
-                .e-grid {
-                    width: 100%;
-                }
+            <section>
+                <h2>Dialog</h2>
+                <hr />
+                <button onclick="document.querySelector('dialog').showModal()">Open Dialog</button>
+                <dialog>
+                    <article>
+                        <h3>Dialog Title</h3>
+                        <p>Dialog Message</p>
+                        <footer>
+                            <button onclick="document.querySelector('dialog').close()">Cancel</button>
+                            <button onclick="document.querySelector('dialog').close()">Confirm</button>
+                        </footer>
+                    </article>
+                </dialog>
+            </section>
 
-                .e-grid>.row>* {
-                    padding: 1rem;
-                    min-width: 4rem;
-                    min-height: 4rem;
-                    border-radius: 4px;
-                }
+            <section>
+                <h2>Details</h2>
+                <hr />
+                <details open>
+                    <summary>Foo Bar</summary>
+                    <p>Baz bat boo.</p>
+                </details>
+                <details>
+                    <summary>Foo Bar</summary>
+                    <p>Baz bat boo.</p>
+                </details>
+            </section>
 
-                .e-grid>.col>* {
-                    padding: 1rem;
-                    min-width: 4rem;
-                    min-height: 4rem;
-                    border-radius: 4px;
-                }
-            </style>
-            <div class="e-grid">
-                <h3>Row</h3>
-                <div class="row wrap accent-children col-children grow-children margin-2-children padding-2-children">
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                    <div class="bottom">bottom</div>
-                    <div class="top">top</div>
-                    <div class="center">center</div>
-                    <div class="middle center">middle center</div>
+            <section>
+                <h2>Grid</h2>
+                <hr />
+                <style>
+                    .e-grid {
+                        width: 100%;
+                    }
+
+                    .e-grid>.row>* {
+                        padding: 1rem;
+                        min-width: 4rem;
+                        min-height: 4rem;
+                        border-radius: 4px;
+                    }
+
+                    .e-grid>.col>* {
+                        padding: 1rem;
+                        min-width: 4rem;
+                        min-height: 4rem;
+                        border-radius: 4px;
+                    }
+                </style>
+                <div class="e-grid">
+                    <h3>Row</h3>
+                    <div class="row wrap accent-children col-children grow-children margin-2-children padding-2-children">
+                        <div class="left">left</div>
+                        <div class="right">right</div>
+                        <div class="bottom">bottom</div>
+                        <div class="top">top</div>
+                        <div class="center">center</div>
+                        <div class="middle center">middle center</div>
+                    </div>
+                    <h3>Col</h3>
+                    <div class="col wrap accent-children row-children grow-children margin-2-children padding-2-children">
+                        <div class="left">left</div>
+                        <div class="right">right</div>
+                        <div class="bottom">bottom</div>
+                        <div class="top">top</div>
+                        <div class="center">center</div>
+                        <div class="middle center">middle center</div>
+                    </div>
                 </div>
-                <h3>Col</h3>
-                <div class="col wrap accent-children row-children grow-children margin-2-children padding-2-children">
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                    <div class="bottom">bottom</div>
-                    <div class="top">top</div>
-                    <div class="center">center</div>
-                    <div class="middle center">middle center</div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="list">
-            <h2>List</h2>
-            <hr>
-            <h3>Unordered List</h3>
-            <ul>
-                <li>Apple</li>
-                <li>Banana</li>
-                <li>Coconut</li>
-            </ul>
-            <h3>Ordered List</h3>
-            <ol>
-                <li>Apple</li>
-                <li>Banana</li>
-                <li>Coconut</li>
-            </ol>
-        </section>
+            <section id="list">
+                <h2>List</h2>
+                <hr>
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Coconut</li>
+                </ul>
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Coconut</li>
+                </ol>
+            </section>
 
-        <section id="typography">
-            <h2>Typography</h2>
-            <hr>
-            <p><i>Italic</i></p>
-            <p><del>Delete</del></p>
-            <p><strong>Bold</strong></p>
-            <p><small>Small</small></p>
-            <p><s>Strikethrough</s></p>
-            <blockquote>
-                <p>"Foo bar baz."</p>
-                <cite>- moo too cow</cite>
-            </blockquote>
-        </section>
+            <section id="typography">
+                <h2>Typography</h2>
+                <hr>
+                <p><i>Italic</i></p>
+                <p><del>Delete</del></p>
+                <p><strong>Bold</strong></p>
+                <p><small>Small</small></p>
+                <p><s>Strikethrough</s></p>
+                <blockquote>
+                    <p>"Foo bar baz."</p>
+                    <cite>- moo too cow</cite>
+                </blockquote>
+            </section>
 
-        <section id="figure">
-            <h2>Figure</h2>
-            <hr>
-            <figure>
-                <img src="./mountain.jpg" alt="Minimal landscape">
-                <figcaption>
-                    <span>Caption</span>
-                    <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
-                </figcaption>
-            </figure>
-        </section>
+            <section id="figure">
+                <h2>Figure</h2>
+                <hr>
+                <figure>
+                    <img src="./mountain.jpg" alt="Minimal landscape">
+                    <figcaption>
+                        <span>Caption</span>
+                        <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+                    </figcaption>
+                </figure>
+            </section>
 
-        <section id="customize">
-            <h2>Customize</h2>
-            <hr>
-            <h3>Layer</h3>
-            <p>
-                <span>Layer elements such as </span>
-                <code>body</code>
-                <span> and </span>
-                <code>article</code>
-                <span>can be stacked by defining the following css variables.</span>
-            </p>
-            <pre>
+            <section id="customize">
+                <h2>Customize</h2>
+                <hr>
+                <h3>Layer</h3>
+                <p>
+                    <span>Layer elements such as </span>
+                    <code>body</code>
+                    <span> and </span>
+                    <code>article</code>
+                    <span>can be stacked by defining the following css variables.</span>
+                </p>
+                <pre>
             article {
                 --back-lit: var(--back-lit-1);
                 --mean-lit: var(--mean-lit-1);
                 --fore-lit: var(--fore-lit-1);
             }
             </pre>
-            <h3>Theme</h3>
-            <p>To customize the theme you can overwrite these css variables for light and dark mode.</p>
-            <pre>
+                <h3>Theme</h3>
+                <p>To customize the theme you can overwrite these css variables for light and dark mode.</p>
+                <pre>
             @media (prefers-color-scheme: light) {
                 :root,
                 ::backdrop {
@@ -622,10 +623,10 @@
                 }
             }
             </pre>
-        </section>
+            </section>
 
 
-    </main>
-</body>
+        </main>
+    </body>
 
 </html>

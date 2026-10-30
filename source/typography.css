@@ -1,25 +1,32 @@
+b,
+p,
+s,
+em,
 h1,
 h2,
 h3,
 h4,
 h5,
-p {
+cite,
+small,
+strong {
     display: flex;
-    flex: 1 1 100%;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: row;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: var(--margin);
     padding: var(--padding);
 }
 
 h1 {
     font-size: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
 h2 {
@@ -40,33 +47,21 @@ h5 {
 
 em,
 cite {
-    display: flex;
-    align-items: center;
-
     font-size: inherit;
     font-style: italic;
 }
 
 b,
 strong {
-    display: flex;
-    align-items: center;
-
     font-weight: bold;
     font-size: inherit;
 }
 
 small {
-    display: flex;
-    align-items: center;
-
     font-size: 0.9em;
     font-weight: normal;
 }
 
 s {
-    display: flex;
-    align-items: center;
-
     font-size: inherit;
 }

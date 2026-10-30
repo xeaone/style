@@ -10,10 +10,9 @@ input[type=submit] {
 
     cursor: pointer;
 
-    flex: 1 1 auto;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    display: inline-flex;
     justify-content: center;
 
     transition: var(--transition);
@@ -28,6 +27,22 @@ input[type=submit] {
     border-width: var(--button-border-width);
     border-style: var(--button-border-style);
     border-radius: var(--button-border-radius);
+}
+
+a {
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+}
+
+button:not([disabled])>:first-child,
+input[type=submit]:not([disabled])>:first-child,
+input[type=button]:not([disabled])>:first-child {
+    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
+}
+
+p>a,
+figcaption>a {
+    margin: 0.1rem;
+    padding: 0.25rem;
 }
 
 a:disabled,
@@ -66,20 +81,4 @@ input[type=submit]:focus-visible:not([disabled]) {
 
     color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
     background: hsl(var(--accent-back-hue), var(--accent-back-sat), var(--accent-back-lit), var(--accent-back-alp));
-}
-
-button>:first-child,
-input[type=submit]>:first-child,
-input[type=button]>:first-child {
-    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
-}
-
-a {
-    color: hsl(var(--accent-fore-hue), var(--accent-fore-sat), var(--accent-fore-lit), var(--accent-fore-alp));
-}
-
-p>a,
-figcaption>a {
-    margin: 0.1rem;
-    padding: 0.25rem;
 }

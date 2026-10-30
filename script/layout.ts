@@ -1,3 +1,5 @@
+import { writeFile } from 'node:fs/promises';
+
 /*
 
     row | row-reverse + align-items = vertical
@@ -58,20 +60,18 @@ export default async () => {
     for (const size of sizes) {
         size.result += size.open;
 
-        for (
-            const [name, value] of [
-                ['row', 'row'],
-                ['col', 'column'],
-                ['row-reverse', 'row-reverse'],
-                ['col-reverse', 'column-reverse'],
-            ]
-        ) {
+        for (const [name, value] of [
+            ['row', 'row'],
+            ['col', 'column'],
+            ['row-reverse', 'row-reverse'],
+            ['col-reverse', 'column-reverse'],
+        ]) {
             size.result += `${size.prefix}${name},`;
             size.result += `${size.prefix}${name}-children>*`;
             size.result += `{`;
             size.result += `display: flex;`;
             size.result += `flex-direction: ${value};`;
-            size.result += `box-sizing: border-box;`;
+            // size.result += `box-sizing: border-box;`;
             size.result += `}\n`;
         }
 
@@ -82,6 +82,10 @@ export default async () => {
         size.result += `${size.prefix}last,`;
         size.result += `${size.prefix}last-children>*`;
         size.result += `{ order: -1; }\n`;
+
+        size.result += `${size.prefix}elastic,`;
+        size.result += `${size.prefix}elastic-children>*`;
+        size.result += `{ flex: 1 1 auto; }\n`;
 
         size.result += `${size.prefix}grow,`;
         size.result += `${size.prefix}grow-children>*`;
@@ -144,17 +148,15 @@ export default async () => {
 
         for (const aj of ['align', 'justify']) {
             for (const sci of ['self', 'content', 'items']) {
-                for (
-                    const [name, value] of [
-                        ['end', 'end'],
-                        ['start', 'start'],
-                        ['center', 'center'],
-                        ['stretch', 'stretch'],
-                        ['around', 'space-around'],
-                        ['evenly', 'space-evenly'],
-                        ['between', 'space-between'],
-                    ]
-                ) {
+                for (const [name, value] of [
+                    ['end', 'end'],
+                    ['start', 'start'],
+                    ['center', 'center'],
+                    ['stretch', 'stretch'],
+                    ['around', 'space-around'],
+                    ['evenly', 'space-evenly'],
+                    ['between', 'space-between'],
+                ]) {
                     size.result += `${size.prefix}${aj}-${sci}-${name},`;
                     size.result += `${size.prefix}${aj}-${sci}-${name}-children>*`;
                     size.result += `{ ${aj}-${sci}: ${value}; }\n`;
@@ -172,6 +174,12 @@ export default async () => {
         size.result += `${size.prefix}wac>*,`;
         size.result += `${size.prefix}width-auto-children>*`;
         size.result += `{ width: auto; }\n`;
+
+        size.result += `${size.prefix}ws,`;
+        size.result += `${size.prefix}width-stretch,`;
+        size.result += `${size.prefix}wsc>*,`;
+        size.result += `${size.prefix}width-stretch-children>*`;
+        size.result += `{ width: stretch; }\n`;
 
         size.result += `${size.prefix}wf,`;
         size.result += `${size.prefix}width-fit,`;
@@ -191,6 +199,12 @@ export default async () => {
         size.result += `${size.prefix}height-auto-children>*`;
         size.result += `{ height: auto; }\n`;
 
+        size.result += `${size.prefix}hs,`;
+        size.result += `${size.prefix}height-stretch,`;
+        size.result += `${size.prefix}hsc>*,`;
+        size.result += `${size.prefix}height-stretch-children>*`;
+        size.result += `{ height: stretch; }\n`;
+
         size.result += `${size.prefix}hf,`;
         size.result += `${size.prefix}height-fit,`;
         size.result += `${size.prefix}hfc>*,`;
@@ -208,6 +222,12 @@ export default async () => {
         size.result += `${size.prefix}bac>*,`;
         size.result += `${size.prefix}basis-auto-children>*`;
         size.result += `{ flex-basis: auto; }\n`;
+
+        size.result += `${size.prefix}bs,`;
+        size.result += `${size.prefix}basis-stretch,`;
+        size.result += `${size.prefix}bsc>*,`;
+        size.result += `${size.prefix}basis-stretch-children>*`;
+        size.result += `{ flex-basis: stretch; }\n`;
 
         size.result += `${size.prefix}bf,`;
         size.result += `${size.prefix}basis-fit,`;
@@ -242,7 +262,7 @@ export default async () => {
         for (let i = 0; i < units.length; i++) {
             const unit = units[i];
             const fontScale = units.length / (units.length / 2);
-            const fontAdjusted = (unit / fontScale) < 0.9 ? 0.9 : (unit / fontScale);
+            const fontAdjusted = unit / fontScale < 0.9 ? 0.9 : unit / fontScale;
 
             size.result += `${size.prefix}f-${unit},`;
             size.result += `${size.prefix}font-${unit},`;
@@ -287,5 +307,5 @@ export default async () => {
         result += size.result;
     }
 
-    await Deno.writeTextFile('source/layout.css', result);
+    await writeFile('source/layout.css', result);
 };

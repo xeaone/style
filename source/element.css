@@ -23,8 +23,7 @@ pre {
 }
 
 pre {
-    display: flex;
-    flex: 1 1 auto;
+    /* display: flex; */
     overflow: auto;
 }
 
@@ -39,7 +38,6 @@ section>footer,
 article>header,
 article>footer {
     display: flex;
-    flex: 1 1 auto;
     flex-wrap: wrap;
     flex-direction: row;
 
@@ -52,10 +50,8 @@ section {
 }
 
 hr {
-    width: 100%;
+    width: stretch;
     height: var(--hr-height);
-
-    flex: 1 1 100%;
 
     padding: 0;
     border: none;
@@ -68,7 +64,6 @@ hr {
 img {
     display: flex;
     height: auto;
-    max-width: 100%;
     border-style: none;
     margin: var(--margin);
     padding: var(--padding);
@@ -76,7 +71,6 @@ img {
 
 figure {
     display: flex;
-    flex: 1 1 auto;
     flex-wrap: wrap;
     flex-direction: column;
     margin: var(--margin);

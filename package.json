@@ -2,14 +2,30 @@
     "private": false,
     "name": "@xeaone/style",
     "type": "module",
-    "main": "./build/mod.ts",
-    "module": "./build/mod.ts",
+    "exports": {
+        ".": "./build/x-style.css"
+    },
+    "style": "./build/x-style.css",
+    "files": [
+        "build"
+    ],
     "version": "0.0.1",
     "description": "",
     "directories": {
         "doc": "docs"
     },
     "scripts": {
+        "build": "node script/build.ts",
+        "watch": "node script/watch.ts"
+    },
+    "engines": {
+        "node": ">=20"
+    },
+    "devDependencies": {
+        "@types/node": "^26.6.6",
+        "postcss": "^8.5.32",
+        "postcss-import": "^17.0.1",
+        "tsx": "^4.20.6"
     },
     "repository": {
         "type": "git",

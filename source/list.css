@@ -4,7 +4,6 @@ ol {
     padding: var(--padding);
 
     display: flex;
-    flex: 1 1 auto;
     flex-wrap: nowrap;
     flex-direction: column;
 }
@@ -17,7 +16,6 @@ ol>li {
     padding: var(--padding);
 
     display: flex;
-    flex: 1 1 auto;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
